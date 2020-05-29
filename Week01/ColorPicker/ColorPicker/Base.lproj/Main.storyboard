@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -17,30 +17,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fOs-1D-vcJ" userLabel="Color Name View">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GradientImage" translatesAutoresizingMaskIntoConstraints="NO" id="hq8-Nc-LKX">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="139"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="hgS-75-0ov" userLabel="Name Label">
-                                        <rect key="frame" x="8" y="41" width="343" height="21"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INr-t8-EC7" userLabel="About Button">
+                                        <rect key="frame" x="327" y="8" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INr-t8-EC7" userLabel="About Button">
-                                        <rect key="frame" x="287" y="8" width="80" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="About RGB">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="DefaultBackground"/>
+                                        <state key="normal" image="info.circle" catalog="system">
+                                            <color key="titleColor" name="DefaultBackground"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                         </state>
                                         <connections>
                                             <segue destination="Zzi-OE-tM1" kind="presentation" modalPresentationStyle="fullScreen" id="5EC-Gy-yh8"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="hgS-75-0ov" userLabel="Name Label">
+                                        <rect key="frame" x="16" y="40" width="343" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                        <color key="textColor" name="DefaultBackground"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -108,36 +110,58 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kda-58-8sH" userLabel="Reset Button">
                                         <rect key="frame" x="30" y="439" width="150" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                        <state key="normal" title="Reset" backgroundImage="GradientImage">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zgy-I2-CHq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-xP-fz8" userLabel="Set Color Button">
                                         <rect key="frame" x="201" y="439" width="150" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <state key="normal" title="Set Color" backgroundImage="GradientImage">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" name="DefaultBackground"/>
                                         </state>
+                                        <connections>
+                                            <action selector="setColorButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s37-WB-Dmm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="DefaultBackground"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fJ2-Ad-Txs" userLabel="Segmented control">
-                                <rect key="frame" x="38" y="90" width="299" height="32"/>
+                                <rect key="frame" x="38" y="80" width="299" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="RGB"/>
                                     <segment title="HSB"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" name="SegmentSelectedTint"/>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mPO-nY-x6u"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Mzo-jL-Hkd"/>
+                    <connections>
+                        <outlet property="blueBrightnessLabel" destination="TqP-i3-Hvi" id="2gG-kY-NEu"/>
+                        <outlet property="blueBrightnessSlider" destination="SNM-QB-Npa" id="dZV-FZ-nRb"/>
+                        <outlet property="blueBrightnessValueLabel" destination="RhR-96-GK5" id="uLM-2Y-dK3"/>
+                        <outlet property="colorNameLabel" destination="hgS-75-0ov" id="6kT-WD-FvP"/>
+                        <outlet property="greenSaturationLabel" destination="pfC-Eg-uLv" id="f2F-pf-E04"/>
+                        <outlet property="greenSaturationSlider" destination="wKG-lO-3zH" id="4Hk-ed-lom"/>
+                        <outlet property="greenSaturationValueLabel" destination="qTG-5h-nru" id="XPf-7W-s29"/>
+                        <outlet property="redHueLabel" destination="AwC-Rz-koA" id="LXS-kx-vhc"/>
+                        <outlet property="redHueSlider" destination="wKG-lO-3zH" id="he6-1T-MAQ"/>
+                        <outlet property="redHueValueLabel" destination="2IZ-Xp-2Cg" id="d7y-oX-pn9"/>
+                        <outlet property="segmentedControl" destination="fJ2-Ad-Txs" id="ncj-b0-QpV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,41 +170,58 @@
         <!--About Controller-->
         <scene sceneID="m7V-2K-Fbj">
             <objects>
-                <viewController id="Zzi-OE-tM1" userLabel="About Controller" sceneMemberID="viewController">
+                <viewController id="Zzi-OE-tM1" userLabel="About Controller" customClass="AboutViewController" customModule="ColorPicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NWz-PJ-3b8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GRN-PS-4wa">
-                                <rect key="frame" x="16" y="20" width="343" height="572"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRN-PS-4wa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
                                 <color key="backgroundColor" name="DefaultBackground"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzP-pm-TZs" userLabel="Close Button">
-                                <rect key="frame" x="112" y="600" width="150" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzP-pm-TZs" userLabel="Close Button">
+                                <rect key="frame" x="112" y="610" width="151" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Fqs-W2-E28"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <state key="normal" title="Close" backgroundImage="GradientImage">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" name="DefaultBackground"/>
                                 </state>
+                                <connections>
+                                    <action selector="close" destination="Zzi-OE-tM1" eventType="touchUpInside" id="ldk-QR-llX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="DefaultBackground"/>
+                        <constraints>
+                            <constraint firstItem="GRN-PS-4wa" firstAttribute="top" secondItem="HMa-Da-d7n" secondAttribute="top" id="AUc-kO-krQ"/>
+                            <constraint firstItem="FzP-pm-TZs" firstAttribute="top" secondItem="GRN-PS-4wa" secondAttribute="bottom" constant="10" id="N5b-gk-lWz"/>
+                            <constraint firstItem="FzP-pm-TZs" firstAttribute="leading" secondItem="HMa-Da-d7n" secondAttribute="leading" constant="112" id="Pui-xe-EdG"/>
+                            <constraint firstItem="GRN-PS-4wa" firstAttribute="leading" secondItem="HMa-Da-d7n" secondAttribute="leading" id="U7U-ma-eA0"/>
+                            <constraint firstItem="FzP-pm-TZs" firstAttribute="centerX" secondItem="GRN-PS-4wa" secondAttribute="centerX" id="cWo-F6-TWU"/>
+                            <constraint firstItem="HMa-Da-d7n" firstAttribute="trailing" secondItem="GRN-PS-4wa" secondAttribute="trailing" id="l1W-SV-zNS"/>
+                            <constraint firstItem="HMa-Da-d7n" firstAttribute="bottom" secondItem="FzP-pm-TZs" secondAttribute="bottom" constant="20" id="y0w-CT-GeH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HMa-Da-d7n"/>
                     </view>
                     <navigationItem key="navigationItem" id="NhQ-Sg-Ou2"/>
+                    <connections>
+                        <outlet property="webView" destination="GRN-PS-4wa" id="pI2-Jh-AUq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7CX-VY-GdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1831" y="139"/>
+            <point key="canvasLocation" x="1829.5999999999999" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>
         <image name="GradientImage" width="200" height="128"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <namedColor name="DefaultBackground">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
