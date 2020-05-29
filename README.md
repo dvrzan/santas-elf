@@ -2,7 +2,7 @@
 
 ## About Me
 
-<p align="center">
+<p>
 <img src="Documentation/Image.jpg" width="200">
 </p>
 
@@ -35,7 +35,6 @@ And here I am... Attending iOS bootcamp and taking the steps forward to become a
 In my free time I love to put my mind on ease and play some video games to relax and in the same time spend some time with my friends. I also read books sometimes. I mostly enjoy science-fiction and fantasy. I am a great fan of Harry Potter, The Witcher, and the whole LOTR lore.
 Apart from that, I love to experiment with cooking different food, go to the gym, sketch, and spend time outside exploring Toronto's amazing restaurants! 
 
-<br />
 <br />
 
 >This is a homework repository for the raywenderlich.com iOS Bootcamp.
