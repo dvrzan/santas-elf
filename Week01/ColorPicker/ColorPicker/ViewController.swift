@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     var currentGreenSaturationValue = 0
     var currentBlueBrightnessValue = 0
     
+    var maxRedHueSliderValue: Float = 255
+    var maxGreenSaturationSliderValue: Float = 255
+    var maxBlueBrightnessSliderValue: Float = 255
+    
     @IBOutlet weak var backgroundColorView: UIView!
     
     @IBOutlet weak var redHueSlider: UISlider!
@@ -36,12 +40,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         updateSliderValueLabels()
-        
     }
     
-    //MARK: - Slider Value methods
+    //MARK: - Slider value methods
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
+        roundSliderValues()
+        updateSliderValueLabels()
+    }
+    
+    func roundSliderValues() {
         let redHueRoundedValue = redHueSlider.value.rounded()
         currentRedHueValue = Int(redHueRoundedValue)
         
@@ -50,8 +58,6 @@ class ViewController: UIViewController {
         
         let blueBrightnessRoundedValue = blueBrightnessSlider.value.rounded()
         currentBlueBrightnessValue = Int(blueBrightnessRoundedValue)
-        
-        updateSliderValueLabels()
     }
     
     func updateSliderValueLabels() {
@@ -60,7 +66,7 @@ class ViewController: UIViewController {
         blueBrightnessValueLabel.text = String(currentBlueBrightnessValue)
     }
     
-    //MARK: - Alert Controller methods
+    //MARK: - Alert controller methods
     
     @IBAction func setColorButtonTapped(_ sender: UIButton) {
         showAlert()
@@ -84,19 +90,35 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    //MARK: - Background color methods
+    
     func getColor() {
         let redHueRoundedValue = redHueSlider.value.rounded()
         let greenSaturationRoundedValue = greenSaturationSlider.value.rounded()
         let blueBrightnessRoundedValue = blueBrightnessSlider.value.rounded()
         
-        let redHue = CGFloat(redHueRoundedValue / 255) //change 255 when dealing with hue value
-        let greenSaturation = CGFloat(greenSaturationRoundedValue / 255)
-        let blueBrightness = CGFloat(blueBrightnessRoundedValue / 255)
+        let redHue = CGFloat(redHueRoundedValue / maxRedHueSliderValue)
+        let greenSaturation = CGFloat(greenSaturationRoundedValue / maxGreenSaturationSliderValue)
+        let blueBrightness = CGFloat(blueBrightnessRoundedValue / maxBlueBrightnessSliderValue)
         
-        backgroundColorView.backgroundColor = UIColor(red: redHue, green: greenSaturation, blue: blueBrightness, alpha: 1.0)
+        switch maxRedHueSliderValue {
+        case 255:
+            backgroundColorView.backgroundColor = UIColor(red: redHue, green: greenSaturation, blue: blueBrightness, alpha: 1.0)
+        case 360:
+            backgroundColorView.backgroundColor = UIColor(hue: redHue, saturation: greenSaturation, brightness: blueBrightness, alpha: 1.0)
+        default:
+            break
+        }
     }
     
+    //MARK: - Reset button methods
+    
     @IBAction func resetButtonTapped(_ sender: UIButton) {
+        resetToDefaultValues()
+        updateSliderValueLabels()
+    }
+    
+    func resetToDefaultValues() {
         backgroundColorView.backgroundColor = UIColor.systemBackground
         
         currentRedHueValue = 0
@@ -106,12 +128,37 @@ class ViewController: UIViewController {
         redHueSlider.value = Float(currentRedHueValue)
         greenSaturationSlider.value = Float(currentGreenSaturationValue)
         blueBrightnessSlider.value = Float(currentBlueBrightnessValue)
-        
+    }
+    
+    //MARK: - Segmented control value methods
+    
+    @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+        changeMode()
+        resetToDefaultValues()
         updateSliderValueLabels()
     }
     
-    @IBAction func segmentedControlValueChanged(_ sender: UISegmentedControl) {
-        
+    func changeMode() {
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            redHueSlider.maximumValue = 255
+            greenSaturationSlider.maximumValue = 255
+            blueBrightnessSlider.maximumValue = 255
+            
+            redHueLabel.text = "Red"
+            greenSaturationLabel.text = "Green"
+            blueBrightnessLabel.text = "Blue"
+        case 1:
+            redHueSlider.maximumValue = 360
+            greenSaturationSlider.maximumValue = 100
+            blueBrightnessSlider.maximumValue = 100
+            
+            redHueLabel.text = "Hue"
+            greenSaturationLabel.text = "Saturation"
+            blueBrightnessLabel.text = "Brightness"
+        default:
+            break
+        }
     }
 
 }
