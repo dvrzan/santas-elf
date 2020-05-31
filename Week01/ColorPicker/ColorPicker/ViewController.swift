@@ -44,6 +44,7 @@ class ViewController: UIViewController {
     
     //MARK: - Slider value methods
     
+    // This function has all 3 sliders linked to it
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         roundSliderValues()
         updateSliderValueLabels()
