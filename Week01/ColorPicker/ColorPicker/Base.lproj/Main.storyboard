@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="dark"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -16,156 +16,206 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fOs-1D-vcJ" userLabel="Color Name View">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="132"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YdJ-SL-Q2k">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GradientImage" translatesAutoresizingMaskIntoConstraints="NO" id="hq8-Nc-LKX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="139"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INr-t8-EC7" userLabel="About Button">
-                                        <rect key="frame" x="327" y="8" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" name="DefaultBackground"/>
-                                        <state key="normal" image="info.circle" catalog="system">
-                                            <color key="titleColor" name="DefaultBackground"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="Zzi-OE-tM1" kind="presentation" modalPresentationStyle="fullScreen" id="5EC-Gy-yh8"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="hgS-75-0ov" userLabel="Name Label">
-                                        <rect key="frame" x="16" y="42" width="343" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
-                                        <color key="textColor" name="DefaultBackground"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fJ2-Ad-Txs" userLabel="Segmented control">
-                                        <rect key="frame" x="38" y="93" width="299" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <segments>
-                                            <segment title="RGB"/>
-                                            <segment title="HSB"/>
-                                        </segments>
-                                        <color key="selectedSegmentTintColor" name="SegmentSelectedTint"/>
-                                        <connections>
-                                            <action selector="segmentedControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mPO-nY-x6u"/>
-                                        </connections>
-                                    </segmentedControl>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHL-rG-fox" userLabel="Background View">
-                                <rect key="frame" x="0.0" y="140" width="375" height="527"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="fBD-Dm-xRI" userLabel="R/H Slider">
-                                        <rect key="frame" x="28" y="113" width="274" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="thumbTintColor" name="ThumbTint"/>
-                                        <connections>
-                                            <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="jUU-x7-Nan"/>
-                                        </connections>
-                                    </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwC-Rz-koA" userLabel="R/H Label">
-                                        <rect key="frame" x="30" y="84" width="270" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="255" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IZ-Xp-2Cg" userLabel="R/H Number Label">
-                                        <rect key="frame" x="323" y="118" width="38" height="18"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="wKG-lO-3zH" userLabel="G/S Slider">
-                                        <rect key="frame" x="28" y="200" width="274" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="thumbTintColor" name="ThumbTint"/>
-                                        <connections>
-                                            <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="pjx-Ek-j1s"/>
-                                        </connections>
-                                    </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfC-Eg-uLv" userLabel="G/S Label">
-                                        <rect key="frame" x="30" y="171" width="270" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="255" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTG-5h-nru" userLabel="G/S Number Label">
-                                        <rect key="frame" x="323" y="205" width="38" height="18"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="SNM-QB-Npa" userLabel="B/B Slider">
-                                        <rect key="frame" x="28" y="290" width="274" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="thumbTintColor" name="ThumbTint"/>
-                                        <connections>
-                                            <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="sCB-R6-MSZ"/>
-                                        </connections>
-                                    </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqP-i3-Hvi" userLabel="B/B Label">
-                                        <rect key="frame" x="30" y="261" width="270" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="255" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhR-96-GK5" userLabel="B/B Number Label">
-                                        <rect key="frame" x="323" y="295" width="38" height="18"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kda-58-8sH" userLabel="Reset Button">
-                                        <rect key="frame" x="30" y="439" width="150" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOs-1D-vcJ" userLabel="Color Name View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GradientImage" translatesAutoresizingMaskIntoConstraints="NO" id="hq8-Nc-LKX">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INr-t8-EC7" userLabel="About Button">
+                                                <rect key="frame" x="335" y="5" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="Ypp-ay-Dbs"/>
+                                                    <constraint firstAttribute="width" secondItem="INr-t8-EC7" secondAttribute="height" multiplier="1:1" id="kDL-gb-JXl"/>
+                                                </constraints>
+                                                <color key="tintColor" name="DefaultBackground"/>
+                                                <state key="normal" image="info.circle" catalog="system">
+                                                    <color key="titleColor" name="DefaultBackground"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Zzi-OE-tM1" kind="presentation" modalPresentationStyle="fullScreen" id="5EC-Gy-yh8"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Awesome Color Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="hgS-75-0ov" userLabel="Name Label">
+                                                <rect key="frame" x="10" y="53.5" width="355" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                                <color key="textColor" name="DefaultBackground"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fJ2-Ad-Txs" userLabel="Segmented control">
+                                                <rect key="frame" x="62.5" y="126" width="250" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="sfq-qT-H7q"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="RGB"/>
+                                                    <segment title="HSB"/>
+                                                </segments>
+                                                <color key="selectedSegmentTintColor" name="SegmentSelectedTint"/>
+                                                <connections>
+                                                    <action selector="segmentedControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="mPO-nY-x6u"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="hq8-Nc-LKX" secondAttribute="trailing" id="E3k-50-2hP"/>
+                                            <constraint firstItem="hq8-Nc-LKX" firstAttribute="top" secondItem="fOs-1D-vcJ" secondAttribute="top" id="G5d-ki-J3Y"/>
+                                            <constraint firstItem="hgS-75-0ov" firstAttribute="centerX" secondItem="fOs-1D-vcJ" secondAttribute="centerX" id="Oix-UD-ZGq"/>
+                                            <constraint firstItem="hq8-Nc-LKX" firstAttribute="leading" secondItem="fOs-1D-vcJ" secondAttribute="leading" id="SCh-sF-jfs"/>
+                                            <constraint firstItem="INr-t8-EC7" firstAttribute="top" secondItem="fOs-1D-vcJ" secondAttribute="top" constant="5" id="TTd-Tv-szy"/>
+                                            <constraint firstAttribute="trailing" secondItem="INr-t8-EC7" secondAttribute="trailing" constant="5" id="UNb-Ml-EXT"/>
+                                            <constraint firstAttribute="bottom" secondItem="fJ2-Ad-Txs" secondAttribute="bottom" constant="10" id="grz-qe-cG5"/>
+                                            <constraint firstAttribute="bottom" secondItem="hq8-Nc-LKX" secondAttribute="bottom" id="i7a-IO-d5t"/>
+                                            <constraint firstItem="hgS-75-0ov" firstAttribute="centerY" secondItem="fOs-1D-vcJ" secondAttribute="centerY" constant="-15" id="jgp-ut-9Jl"/>
+                                            <constraint firstItem="fJ2-Ad-Txs" firstAttribute="centerX" secondItem="fOs-1D-vcJ" secondAttribute="centerX" id="myP-1q-oT2"/>
+                                            <constraint firstItem="hgS-75-0ov" firstAttribute="leading" secondItem="fOs-1D-vcJ" secondAttribute="leading" constant="10" id="ypH-gJ-VUx"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pHL-rG-fox" userLabel="Background View">
+                                        <rect key="frame" x="0.0" y="167" width="375" height="500"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="R0a-KW-TRn">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nix-44-FcJ" userLabel="Sliders View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
+                                                        <subviews>
+                                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="fBD-Dm-xRI" userLabel="R/H Slider">
+                                                                <rect key="frame" x="18" y="49" width="274" height="30"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="thumbTintColor" name="ThumbTint"/>
+                                                                <connections>
+                                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="jUU-x7-Nan"/>
+                                                                </connections>
+                                                            </slider>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwC-Rz-koA" userLabel="R/H Label">
+                                                                <rect key="frame" x="20" y="20" width="270" height="21"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="255" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IZ-Xp-2Cg" userLabel="R/H Number Label">
+                                                                <rect key="frame" x="313" y="54" width="38" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="wKG-lO-3zH" userLabel="G/S Slider">
+                                                                <rect key="frame" x="18" y="136" width="274" height="30"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="thumbTintColor" name="ThumbTint"/>
+                                                                <connections>
+                                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="pjx-Ek-j1s"/>
+                                                                </connections>
+                                                            </slider>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfC-Eg-uLv" userLabel="G/S Label">
+                                                                <rect key="frame" x="20" y="107" width="270" height="21"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="255" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTG-5h-nru" userLabel="G/S Number Label">
+                                                                <rect key="frame" x="313" y="141" width="38" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="SNM-QB-Npa" userLabel="B/B Slider">
+                                                                <rect key="frame" x="18" y="226" width="274" height="30"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="thumbTintColor" name="ThumbTint"/>
+                                                                <connections>
+                                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="sCB-R6-MSZ"/>
+                                                                </connections>
+                                                            </slider>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqP-i3-Hvi" userLabel="B/B Label">
+                                                                <rect key="frame" x="20" y="197" width="270" height="21"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="255" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhR-96-GK5" userLabel="B/B Number Label">
+                                                                <rect key="frame" x="313" y="231" width="38" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAL-Tg-fv3">
+                                                        <rect key="frame" x="0.0" y="329" width="375" height="171"/>
+                                                        <subviews>
+                                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kda-58-8sH" userLabel="Reset Button">
+                                                                <rect key="frame" x="20" y="20" width="150" height="37"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" name="DefaultBackground"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                <state key="normal" title="Reset">
+                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="18"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zgy-I2-CHq"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-xP-fz8" userLabel="Set Color Button">
+                                                                <rect key="frame" x="191" y="20" width="150" height="37"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                                <state key="normal" title="Set Color" backgroundImage="GradientImage">
+                                                                    <color key="titleColor" name="DefaultBackground"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="18"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="setColorButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s37-WB-Dmm"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                        </subviews>
                                         <color key="backgroundColor" name="DefaultBackground"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <state key="normal" title="Reset">
-                                            <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="18"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zgy-I2-CHq"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-xP-fz8" userLabel="Set Color Button">
-                                        <rect key="frame" x="201" y="439" width="150" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                        <state key="normal" title="Set Color" backgroundImage="GradientImage">
-                                            <color key="titleColor" name="DefaultBackground"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="18"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="setColorButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s37-WB-Dmm"/>
-                                        </connections>
-                                    </button>
+                                        <constraints>
+                                            <constraint firstItem="R0a-KW-TRn" firstAttribute="top" secondItem="pHL-rG-fox" secondAttribute="top" id="Eqi-ZI-JG1"/>
+                                            <constraint firstItem="R0a-KW-TRn" firstAttribute="leading" secondItem="pHL-rG-fox" secondAttribute="leading" id="NTw-9j-5N9"/>
+                                            <constraint firstAttribute="trailing" secondItem="R0a-KW-TRn" secondAttribute="trailing" id="OVY-yc-aAl"/>
+                                            <constraint firstAttribute="bottom" secondItem="R0a-KW-TRn" secondAttribute="bottom" id="azO-C2-9ne"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" name="DefaultBackground"/>
-                            </view>
+                                <constraints>
+                                    <constraint firstItem="pHL-rG-fox" firstAttribute="height" secondItem="fOs-1D-vcJ" secondAttribute="height" multiplier="3" id="beA-QB-5iI"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YdJ-SL-Q2k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3wX-uZ-0ha"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YdJ-SL-Q2k" secondAttribute="bottom" id="Ajz-sJ-G05"/>
+                            <constraint firstItem="YdJ-SL-Q2k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="buL-Fp-Qu2"/>
+                            <constraint firstItem="YdJ-SL-Q2k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yQE-3X-8Q9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Mzo-jL-Hkd"/>
@@ -228,7 +278,7 @@
                         <constraints>
                             <constraint firstItem="GRN-PS-4wa" firstAttribute="top" secondItem="HMa-Da-d7n" secondAttribute="top" id="AUc-kO-krQ"/>
                             <constraint firstItem="FzP-pm-TZs" firstAttribute="top" secondItem="GRN-PS-4wa" secondAttribute="bottom" constant="10" id="N5b-gk-lWz"/>
-                            <constraint firstItem="FzP-pm-TZs" firstAttribute="leading" secondItem="HMa-Da-d7n" secondAttribute="leading" constant="112" id="Pui-xe-EdG"/>
+                            <constraint firstItem="FzP-pm-TZs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HMa-Da-d7n" secondAttribute="leading" constant="112" id="Pui-xe-EdG"/>
                             <constraint firstItem="GRN-PS-4wa" firstAttribute="leading" secondItem="HMa-Da-d7n" secondAttribute="leading" id="U7U-ma-eA0"/>
                             <constraint firstItem="FzP-pm-TZs" firstAttribute="centerX" secondItem="GRN-PS-4wa" secondAttribute="centerX" id="cWo-F6-TWU"/>
                             <constraint firstItem="HMa-Da-d7n" firstAttribute="trailing" secondItem="GRN-PS-4wa" secondAttribute="trailing" id="l1W-SV-zNS"/>
