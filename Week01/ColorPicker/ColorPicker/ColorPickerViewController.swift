@@ -18,9 +18,6 @@ class ColorPickerViewController: UIViewController {
     var maxGreenSaturationSliderValue: Float = 255
     var maxBlueBrightnessSliderValue: Float = 255
     
-    @IBOutlet weak var darkModeButton: UIButton!
-    var stylePreference: UIUserInterfaceStyle
-    
     @IBOutlet weak var backgroundColorView: UIView!
     
     @IBOutlet weak var redHueSlider: UISlider!
@@ -33,6 +30,8 @@ class ColorPickerViewController: UIViewController {
     @IBOutlet weak var greenSaturationLabel: UILabel!
     @IBOutlet weak var blueBrightnessLabel: UILabel!
     
+    @IBOutlet var contrastLabels: [UILabel]!
+    
     @IBOutlet weak var redHueValueLabel: UILabel!
     @IBOutlet weak var greenSaturationValueLabel: UILabel!
     @IBOutlet weak var blueBrightnessValueLabel: UILabel!
@@ -42,28 +41,7 @@ class ColorPickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        overrideUserInterfaceStyle = .light
-        
         updateSliderValueLabels()
-    }
-    
-    //MARK: - Style Preference
-    
-    @IBAction func darkModeButtonPressed(_ sender: UIButton) {
-        updateStyle()
-    }
-    
-    func updateStyle() {
-        switch overrideUserInterfaceStyle {
-        case .light:
-            overrideUserInterfaceStyle = .dark
-            stylePreference = .dark
-        case .dark:
-            overrideUserInterfaceStyle = .light
-            stylePreference = .light
-        default:
-            break
-        }
     }
     
     //MARK: - Slider value methods
@@ -104,7 +82,8 @@ class ColorPickerViewController: UIViewController {
         let action = UIAlertAction(title: "Set", style: .default, handler: {
             action in
             self.getColor()
-            self.colorNameLabel.text = textField.text
+            self.changeLabelColors()
+            self.colorNameLabel.text = textField.text == "" ? "My Color" : textField.text
         })
         
         alert.addAction(action)
@@ -135,6 +114,13 @@ class ColorPickerViewController: UIViewController {
             break
         }
     }
+
+    func changeLabelColors() {
+        for label in contrastLabels {
+            label.textColor = backgroundColorView.backgroundColor?.isDarkColor == true ? .white : .black
+        }
+    }
+    
     
     //MARK: - Reset button methods
     

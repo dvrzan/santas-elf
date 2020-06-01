@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		732F333E24818FB6007C1E51 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732F333D24818FB6007C1E51 /* AboutViewController.swift */; };
 		732F3342248193C9007C1E51 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732F3341248193C9007C1E51 /* WebKit.framework */; };
+		7350305A24855B36009777A5 /* UIColor+BackgroundContrast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7350305924855B36009777A5 /* UIColor+BackgroundContrast.swift */; };
 		735DBCF624816C7A00445AA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DBCF524816C7A00445AA9 /* AppDelegate.swift */; };
 		735DBCF824816C7A00445AA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DBCF724816C7A00445AA9 /* SceneDelegate.swift */; };
-		735DBCFA24816C7A00445AA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DBCF924816C7A00445AA9 /* ViewController.swift */; };
+		735DBCFA24816C7A00445AA9 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735DBCF924816C7A00445AA9 /* ColorPickerViewController.swift */; };
 		735DBCFD24816C7A00445AA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735DBCFB24816C7A00445AA9 /* Main.storyboard */; };
 		735DBCFF24816C8000445AA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 735DBCFE24816C8000445AA9 /* Assets.xcassets */; };
 		735DBD0224816C8000445AA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735DBD0024816C8000445AA9 /* LaunchScreen.storyboard */; };
@@ -20,10 +21,11 @@
 /* Begin PBXFileReference section */
 		732F333D24818FB6007C1E51 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		732F3341248193C9007C1E51 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		7350305924855B36009777A5 /* UIColor+BackgroundContrast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+BackgroundContrast.swift"; sourceTree = "<group>"; };
 		735DBCF224816C7A00445AA9 /* ColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		735DBCF524816C7A00445AA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		735DBCF724816C7A00445AA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		735DBCF924816C7A00445AA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		735DBCF924816C7A00445AA9 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		735DBCFC24816C7A00445AA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		735DBCFE24816C8000445AA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		735DBD0124816C8000445AA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,8 +74,9 @@
 			children = (
 				735DBCF524816C7A00445AA9 /* AppDelegate.swift */,
 				735DBCF724816C7A00445AA9 /* SceneDelegate.swift */,
-				735DBCF924816C7A00445AA9 /* ViewController.swift */,
+				735DBCF924816C7A00445AA9 /* ColorPickerViewController.swift */,
 				732F333D24818FB6007C1E51 /* AboutViewController.swift */,
+				7350305924855B36009777A5 /* UIColor+BackgroundContrast.swift */,
 				735DBCFB24816C7A00445AA9 /* Main.storyboard */,
 				735DBCFE24816C8000445AA9 /* Assets.xcassets */,
 				735DBD0024816C8000445AA9 /* LaunchScreen.storyboard */,
@@ -153,8 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				735DBCFA24816C7A00445AA9 /* ViewController.swift in Sources */,
+				735DBCFA24816C7A00445AA9 /* ColorPickerViewController.swift in Sources */,
 				735DBCF624816C7A00445AA9 /* AppDelegate.swift in Sources */,
+				7350305A24855B36009777A5 /* UIColor+BackgroundContrast.swift in Sources */,
 				732F333E24818FB6007C1E51 /* AboutViewController.swift in Sources */,
 				735DBCF824816C7A00445AA9 /* SceneDelegate.swift in Sources */,
 			);
