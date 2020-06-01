@@ -52,6 +52,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		73503060248565CD009777A5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7350305924855B36009777A5 /* UIColor+BackgroundContrast.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		73503061248565DB009777A5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				735DBCF924816C7A00445AA9 /* ColorPickerViewController.swift */,
+				732F333D24818FB6007C1E51 /* AboutViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		735DBCE924816C7A00445AA9 = {
 			isa = PBXGroup;
 			children = (
@@ -72,11 +89,10 @@
 		735DBCF424816C7A00445AA9 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
+				73503061248565DB009777A5 /* Controllers */,
+				73503060248565CD009777A5 /* Extensions */,
 				735DBCF524816C7A00445AA9 /* AppDelegate.swift */,
 				735DBCF724816C7A00445AA9 /* SceneDelegate.swift */,
-				735DBCF924816C7A00445AA9 /* ColorPickerViewController.swift */,
-				732F333D24818FB6007C1E51 /* AboutViewController.swift */,
-				7350305924855B36009777A5 /* UIColor+BackgroundContrast.swift */,
 				735DBCFB24816C7A00445AA9 /* Main.storyboard */,
 				735DBCFE24816C8000445AA9 /* Assets.xcassets */,
 				735DBD0024816C8000445AA9 /* LaunchScreen.storyboard */,
