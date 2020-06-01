@@ -130,7 +130,11 @@ class ColorPickerViewController: UIViewController {
     }
     
     func resetToDefaultValues() {
-        backgroundColorView.backgroundColor = UIColor.systemBackground
+        backgroundColorView.backgroundColor = UIColor(named: "DefaultBackground")
+        
+        for label in contrastLabels {
+            label.textColor = UIColor.label
+        }
         
         currentRedHueValue = 0
         currentBlueBrightnessValue = 0

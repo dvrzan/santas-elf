@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Change label color to contrast background color for visibility
 extension UIColor {
     var isDarkColor: Bool {
         var r, g, b, a : CGFloat
