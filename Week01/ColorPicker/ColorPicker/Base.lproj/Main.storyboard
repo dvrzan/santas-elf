@@ -79,11 +79,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pHL-rG-fox" userLabel="Background View">
                                         <rect key="frame" x="0.0" y="167" width="375" height="500"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="R0a-KW-TRn">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="R0a-KW-TRn">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nix-44-FcJ" userLabel="Sliders View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="348.5"/>
                                                         <subviews>
                                                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="fBD-Dm-xRI" userLabel="R/H Slider">
                                                                 <rect key="frame" x="18" y="49" width="274" height="30"/>
@@ -153,43 +153,79 @@
                                                             </label>
                                                         </subviews>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAL-Tg-fv3">
-                                                        <rect key="frame" x="0.0" y="329" width="375" height="171"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAL-Tg-fv3" userLabel="Buttons View">
+                                                        <rect key="frame" x="0.0" y="348.5" width="375" height="151.5"/>
                                                         <subviews>
-                                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kda-58-8sH" userLabel="Reset Button">
-                                                                <rect key="frame" x="20" y="20" width="150" height="37"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <color key="backgroundColor" name="DefaultBackground"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                                <state key="normal" title="Reset">
-                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                                </state>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                        <integer key="value" value="18"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zgy-I2-CHq"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-xP-fz8" userLabel="Set Color Button">
-                                                                <rect key="frame" x="191" y="20" width="150" height="37"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                                <state key="normal" title="Set Color" backgroundImage="GradientImage">
-                                                                    <color key="titleColor" name="DefaultBackground"/>
-                                                                </state>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                        <integer key="value" value="18"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                                <connections>
-                                                                    <action selector="setColorButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s37-WB-Dmm"/>
-                                                                </connections>
-                                                            </button>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sqo-0v-Q6X">
+                                                                <rect key="frame" x="40" y="23" width="295" height="105.5"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ae1-7i-72A">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="142.5" height="105.5"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kda-58-8sH" userLabel="Reset Button">
+                                                                                <rect key="frame" x="10" y="34" width="122.5" height="37"/>
+                                                                                <color key="backgroundColor" name="DefaultBackground"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="37" id="zzq-m7-4c0"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                                <state key="normal" title="Reset">
+                                                                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                                </state>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                        <integer key="value" value="18"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zgy-I2-CHq"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstItem="Kda-58-8sH" firstAttribute="leading" secondItem="Ae1-7i-72A" secondAttribute="leading" constant="10" id="8rT-2b-qPA"/>
+                                                                            <constraint firstItem="Kda-58-8sH" firstAttribute="centerY" secondItem="Ae1-7i-72A" secondAttribute="centerY" id="Ske-1K-DVz"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="Kda-58-8sH" secondAttribute="trailing" constant="10" id="pez-K4-Qc1"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4C-rH-KLU">
+                                                                        <rect key="frame" x="152.5" y="0.0" width="142.5" height="105.5"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-xP-fz8" userLabel="Set Color Button">
+                                                                                <rect key="frame" x="10" y="34" width="122.5" height="37"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="37" id="6cv-Si-e3O"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                                                <state key="normal" title="Set Color" backgroundImage="GradientImage">
+                                                                                    <color key="titleColor" name="DefaultBackground"/>
+                                                                                </state>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                        <integer key="value" value="18"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                                <connections>
+                                                                                    <action selector="setColorButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s37-WB-Dmm"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="trailing" secondItem="g0n-xP-fz8" secondAttribute="trailing" constant="10" id="2Sp-3y-liU"/>
+                                                                            <constraint firstItem="g0n-xP-fz8" firstAttribute="leading" secondItem="Y4C-rH-KLU" secondAttribute="leading" constant="10" id="LU1-vm-uYT"/>
+                                                                            <constraint firstItem="g0n-xP-fz8" firstAttribute="centerY" secondItem="Y4C-rH-KLU" secondAttribute="centerY" id="Lzc-SG-p8r"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </stackView>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="sqo-0v-Q6X" secondAttribute="bottom" constant="23" id="0kF-OF-0uI"/>
+                                                            <constraint firstAttribute="trailing" secondItem="sqo-0v-Q6X" secondAttribute="trailing" constant="40" id="OUV-9n-gdT"/>
+                                                            <constraint firstItem="sqo-0v-Q6X" firstAttribute="top" secondItem="vAL-Tg-fv3" secondAttribute="top" constant="23" id="oaT-L3-4MR"/>
+                                                            <constraint firstItem="sqo-0v-Q6X" firstAttribute="leading" secondItem="vAL-Tg-fv3" secondAttribute="leading" constant="40" id="yK9-pf-P99"/>
+                                                        </constraints>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
