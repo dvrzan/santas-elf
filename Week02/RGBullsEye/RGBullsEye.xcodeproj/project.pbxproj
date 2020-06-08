@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		181A114F22AD925B003EA9CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181A114E22AD925B003EA9CF /* LaunchScreen.storyboard */; };
+		73C82860248E976A00AF161B /* UIColor+RGBInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C8285F248E976A00AF161B /* UIColor+RGBInit.swift */; };
+		73C82863248E989600AF161B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C82862248E989600AF161B /* Constants.swift */; };
 		CDCB57E51BED8F4800003224 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB57E41BED8F4800003224 /* AppDelegate.swift */; };
 		CDCB57E71BED8F4800003224 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCB57E61BED8F4800003224 /* ViewController.swift */; };
 		CDCB57EA1BED8F4800003224 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCB57E81BED8F4800003224 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		181A114E22AD925B003EA9CF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		73C8285F248E976A00AF161B /* UIColor+RGBInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGBInit.swift"; sourceTree = "<group>"; };
+		73C82862248E989600AF161B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CDCB57E11BED8F4800003224 /* RGBullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGBullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCB57E41BED8F4800003224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDCB57E61BED8F4800003224 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				CDCB57F61BED941D00003224 /* BullsEyeGame.swift */,
+				CDCB57F71BED941D00003224 /* RGB.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -69,6 +74,23 @@
 				CDCB57E61BED8F4800003224 /* ViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		73C82861248E977000AF161B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				73C8285F248E976A00AF161B /* UIColor+RGBInit.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		73C82864248E9A8B00AF161B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CDCB57E81BED8F4800003224 /* Main.storyboard */,
+				181A114E22AD925B003EA9CF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		CDCB57D81BED8F4800003224 = {
@@ -90,12 +112,12 @@
 		CDCB57E31BED8F4800003224 /* RGBullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				73C82862248E989600AF161B /* Constants.swift */,
 				735907D6248D4E6F00B4DBC7 /* Controllers */,
 				735907D5248D4E6300B4DBC7 /* Models */,
+				73C82864248E9A8B00AF161B /* Storyboards */,
+				73C82861248E977000AF161B /* Extensions */,
 				CDCB57E41BED8F4800003224 /* AppDelegate.swift */,
-				CDCB57F71BED941D00003224 /* RGB.swift */,
-				CDCB57E81BED8F4800003224 /* Main.storyboard */,
-				181A114E22AD925B003EA9CF /* LaunchScreen.storyboard */,
 				CDCB57EB1BED8F4800003224 /* Assets.xcassets */,
 				CDCB57F01BED8F4800003224 /* Info.plist */,
 			);
@@ -178,6 +200,8 @@
 				CDCB57E71BED8F4800003224 /* ViewController.swift in Sources */,
 				CDCB57E51BED8F4800003224 /* AppDelegate.swift in Sources */,
 				CDCB57F81BED941D00003224 /* BullsEyeGame.swift in Sources */,
+				73C82860248E976A00AF161B /* UIColor+RGBInit.swift in Sources */,
+				73C82863248E989600AF161B /* Constants.swift in Sources */,
 				CDCB57FB1BED986300003224 /* AboutViewController.swift in Sources */,
 				CDCB57F91BED941D00003224 /* RGB.swift in Sources */,
 			);

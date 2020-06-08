@@ -38,8 +38,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
-    let game = BullsEyeGame(currentValue: RGB(r: 0, g: 0, b: 0), targetValue: RGB(r: 0, g: 0, b: 0), score: 0, round: 0)
+    let game = BullsEyeGame(currentValue: RGB(), targetValue: RGB(), score: 0, round: 0)
     var rgb = RGB()
+    
+    var quickDiff: [Int] {
+        return [abs(game.targetValue.r - game.currentValue.r),
+                abs(game.targetValue.g - game.currentValue.g),
+                abs(game.targetValue.b - game.currentValue.b)]
+    }
+    
+    func hint() {
+        redSlider.minimumTrackTintColor = UIColor.blue.withAlphaComponent(CGFloat(quickDiff[0])/100.0)
+        greenSlider.minimumTrackTintColor = UIColor.blue.withAlphaComponent(CGFloat(quickDiff[1])/100.0)
+        blueSlider.minimumTrackTintColor = UIColor.blue.withAlphaComponent(CGFloat(quickDiff[2])/100.0)
+    }
     
     @IBAction func aSliderMoved(sender: UISlider) {
         let redRoundedValue = redSlider.value.rounded()
@@ -53,6 +65,7 @@ class ViewController: UIViewController {
         
         game.currentValue = RGB(r: redValue, g: greenValue, b: blueValue)
         updateView()
+        hint()
     }
     
     @IBAction func showAlert(sender: AnyObject) {
@@ -78,14 +91,16 @@ class ViewController: UIViewController {
     
     func startNewRound() {
         game.startNewRound()
-        redSlider.value = 128
-        blueSlider.value = 128
-        greenSlider.value = 128
+        redSlider.value = K.rgbMiddleValue
+        blueSlider.value = K.rgbMiddleValue
+        greenSlider.value = K.rgbMiddleValue
         targetTextLabel.text = "Match this new color!"
         updateView()
     }
     
     func updateView() {
+        hint()
+        
         redLabel.text = String(Int(redSlider.value))
         blueLabel.text = String(Int(blueSlider.value))
         greenLabel.text = String(Int(greenSlider.value))

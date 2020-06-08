@@ -21,16 +21,6 @@
  */
 
 import Foundation
-import UIKit
-
-extension UIColor {
-    convenience init(rgbStruct rgb: RGB) {
-        let r = CGFloat(rgb.r) / 255.0
-        let g = CGFloat(rgb.g) / 255.0
-        let b = CGFloat(rgb.b) / 255.0
-        self.init(red: r, green: g, blue: b, alpha:1.0)
-    }
-}
 
 struct RGB {
     var r = 127
