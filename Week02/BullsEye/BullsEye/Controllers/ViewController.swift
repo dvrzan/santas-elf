@@ -20,9 +20,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        currentValueToInt()
+        startNewGame()
+    }
+    
+    func currentValueToInt() {
         let roundedValue = slider.value.rounded()
         game.currentValue = Int(roundedValue)
-        startNewGame()
     }
     
     @IBAction func showAlert() {
@@ -41,8 +45,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sliderMoved(_ slider: UISlider) {
-        let roundedValue = slider.value.rounded()
-        game.currentValue = Int(roundedValue)
+       currentValueToInt()
     }
     
     func startNewRound() {
