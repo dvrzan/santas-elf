@@ -12,16 +12,37 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var currentGuessTextField: UITextField!
     @IBOutlet weak var targetValueSlider: UISlider!
-    @IBOutlet weak var hitMeButton: UIButton!
+    @IBOutlet weak var hitMeButton: UIButton! {
+        didSet {
+            hitMeButton.layer.cornerRadius = 17
+        }
+    }
     
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    
+    @IBOutlet weak var hintBubbleImageView: UIImageView!
+    
+    var currentValue: Int {
+        if let currentValue = Int(currentGuessTextField.text!) {
+            game.currentValue = currentValue
+            return currentValue
+        }
+        return 0
+    }
+    
+    var quickDiff: Int {
+        return abs(game.targetValue - currentValue)
+    }
     
     let game = BullsEyeGame(currentValue: 0, targetValue: 0, score: 0, round: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        currentGuessTextField.delegate = self
+        
+        hintBubbleImageView.tintColor = .white
         hitMeButton.isEnabled = false
         targetValueSlider.isUserInteractionEnabled = false
         
@@ -53,6 +74,7 @@ class ViewController: UIViewController {
             game.currentValue = currentValue
         }
         updateViewInfo()
+        hitMeButton.isEnabled = false
     }
     
     func updateViewInfo() {
@@ -71,6 +93,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func currentGuessTextFieldEditingDidChange(_ sender: UITextField) {
+        changeHintBubbleTintColor()
         if let userInput = sender.text, userInput.isValidInput == false {
             return hitMeButton.isEnabled = false
         } else {
@@ -95,6 +118,22 @@ class ViewController: UIViewController {
         let roundedValue = targetValueSlider.value.rounded()
         game.currentValue = Int(roundedValue)
     }
+    
+    func changeHintBubbleTintColor() {
+        hintBubbleImageView.tintColor = UIColor.blue.withAlphaComponent(CGFloat(quickDiff)/100.0)
+    }
 
 }
 
+extension ViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        changeHintBubbleTintColor()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        currentGuessTextField.text = ""
+        hintBubbleImageView.tintColor = .white
+    }
+    
+}
