@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
     
-    let game = BullsEyeGame(currentValue: 0, targetValue: 0, score: 0, round: 0)
+    var game = BullsEyeGame()
     
     var quickDiff: Int {
         return abs(game.targetValue - game.currentValue)

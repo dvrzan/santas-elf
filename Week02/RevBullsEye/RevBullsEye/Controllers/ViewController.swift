@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         return abs(game.targetValue - currentValue)
     }
     
-    let game = BullsEyeGame(currentValue: 0, targetValue: 0, score: 0, round: 0)
+    var game = BullsEyeGame()
 
     override func viewDidLoad() {
         super.viewDidLoad()

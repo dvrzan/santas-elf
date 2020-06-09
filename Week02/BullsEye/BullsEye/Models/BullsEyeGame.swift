@@ -8,21 +8,14 @@
 
 import Foundation
 
-class BullsEyeGame {
+struct BullsEyeGame {
     
-    var currentValue: Int
-    var targetValue: Int
-    var score: Int
-    var round: Int
+    var currentValue = 0
+    var targetValue = 0
+    var score = 0
+    var round = 0
     
-    init(currentValue: Int, targetValue: Int, score: Int, round: Int) {
-        self.currentValue = currentValue
-        self.targetValue = targetValue
-        self.score = score
-        self.round = round
-    }
-    
-    func calculatePoints() -> (String, String) {
+    mutating func calculatePoints() -> (String, String) {
         let difference = abs(targetValue - currentValue)
         var points = 100 - difference
         
@@ -48,13 +41,13 @@ class BullsEyeGame {
         return (title, message)
     }
     
-    func startNewGame() {
+    mutating func startNewGame() {
         score = 0
         round = 0
         startNewRound()
     }
     
-    func startNewRound() {
+    mutating func startNewRound() {
         round += 1
         targetValue = Int.random(in: 1...100)
     }

@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
-    let game = BullsEyeGame(currentValue: RGB(), targetValue: RGB(), score: 0, round: 0)
+    var game = BullsEyeGame()
     var rgb = RGB()
     
     var quickDiff: [Int] {
