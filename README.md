@@ -9,7 +9,6 @@
 <br />
 
 * Name: **Danijela Vrzan**
-* Discord Username: **Amonete#7126**
 * Discord Server Nickname: **TS: Danijela**
 * Current Location: **Toronto, Canada**
 * Home Country: **Croatia**
