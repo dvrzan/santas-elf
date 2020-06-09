@@ -17,11 +17,20 @@ class ViewController: UIViewController {
     
     let game = BullsEyeGame(currentValue: 0, targetValue: 0, score: 0, round: 0)
     
+    var quickDiff: Int {
+        return abs(game.targetValue - game.currentValue)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         currentValueToInt()
+        showHint()
         startNewGame()
+    }
+    
+    func showHint() {
+        slider.minimumTrackTintColor = UIColor.blue.withAlphaComponent(CGFloat(quickDiff)/100.0)
     }
     
     func currentValueToInt() {
@@ -46,6 +55,7 @@ class ViewController: UIViewController {
     
     @IBAction func sliderMoved(_ slider: UISlider) {
        currentValueToInt()
+        showHint()
     }
     
     func startNewRound() {
@@ -59,6 +69,7 @@ class ViewController: UIViewController {
         scoreLabel.text = String(game.score)
         roundLabel.text = String(game.round)
         slider.value = Float(game.currentValue)
+        showHint()
     }
     
     @IBAction func startNewGame() {
