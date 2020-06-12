@@ -42,9 +42,12 @@ class HomeViewController: UIViewController{
   @IBOutlet weak var view2TextLabel: UILabel!
   @IBOutlet weak var view3TextLabel: UILabel!
   @IBOutlet weak var themeSwitch: UISwitch!
+  
+  let cryptoData = DataGenerator.shared.generateData()
     
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     setupViews()
     setupLabels()
     setView1Data()
@@ -93,13 +96,32 @@ class HomeViewController: UIViewController{
     view2TextLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
   }
   
+  // Display a comma separated list of every currency you own
   func setView1Data() {
+    view1TextLabel.text = cryptoData?.reduce("") { (result, currency) in
+      result + currency.name + ", "
+    }
+    view1TextLabel.text?.removeLast(2)
   }
   
+  // Display a comma separated list of every currency which increased from its previous value
   func setView2Data() {
+    view2TextLabel.text = cryptoData?.filter {
+      $0.currentValue > $0.previousValue
+    }.reduce("") { (result, currency) in
+      result + currency.name + ", "
+    }
+    view2TextLabel.text?.removeLast(2)
   }
   
+  // Display a comma separated list of every currency which decreased from its previous value
   func setView3Data() {
+    view3TextLabel.text = cryptoData?.filter {
+      $0.currentValue < $0.previousValue
+    }.reduce("") { (result, currency) in
+      result + currency.name + ", "
+    }
+    view3TextLabel.text?.removeLast(2)
   }
   
   @IBAction func switchPressed(_ sender: Any) {

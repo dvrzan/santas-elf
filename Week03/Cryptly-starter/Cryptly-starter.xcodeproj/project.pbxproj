@@ -68,10 +68,10 @@
 		185CB1FA23C78CE6009F7571 /* Cryptly-starter */ = {
 			isa = PBXGroup;
 			children = (
-				A1F9E0552492697800323226 /* ThemeManager */,
-				A1F9E0542492696200323226 /* Data */,
 				185CB1FB23C78CE6009F7571 /* AppDelegate.swift */,
 				185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */,
+				A1F9E0552492697800323226 /* ThemeManager */,
+				A1F9E0542492696200323226 /* Data */,
 				A1F9E048249267DB00323226 /* HomeViewController.swift */,
 				185CB20123C78CE6009F7571 /* Main.storyboard */,
 				A1F9E04E249268D200323226 /* Model.swift */,
