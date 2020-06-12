@@ -39,6 +39,4 @@ struct CryptoCurrency: Codable {
   var currentValue: Double
   var previousValue: Double
   
-  
-  
 }
