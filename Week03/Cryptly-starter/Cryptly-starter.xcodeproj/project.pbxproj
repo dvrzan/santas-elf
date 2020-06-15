@@ -13,7 +13,6 @@
 		185CB20323C78CE6009F7571 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185CB20123C78CE6009F7571 /* Main.storyboard */; };
 		185CB20523C78CE8009F7571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185CB20423C78CE8009F7571 /* Assets.xcassets */; };
 		7322E45E2497BA1100A4DD69 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322E45D2497BA1100A4DD69 /* WidgetView.swift */; };
-		7322E4612497C45000A4DD69 /* HomeVC+Themable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322E4602497C45000A4DD69 /* HomeVC+Themable.swift */; };
 		A1F9E049249267DB00323226 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9E048249267DB00323226 /* HomeViewController.swift */; };
 		A1F9E04B2492688C00323226 /* DataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9E04A2492688C00323226 /* DataGenerator.swift */; };
 		A1F9E04D249268A300323226 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = A1F9E04C249268A300323226 /* Data.json */; };
@@ -31,7 +30,6 @@
 		185CB20423C78CE8009F7571 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		185CB20923C78CE8009F7571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7322E45D2497BA1100A4DD69 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
-		7322E4602497C45000A4DD69 /* HomeVC+Themable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Themable.swift"; sourceTree = "<group>"; };
 		A1F9E048249267DB00323226 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A1F9E04A2492688C00323226 /* DataGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGenerator.swift; sourceTree = "<group>"; };
 		A1F9E04C249268A300323226 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 				7322E4592497B77100A4DD69 /* Models */,
 				7322E45C2497B91C00A4DD69 /* Views */,
 				7322E45B2497B7B600A4DD69 /* Controllers */,
-				7322E45F2497C42700A4DD69 /* Extensions */,
 				A1F9E0552492697800323226 /* ThemeManager */,
 				7322E45A2497B78200A4DD69 /* Storyboards */,
 				185CB20423C78CE8009F7571 /* Assets.xcassets */,
@@ -118,14 +115,6 @@
 				7322E45D2497BA1100A4DD69 /* WidgetView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		7322E45F2497C42700A4DD69 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				7322E4602497C45000A4DD69 /* HomeVC+Themable.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A1F9E0542492696200323226 /* Data */ = {
@@ -242,7 +231,6 @@
 				A1F9E04F249268D200323226 /* Model.swift in Sources */,
 				185CB1FC23C78CE6009F7571 /* AppDelegate.swift in Sources */,
 				7322E45E2497BA1100A4DD69 /* WidgetView.swift in Sources */,
-				7322E4612497C45000A4DD69 /* HomeVC+Themable.swift in Sources */,
 				185CB1FE23C78CE6009F7571 /* SceneDelegate.swift in Sources */,
 				A1F9E049249267DB00323226 /* HomeViewController.swift in Sources */,
 				A1F9E04B2492688C00323226 /* DataGenerator.swift in Sources */,

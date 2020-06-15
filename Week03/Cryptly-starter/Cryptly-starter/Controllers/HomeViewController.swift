@@ -121,3 +121,29 @@ class HomeViewController: UIViewController{
     }
   }
 }
+
+extension HomeViewController: Themable {
+  func registerForTheme() {
+    NotificationCenter.default.addObserver(self, selector: #selector(themeChanged), name: Notification.Name.init("themeChanged"), object: nil)
+  }
+  
+  func unregisterforTheme() {
+    NotificationCenter.default.removeObserver(self)
+  }
+  
+  @objc func themeChanged() {
+    widgetViews.forEach {
+      $0.backgroundColor = ThemeManager.shared.currentTheme?.widgetBackgroundColor
+      $0.layer.borderColor = ThemeManager.shared.currentTheme?.borderColor.cgColor
+    }
+    titleLabels.forEach {
+      $0.textColor = ThemeManager.shared.currentTheme?.textColor
+    }
+    view1TextLabel.textColor = ThemeManager.shared.currentTheme?.textColor
+    view2TextLabel.textColor = ThemeManager.shared.currentTheme?.textColor
+    view3TextLabel.textColor = ThemeManager.shared.currentTheme?.textColor
+    
+    headingLabel.textColor = ThemeManager.shared.currentTheme?.textColor
+    view.backgroundColor = ThemeManager.shared.currentTheme?.backgroundColor
+  }
+}

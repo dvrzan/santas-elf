@@ -32,25 +32,34 @@
 
 import UIKit
 
-class WidgetView: UIView {
-  override init(frame: CGRect) {
-    super.init(frame: frame)
-    setupView()
+protocol Roundable: UIView {
+  var cornerRadius: CGFloat { get set }
+  func round(by radius: CGFloat)
+}
+
+extension Roundable {
+  func round(by radius: CGFloat) {
+    cornerRadius = radius
   }
+}
+
+class WidgetView: UIView, Roundable {
+  var cornerRadius: CGFloat = 20
   
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)!
     setupView()
   }
-
+  
   func setupView() {
-      backgroundColor = .systemGray6
-      layer.borderColor = UIColor.lightGray.cgColor
-      layer.borderWidth = 1.0
-      layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-      layer.shadowOffset = CGSize(width: 0, height: 2)
-      layer.shadowRadius = 4
-      layer.shadowOpacity = 0.8
+    layer.cornerRadius = cornerRadius
+    backgroundColor = .systemGray6
+    layer.borderColor = UIColor.lightGray.cgColor
+    layer.borderWidth = 1.0
+    layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
+    layer.shadowOffset = CGSize(width: 0, height: 2)
+    layer.shadowRadius = 4
+    layer.shadowOpacity = 0.8
   }
-
+  
 }
