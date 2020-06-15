@@ -60,6 +60,7 @@ class HomeViewController: UIViewController{
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     registerForTheme()
+    ThemeManager.shared.set(theme: LightTheme())
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -143,7 +144,7 @@ extension HomeViewController: Themable {
     view2TextLabel.textColor = ThemeManager.shared.currentTheme?.textColor
     view3TextLabel.textColor = ThemeManager.shared.currentTheme?.textColor
     
-    headingLabel.textColor = ThemeManager.shared.currentTheme?.textColor
+    headingLabel.textColor = ThemeManager.shared.currentTheme?.widgetBackgroundColor
     view.backgroundColor = ThemeManager.shared.currentTheme?.backgroundColor
   }
 }
