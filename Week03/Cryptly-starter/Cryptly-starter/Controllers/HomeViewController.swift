@@ -39,16 +39,22 @@ class HomeViewController: UIViewController{
   @IBOutlet weak var view1TextLabel: UILabel!
   @IBOutlet weak var view2TextLabel: UILabel!
   @IBOutlet weak var view3TextLabel: UILabel!
+  
+  @IBOutlet var titleLabels: [UILabel]!
+  @IBOutlet weak var mostFallingCurrencyLabel: UILabel!
+  @IBOutlet weak var mostRisingCurrencyLabel: UILabel!
+  
   @IBOutlet weak var themeSwitch: UISwitch!
 
   let cryptoData = DataGenerator.shared.generateData()
-    
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setupLabels()
     setView1Data()
     setView2Data()
     setView3Data()
+    getMostFallingAndRisingCurrency()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -65,6 +71,9 @@ class HomeViewController: UIViewController{
     headingLabel.font = UIFont.systemFont(ofSize: 20, weight: .medium)
     view1TextLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
     view2TextLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+    
+    mostFallingCurrencyLabel.textColor = .systemRed
+    mostRisingCurrencyLabel.textColor = .systemGreen
   }
   
   // Display a comma separated list of every currency you own
@@ -93,6 +102,14 @@ class HomeViewController: UIViewController{
       result + currency.name + ", "
     }
     view3TextLabel.text?.removeLast(2)
+  }
+  
+  func getMostFallingAndRisingCurrency() {
+    guard let cryptoData = cryptoData else { return }
+    let valueRiseArray = cryptoData.map { $0.valueRise }
+    
+    mostRisingCurrencyLabel.text = String(valueRiseArray.max() ?? 0)
+    mostFallingCurrencyLabel.text = String(valueRiseArray.min() ?? 0)
   }
   
   @IBAction func switchPressed(_ sender: Any) {

@@ -34,13 +34,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CryptoCurrencies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrp-g0-HX2">
-                                <rect key="frame" x="20" y="128" width="374" height="21"/>
+                                <rect key="frame" x="20" y="127.99999999999999" width="374" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oo-MW-3FZ" userLabel="View1" customClass="WidgetView" customModule="Cryptly_starter" customModuleProvider="target">
-                                <rect key="frame" x="20" y="189" width="374" height="120"/>
+                                <rect key="frame" x="20" y="188.33333333333334" width="374" height="120.00000000000003"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pP-O3-GIK">
                                         <rect key="frame" x="20" y="20" width="334" height="80"/>
@@ -59,7 +59,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DpI-h7-D97" userLabel="View2" customClass="WidgetView" customModule="Cryptly_starter" customModuleProvider="target">
-                                <rect key="frame" x="20" y="329" width="374" height="120"/>
+                                <rect key="frame" x="20" y="328.33333333333331" width="374" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPy-T8-YB9">
                                         <rect key="frame" x="20" y="20" width="334" height="80"/>
@@ -78,7 +78,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNM-6D-sSb" userLabel="View3" customClass="WidgetView" customModule="Cryptly_starter" customModuleProvider="target">
-                                <rect key="frame" x="20" y="469" width="374" height="120"/>
+                                <rect key="frame" x="20" y="468.33333333333326" width="374" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCh-Bb-EWS">
                                         <rect key="frame" x="20" y="20" width="334" height="80"/>
@@ -96,6 +96,72 @@
                                     <constraint firstItem="UCh-Bb-EWS" firstAttribute="top" secondItem="DNM-6D-sSb" secondAttribute="top" constant="20" id="yJk-b2-7eV"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1xh-cv-qY2">
+                                <rect key="frame" x="20" y="608.33333333333337" width="374" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVw-RJ-LdW" userLabel="FallingView" customClass="WidgetView" customModule="Cryptly_starter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="120"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oVZ-5a-2vZ">
+                                                <rect key="frame" x="10" y="10" width="157" height="100"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Falling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a36-B8-Fnv">
+                                                        <rect key="frame" x="32.666666666666664" y="0.0" width="91.666666666666686" height="46"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqx-t7-VEA" userLabel="Falling Currency Label">
+                                                        <rect key="frame" x="57.666666666666671" y="54" width="41.666666666666671" height="46"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="oVZ-5a-2vZ" secondAttribute="bottom" constant="10" id="6Eg-yU-Rmb"/>
+                                            <constraint firstAttribute="trailing" secondItem="oVZ-5a-2vZ" secondAttribute="trailing" constant="10" id="CWD-8Q-iG4"/>
+                                            <constraint firstItem="oVZ-5a-2vZ" firstAttribute="top" secondItem="NVw-RJ-LdW" secondAttribute="top" constant="10" id="YYe-6q-aPj"/>
+                                            <constraint firstItem="oVZ-5a-2vZ" firstAttribute="leading" secondItem="NVw-RJ-LdW" secondAttribute="leading" constant="10" id="a5h-HC-caG"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNV-pT-Mqb" userLabel="RisingView" customClass="WidgetView" customModule="Cryptly_starter" customModuleProvider="target">
+                                        <rect key="frame" x="197" y="0.0" width="177" height="120"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hss-zB-Bat">
+                                                <rect key="frame" x="10" y="10" width="157" height="100"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Rising" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSH-sV-teh">
+                                                        <rect key="frame" x="33.999999999999993" y="0.0" width="89.333333333333314" height="46"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmA-EA-ShD" userLabel="Rising Currency Label">
+                                                        <rect key="frame" x="57.666666666666686" y="54" width="41.666666666666657" height="46"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="hss-zB-Bat" secondAttribute="trailing" constant="10" id="AIT-n9-TDO"/>
+                                            <constraint firstItem="hss-zB-Bat" firstAttribute="top" secondItem="fNV-pT-Mqb" secondAttribute="top" constant="10" id="PUw-o0-anq"/>
+                                            <constraint firstItem="hss-zB-Bat" firstAttribute="leading" secondItem="fNV-pT-Mqb" secondAttribute="leading" constant="10" id="RKx-ET-Bvc"/>
+                                            <constraint firstAttribute="bottom" secondItem="hss-zB-Bat" secondAttribute="bottom" constant="10" id="Ubf-Xg-eeF"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="AbS-aE-ct2"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -103,14 +169,17 @@
                             <constraint firstItem="zrp-g0-HX2" firstAttribute="leading" secondItem="mvF-6T-uLm" secondAttribute="leading" constant="20" id="BgQ-lJ-slU"/>
                             <constraint firstItem="4oo-MW-3FZ" firstAttribute="leading" secondItem="mvF-6T-uLm" secondAttribute="leading" constant="20" id="GvF-pu-eyv"/>
                             <constraint firstItem="Fco-UW-GoN" firstAttribute="trailing" secondItem="DNM-6D-sSb" secondAttribute="trailing" constant="20" id="I1I-JT-7up"/>
+                            <constraint firstItem="Fco-UW-GoN" firstAttribute="trailing" secondItem="1xh-cv-qY2" secondAttribute="trailing" constant="20" id="JVM-ud-10c"/>
                             <constraint firstItem="Fco-UW-GoN" firstAttribute="trailing" secondItem="4oo-MW-3FZ" secondAttribute="trailing" constant="20" id="MxD-dP-hsS"/>
                             <constraint firstItem="Fco-UW-GoN" firstAttribute="trailing" secondItem="DpI-h7-D97" secondAttribute="trailing" constant="20" id="RFO-t4-BUV"/>
                             <constraint firstItem="Fco-UW-GoN" firstAttribute="trailing" secondItem="zrp-g0-HX2" secondAttribute="trailing" constant="20" id="Vzo-W1-7AZ"/>
+                            <constraint firstItem="1xh-cv-qY2" firstAttribute="leading" secondItem="mvF-6T-uLm" secondAttribute="leading" constant="20" id="dGF-rX-T2V"/>
                             <constraint firstItem="DNM-6D-sSb" firstAttribute="leading" secondItem="mvF-6T-uLm" secondAttribute="leading" constant="20" id="e8x-Td-nAc"/>
                             <constraint firstItem="DpI-h7-D97" firstAttribute="top" secondItem="4oo-MW-3FZ" secondAttribute="bottom" constant="20" id="g2p-cS-0t7"/>
                             <constraint firstItem="zrp-g0-HX2" firstAttribute="top" secondItem="Fco-UW-GoN" secondAttribute="top" constant="40" id="g3g-yP-sVY"/>
                             <constraint firstItem="4oo-MW-3FZ" firstAttribute="top" secondItem="zrp-g0-HX2" secondAttribute="bottom" constant="40" id="it9-nc-0c9"/>
                             <constraint firstItem="DNM-6D-sSb" firstAttribute="top" secondItem="DpI-h7-D97" secondAttribute="bottom" constant="20" id="mig-iG-dA2"/>
+                            <constraint firstItem="1xh-cv-qY2" firstAttribute="top" secondItem="DNM-6D-sSb" secondAttribute="bottom" constant="20" id="qWn-Yf-Pu2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fco-UW-GoN"/>
                     </view>
@@ -127,6 +196,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="headingLabel" destination="zrp-g0-HX2" id="CEx-vX-zmI"/>
+                        <outlet property="mostFallingCurrencyLabel" destination="Bqx-t7-VEA" id="trd-ci-wx7"/>
+                        <outlet property="mostRisingCurrencyLabel" destination="fmA-EA-ShD" id="trb-M8-pY8"/>
                         <outlet property="themeSwitch" destination="kW6-Ms-UCP" id="Vpv-W6-XtS"/>
                         <outlet property="view1TextLabel" destination="2pP-O3-GIK" id="L2m-KB-P6Q"/>
                         <outlet property="view2TextLabel" destination="tPy-T8-YB9" id="VJN-xd-312"/>
@@ -134,11 +205,15 @@
                         <outletCollection property="widgetViews" destination="4oo-MW-3FZ" collectionClass="NSMutableArray" id="Ymz-6y-2yJ"/>
                         <outletCollection property="widgetViews" destination="DpI-h7-D97" collectionClass="NSMutableArray" id="22y-8L-CB6"/>
                         <outletCollection property="widgetViews" destination="DNM-6D-sSb" collectionClass="NSMutableArray" id="kvm-kR-BwR"/>
+                        <outletCollection property="widgetViews" destination="NVw-RJ-LdW" collectionClass="NSMutableArray" id="5yg-xb-mh4"/>
+                        <outletCollection property="widgetViews" destination="fNV-pT-Mqb" collectionClass="NSMutableArray" id="KUJ-Mh-vxx"/>
+                        <outletCollection property="titleLabels" destination="a36-B8-Fnv" collectionClass="NSMutableArray" id="7dC-1y-8iJ"/>
+                        <outletCollection property="titleLabels" destination="DSH-sV-teh" collectionClass="NSMutableArray" id="NaE-Lh-qfq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szC-q4-zjU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1439" y="38"/>
+            <point key="canvasLocation" x="1437.68115942029" y="37.5"/>
         </scene>
     </scenes>
 </document>

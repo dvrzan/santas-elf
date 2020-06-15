@@ -39,4 +39,19 @@ struct CryptoCurrency: Codable {
   var currentValue: Double
   var previousValue: Double
   
+  var valueRise: Float {
+    return Float(currentValue - previousValue)
+  }
+  
+  // I don't know what to do with this Trend enum. I have no clue how to hook it up with the rest of the code...
+  // I got it to work without it. Why do I need it then?
+  enum Trend: Int, Codable {
+     case rising
+     case falling
+   }
+
+  var trend: Trend {
+    valueRise > 0 ? .rising : .falling
+  }
+  
 }
