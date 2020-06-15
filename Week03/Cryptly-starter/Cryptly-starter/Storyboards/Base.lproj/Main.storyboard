@@ -128,12 +128,12 @@
                     <connections>
                         <outlet property="headingLabel" destination="zrp-g0-HX2" id="CEx-vX-zmI"/>
                         <outlet property="themeSwitch" destination="kW6-Ms-UCP" id="Vpv-W6-XtS"/>
-                        <outlet property="view1" destination="4oo-MW-3FZ" id="7mY-sa-8ZH"/>
                         <outlet property="view1TextLabel" destination="2pP-O3-GIK" id="L2m-KB-P6Q"/>
-                        <outlet property="view2" destination="DpI-h7-D97" id="Y0z-cT-8qw"/>
                         <outlet property="view2TextLabel" destination="tPy-T8-YB9" id="VJN-xd-312"/>
-                        <outlet property="view3" destination="DNM-6D-sSb" id="vA8-mC-2c7"/>
                         <outlet property="view3TextLabel" destination="UCh-Bb-EWS" id="8RB-Dk-G3v"/>
+                        <outletCollection property="widgetViews" destination="4oo-MW-3FZ" collectionClass="NSMutableArray" id="Ymz-6y-2yJ"/>
+                        <outletCollection property="widgetViews" destination="DpI-h7-D97" collectionClass="NSMutableArray" id="22y-8L-CB6"/>
+                        <outletCollection property="widgetViews" destination="DNM-6D-sSb" collectionClass="NSMutableArray" id="kvm-kR-BwR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szC-q4-zjU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
