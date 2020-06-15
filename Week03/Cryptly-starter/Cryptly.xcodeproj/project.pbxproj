@@ -23,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		180DC61423C78D9800486B1A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		185CB1F823C78CE6009F7571 /* Cryptly-starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cryptly-starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		185CB1F823C78CE6009F7571 /* Cryptly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185CB1FB23C78CE6009F7571 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		185CB20223C78CE6009F7571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		185CB1EF23C78CE6009F7571 = {
 			isa = PBXGroup;
 			children = (
-				185CB1FA23C78CE6009F7571 /* Cryptly-starter */,
+				185CB1FA23C78CE6009F7571 /* Cryptly */,
 				185CB1F923C78CE6009F7571 /* Products */,
 			);
 			indentWidth = 2;
@@ -62,12 +62,12 @@
 		185CB1F923C78CE6009F7571 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				185CB1F823C78CE6009F7571 /* Cryptly-starter.app */,
+				185CB1F823C78CE6009F7571 /* Cryptly.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		185CB1FA23C78CE6009F7571 /* Cryptly-starter */ = {
+		185CB1FA23C78CE6009F7571 /* Cryptly */ = {
 			isa = PBXGroup;
 			children = (
 				185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */,
@@ -81,7 +81,7 @@
 				185CB20423C78CE8009F7571 /* Assets.xcassets */,
 				185CB20923C78CE8009F7571 /* Info.plist */,
 			);
-			path = "Cryptly-starter";
+			path = Cryptly;
 			sourceTree = "<group>";
 		};
 		7322E4592497B77100A4DD69 /* Models */ = {
@@ -138,9 +138,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		185CB1F723C78CE6009F7571 /* Cryptly-starter */ = {
+		185CB1F723C78CE6009F7571 /* Cryptly */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 185CB20C23C78CE8009F7571 /* Build configuration list for PBXNativeTarget "Cryptly-starter" */;
+			buildConfigurationList = 185CB20C23C78CE8009F7571 /* Build configuration list for PBXNativeTarget "Cryptly" */;
 			buildPhases = (
 				181FE31E248EA70400A180EA /* ShellScript */,
 				185CB1F423C78CE6009F7571 /* Sources */,
@@ -151,9 +151,9 @@
 			);
 			dependencies = (
 			);
-			name = "Cryptly-starter";
+			name = Cryptly;
 			productName = "Cryptly-starter";
-			productReference = 185CB1F823C78CE6009F7571 /* Cryptly-starter.app */;
+			productReference = 185CB1F823C78CE6009F7571 /* Cryptly.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -171,7 +171,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "Cryptly-starter" */;
+			buildConfigurationList = 185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "Cryptly" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -184,7 +184,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				185CB1F723C78CE6009F7571 /* Cryptly-starter */,
+				185CB1F723C78CE6009F7571 /* Cryptly */,
 			);
 		};
 /* End PBXProject section */
@@ -372,15 +372,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Cryptly-starter/Info.plist";
+				INFOPLIST_FILE = Cryptly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.raywenderlich.Cryptly-starter";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.Cryptly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -389,22 +389,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Cryptly-starter/Info.plist";
+				INFOPLIST_FILE = Cryptly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.raywenderlich.Cryptly-starter";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.Cryptly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "Cryptly-starter" */ = {
+		185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "Cryptly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				185CB20A23C78CE8009F7571 /* Debug */,
@@ -413,7 +413,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		185CB20C23C78CE8009F7571 /* Build configuration list for PBXNativeTarget "Cryptly-starter" */ = {
+		185CB20C23C78CE8009F7571 /* Build configuration list for PBXNativeTarget "Cryptly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				185CB20D23C78CE8009F7571 /* Debug */,

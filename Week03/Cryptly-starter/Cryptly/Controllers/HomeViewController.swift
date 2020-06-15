@@ -69,7 +69,7 @@ class HomeViewController: UIViewController{
   }
   
   func setupLabels() {
-    headingLabel.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+    headingLabel.font = UIFont.systemFont(ofSize: 22, weight: .medium)
     view1TextLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
     view2TextLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
     
