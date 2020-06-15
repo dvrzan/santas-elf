@@ -42,12 +42,9 @@ class HomeViewController: UIViewController{
   @IBOutlet weak var themeSwitch: UISwitch!
 
   let cryptoData = DataGenerator.shared.generateData()
-  let widgetView = WidgetView()
     
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    widgetView.setupView(for: widgetViews)
     setupLabels()
     setView1Data()
     setView2Data()

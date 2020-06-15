@@ -32,18 +32,25 @@
 
 import UIKit
 
-struct WidgetView {
+class WidgetView: UIView {
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    setupView()
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)!
+    setupView()
+  }
 
-  func setupView(for view: [UIView]) {
-    view.forEach { (view) in
-      view.backgroundColor = .systemGray6
-      view.layer.borderColor = UIColor.lightGray.cgColor
-      view.layer.borderWidth = 1.0
-      view.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-      view.layer.shadowOffset = CGSize(width: 0, height: 2)
-      view.layer.shadowRadius = 4
-      view.layer.shadowOpacity = 0.8
-    }
+  func setupView() {
+      backgroundColor = .systemGray6
+      layer.borderColor = UIColor.lightGray.cgColor
+      layer.borderWidth = 1.0
+      layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
+      layer.shadowOffset = CGSize(width: 0, height: 2)
+      layer.shadowRadius = 4
+      layer.shadowOpacity = 0.8
   }
 
 }

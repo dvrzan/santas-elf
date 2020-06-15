@@ -39,7 +39,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oo-MW-3FZ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oo-MW-3FZ" userLabel="View1" customClass="WidgetView" customModule="Cryptly_starter" customModuleProvider="target">
                                 <rect key="frame" x="20" y="189" width="374" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pP-O3-GIK">
@@ -58,7 +58,7 @@
                                     <constraint firstAttribute="trailing" secondItem="2pP-O3-GIK" secondAttribute="trailing" constant="20" id="sqv-6S-XbB"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DpI-h7-D97">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DpI-h7-D97" userLabel="View2" customClass="WidgetView" customModule="Cryptly_starter" customModuleProvider="target">
                                 <rect key="frame" x="20" y="329" width="374" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPy-T8-YB9">
@@ -77,7 +77,7 @@
                                     <constraint firstItem="tPy-T8-YB9" firstAttribute="leading" secondItem="DpI-h7-D97" secondAttribute="leading" constant="20" id="mZE-Af-Pi5"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNM-6D-sSb">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNM-6D-sSb" userLabel="View3" customClass="WidgetView" customModule="Cryptly_starter" customModuleProvider="target">
                                 <rect key="frame" x="20" y="469" width="374" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCh-Bb-EWS">

@@ -42,9 +42,9 @@ extension HomeViewController: Themable {
   }
   
   @objc func themeChanged() {
-    widgetViews.forEach { (view) in
-      view.backgroundColor = ThemeManager.shared.currentTheme?.widgetBackgroundColor
-      view.layer.borderColor = ThemeManager.shared.currentTheme?.borderColor.cgColor
+    widgetViews.forEach {
+      $0.backgroundColor = ThemeManager.shared.currentTheme?.widgetBackgroundColor
+      $0.layer.borderColor = ThemeManager.shared.currentTheme?.borderColor.cgColor
     }
     
     view1TextLabel.textColor = ThemeManager.shared.currentTheme?.textColor
