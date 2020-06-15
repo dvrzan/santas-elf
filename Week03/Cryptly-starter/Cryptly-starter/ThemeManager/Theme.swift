@@ -33,7 +33,7 @@
 import UIKit
 
 protocol Theme {
-  var backgroundColor: UIColor {get}
+  var backgroundColor: UIColor { get }
   var textColor: UIColor { get }
   var borderColor: UIColor { get }
   var widgetBackgroundColor: UIColor { get }
