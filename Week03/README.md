@@ -15,15 +15,11 @@ The third view lists all the cryptocurrencies whose current value has decreased 
 
 The last two views are showing currencies' values that have been rising or falling the most.
 
-## Concepts used
+## Concepts learned
 
-* MVC Design Pattern
-* Custom View class
-* Protocols and Extensions
-* get and set current theme using NotificationCenter
-* JSON parsing using Codable
-* Higher order functions: map( ), reduce( ), filter( )
-* Getters and setters
+<p align="center">
+<img src="Documentation/Week03Concepts.png">
+</p>
 
 <br />
    

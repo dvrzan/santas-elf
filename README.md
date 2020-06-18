@@ -36,7 +36,34 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 
 <br />
 
->This is a homework repository for the raywenderlich.com iOS Bootcamp.
+## iOS Bootcamp Curriculum
+
+### Week 01 
+#### Course
+[Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
+#### Homework
+[Week 01 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week01)
+***
+### Week 02
+#### Course
+[Programming in Swift: Fundamentals](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
+#### Homework
+[Week 02 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week02)
+***
+### Week 03
+#### Course
+[Programming in Swift: Functions and Types](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
+#### Homework
+[Week 03 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week03)
+***
+### Week 04
+#### Course
+[Beginning iOS Debugging](https://www.raywenderlich.com/4681-beginning-ios-debugging)
+[Layout in iOS](https://www.raywenderlich.com/6849561-layout-in-ios)
+[Unit and UI Testing](https://www.raywenderlich.com/960290-ios-unit-testing-and-ui-testing-tutorial)
+#### Homework
+[Week 04 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week04)
+***
 
 <br />
    

@@ -2,7 +2,7 @@
 
 <br />
 
-### Struct or Class?
+### What did you decide to use for the model and why... Struct or Class?
 
 Both classes and structures are like blueprints. We lay out all properties and methods that we will use to initialize an actual object once we run our app.
 
@@ -14,6 +14,12 @@ If I decided to add another feature to the game, for example - more game levels,
 I initially created a class. However, I decided to use a struct. It is also an Apple's recommened way of storing data and modeling behaviour. 
 
 In this simple example, there might not be a wrong answer. Both class and struct would work the same.
+
+## Concepts learned
+
+<p align="center">
+<img src="Documentation/Week02Concepts.png">
+</p>
 
 <br />
    

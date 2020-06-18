@@ -17,13 +17,11 @@ If you don't like what you see, press the Reset button and try again!
 Check the wikipedia page from inside your app to learn more about the RGB color model.
 
 
-## Concepts used
+## Concepts learned
 
-* Dark mode conformance
-* Labels contrast the current background color
-* About RGB View using WebKit
-* UISegmentedControl
-* UIAlertController with textField
+<p align="center">
+<img src="Documentation/Week01Concepts.png">
+</p>
 
 <br />
    

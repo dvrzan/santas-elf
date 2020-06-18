@@ -74,13 +74,13 @@
 		185CB1FA23C78CE6009F7571 /* Cryptly */ = {
 			isa = PBXGroup;
 			children = (
-				7346E874249BB6E100B32807 /* Extensions */,
 				185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */,
 				185CB1FB23C78CE6009F7571 /* AppDelegate.swift */,
 				7322E4592497B77100A4DD69 /* Models */,
 				7322E45C2497B91C00A4DD69 /* Views */,
 				7322E45B2497B7B600A4DD69 /* Controllers */,
 				7346E871249BA7EC00B32807 /* Managers */,
+				7346E874249BB6E100B32807 /* Extensions */,
 				A1F9E0542492696200323226 /* Data */,
 				7322E45A2497B78200A4DD69 /* Storyboards */,
 				185CB20423C78CE8009F7571 /* Assets.xcassets */,
