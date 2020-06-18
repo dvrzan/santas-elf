@@ -58,9 +58,9 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 ***
 ### Week 04
 #### Course
-[Beginning iOS Debugging](https://www.raywenderlich.com/4681-beginning-ios-debugging)
-[Layout in iOS](https://www.raywenderlich.com/6849561-layout-in-ios)
-[Unit and UI Testing](https://www.raywenderlich.com/960290-ios-unit-testing-and-ui-testing-tutorial)
+[Beginning iOS Debugging](https://www.raywenderlich.com/4681-beginning-ios-debugging)<br />
+[Layout in iOS](https://www.raywenderlich.com/6849561-layout-in-ios)<br />
+[Unit and UI Testing](https://www.raywenderlich.com/960290-ios-unit-testing-and-ui-testing-tutorial)<br />
 #### Homework
 [Week 04 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week04)
 ***
