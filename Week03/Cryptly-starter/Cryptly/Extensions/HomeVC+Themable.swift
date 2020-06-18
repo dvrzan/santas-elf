@@ -1,15 +1,15 @@
 /// Copyright (c) 2020 Razeware LLC
-///
+/// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
 /// in the Software without restriction, including without limitation the rights
 /// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 /// copies of the Software, and to permit persons to whom the Software is
 /// furnished to do so, subject to the following conditions:
-///
+/// 
 /// The above copyright notice and this permission notice shall be included in
 /// all copies or substantial portions of the Software.
-///
+/// 
 /// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
 /// distribute, sublicense, create a derivative work, and/or sell copies of the
 /// Software in any work that is designed, intended, or marketed for pedagogical or
@@ -17,7 +17,7 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
-///
+/// 
 /// This project and source code may use libraries or frameworks that are
 /// released under various Open-Source licenses. Use of those libraries and
 /// frameworks are governed by their own individual licenses.
@@ -32,26 +32,28 @@
 
 import Foundation
 
-struct CryptoCurrency: Codable {
-  
-  let name: String
-  let symbol: String
-  var currentValue: Double
-  var previousValue: Double
-  
-  var valueRise: Float {
-    return Float(currentValue - previousValue)
+extension HomeViewController: Themable {
+  func registerForTheme() {
+    NotificationCenter.default.addObserver(self, selector: #selector(themeChanged), name: Notification.Name.init("themeChanged"), object: nil)
   }
   
-  // I don't know what to do with this Trend enum. I have no clue how to hook it up with the rest of the code...
-  // I got it to work without it. Why do I need it then?
-  enum Trend: Int, Codable {
-     case rising
-     case falling
-   }
-
-  var trend: Trend {
-    valueRise > 0 ? .rising : .falling
+  func unregisterforTheme() {
+    NotificationCenter.default.removeObserver(self)
   }
   
+  @objc func themeChanged() {
+    widgetViews.forEach {
+      $0.backgroundColor = ThemeManager.shared.currentTheme?.widgetBackgroundColor
+      $0.layer.borderColor = ThemeManager.shared.currentTheme?.borderColor.cgColor
+    }
+    titleLabels.forEach {
+      $0.textColor = ThemeManager.shared.currentTheme?.textColor
+    }
+    view1TextLabel.textColor = ThemeManager.shared.currentTheme?.textColor
+    view2TextLabel.textColor = ThemeManager.shared.currentTheme?.textColor
+    view3TextLabel.textColor = ThemeManager.shared.currentTheme?.textColor
+    
+    headingLabel.textColor = ThemeManager.shared.currentTheme?.widgetBackgroundColor
+    view.backgroundColor = ThemeManager.shared.currentTheme?.backgroundColor
+  }
 }

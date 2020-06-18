@@ -46,7 +46,7 @@ class HomeViewController: UIViewController{
   
   @IBOutlet weak var themeSwitch: UISwitch!
 
-  let cryptoData = DataGenerator.shared.generateData()
+  let dataManager = DataManager.shared
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -79,38 +79,25 @@ class HomeViewController: UIViewController{
   
   // Display a comma separated list of every currency you own
   func setView1Data() {
-    view1TextLabel.text = cryptoData?.reduce("") { (result, currency) in
-      result + currency.name + ", "
-    }
+    view1TextLabel.text = dataManager.allCurrencies
     view1TextLabel.text?.removeLast(2)
   }
   
   // Display a comma separated list of every currency which increased from its previous value
   func setView2Data() {
-    view2TextLabel.text = cryptoData?.filter {
-      $0.currentValue > $0.previousValue
-    }.reduce("") { (result, currency) in
-      result + currency.name + ", "
-    }
+    view2TextLabel.text = dataManager.risingCurrencies
     view2TextLabel.text?.removeLast(2)
   }
   
   // Display a comma separated list of every currency which decreased from its previous value
   func setView3Data() {
-    view3TextLabel.text = cryptoData?.filter {
-      $0.currentValue < $0.previousValue
-    }.reduce("") { (result, currency) in
-      result + currency.name + ", "
-    }
+    view3TextLabel.text = dataManager.fallingCurrencies
     view3TextLabel.text?.removeLast(2)
   }
   
   func getMostFallingAndRisingCurrency() {
-    guard let cryptoData = cryptoData else { return }
-    let valueRiseArray = cryptoData.map { $0.valueRise }
-    
-    mostRisingCurrencyLabel.text = String(valueRiseArray.max() ?? 0)
-    mostFallingCurrencyLabel.text = String(valueRiseArray.min() ?? 0)
+    mostRisingCurrencyLabel.text = dataManager.mostRisingCurrency()
+    mostFallingCurrencyLabel.text = dataManager.mostFallingCurrency()
   }
   
   @IBAction func switchPressed(_ sender: Any) {
@@ -120,31 +107,5 @@ class HomeViewController: UIViewController{
     case false:
       ThemeManager.shared.set(theme: LightTheme())
     }
-  }
-}
-
-extension HomeViewController: Themable {
-  func registerForTheme() {
-    NotificationCenter.default.addObserver(self, selector: #selector(themeChanged), name: Notification.Name.init("themeChanged"), object: nil)
-  }
-  
-  func unregisterforTheme() {
-    NotificationCenter.default.removeObserver(self)
-  }
-  
-  @objc func themeChanged() {
-    widgetViews.forEach {
-      $0.backgroundColor = ThemeManager.shared.currentTheme?.widgetBackgroundColor
-      $0.layer.borderColor = ThemeManager.shared.currentTheme?.borderColor.cgColor
-    }
-    titleLabels.forEach {
-      $0.textColor = ThemeManager.shared.currentTheme?.textColor
-    }
-    view1TextLabel.textColor = ThemeManager.shared.currentTheme?.textColor
-    view2TextLabel.textColor = ThemeManager.shared.currentTheme?.textColor
-    view3TextLabel.textColor = ThemeManager.shared.currentTheme?.textColor
-    
-    headingLabel.textColor = ThemeManager.shared.currentTheme?.widgetBackgroundColor
-    view.backgroundColor = ThemeManager.shared.currentTheme?.backgroundColor
   }
 }

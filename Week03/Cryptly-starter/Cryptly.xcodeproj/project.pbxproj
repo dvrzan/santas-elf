@@ -13,10 +13,12 @@
 		185CB20323C78CE6009F7571 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185CB20123C78CE6009F7571 /* Main.storyboard */; };
 		185CB20523C78CE8009F7571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185CB20423C78CE8009F7571 /* Assets.xcassets */; };
 		7322E45E2497BA1100A4DD69 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322E45D2497BA1100A4DD69 /* WidgetView.swift */; };
+		7346E873249BA84500B32807 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346E872249BA84500B32807 /* DataManager.swift */; };
+		7346E876249BB6F400B32807 /* HomeVC+Themable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346E875249BB6F400B32807 /* HomeVC+Themable.swift */; };
 		A1F9E049249267DB00323226 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9E048249267DB00323226 /* HomeViewController.swift */; };
 		A1F9E04B2492688C00323226 /* DataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9E04A2492688C00323226 /* DataGenerator.swift */; };
 		A1F9E04D249268A300323226 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = A1F9E04C249268A300323226 /* Data.json */; };
-		A1F9E04F249268D200323226 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9E04E249268D200323226 /* Model.swift */; };
+		A1F9E04F249268D200323226 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9E04E249268D200323226 /* CryptoCurrency.swift */; };
 		A1F9E0512492690000323226 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9E0502492690000323226 /* ThemeManager.swift */; };
 		A1F9E0532492690B00323226 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9E0522492690B00323226 /* Theme.swift */; };
 /* End PBXBuildFile section */
@@ -30,10 +32,12 @@
 		185CB20423C78CE8009F7571 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		185CB20923C78CE8009F7571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7322E45D2497BA1100A4DD69 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		7346E872249BA84500B32807 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		7346E875249BB6F400B32807 /* HomeVC+Themable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Themable.swift"; sourceTree = "<group>"; };
 		A1F9E048249267DB00323226 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A1F9E04A2492688C00323226 /* DataGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGenerator.swift; sourceTree = "<group>"; };
 		A1F9E04C249268A300323226 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
-		A1F9E04E249268D200323226 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A1F9E04E249268D200323226 /* CryptoCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
 		A1F9E0502492690000323226 /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		A1F9E0522492690B00323226 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,13 +74,14 @@
 		185CB1FA23C78CE6009F7571 /* Cryptly */ = {
 			isa = PBXGroup;
 			children = (
+				7346E874249BB6E100B32807 /* Extensions */,
 				185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */,
 				185CB1FB23C78CE6009F7571 /* AppDelegate.swift */,
-				A1F9E0542492696200323226 /* Data */,
 				7322E4592497B77100A4DD69 /* Models */,
 				7322E45C2497B91C00A4DD69 /* Views */,
 				7322E45B2497B7B600A4DD69 /* Controllers */,
-				A1F9E0552492697800323226 /* ThemeManager */,
+				7346E871249BA7EC00B32807 /* Managers */,
+				A1F9E0542492696200323226 /* Data */,
 				7322E45A2497B78200A4DD69 /* Storyboards */,
 				185CB20423C78CE8009F7571 /* Assets.xcassets */,
 				185CB20923C78CE8009F7571 /* Info.plist */,
@@ -87,7 +92,7 @@
 		7322E4592497B77100A4DD69 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A1F9E04E249268D200323226 /* Model.swift */,
+				A1F9E04E249268D200323226 /* CryptoCurrency.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,6 +122,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		7346E871249BA7EC00B32807 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A1F9E0522492690B00323226 /* Theme.swift */,
+				A1F9E0502492690000323226 /* ThemeManager.swift */,
+				7346E872249BA84500B32807 /* DataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7346E874249BB6E100B32807 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7346E875249BB6F400B32807 /* HomeVC+Themable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A1F9E0542492696200323226 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,15 +147,6 @@
 				A1F9E04A2492688C00323226 /* DataGenerator.swift */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		A1F9E0552492697800323226 /* ThemeManager */ = {
-			isa = PBXGroup;
-			children = (
-				A1F9E0522492690B00323226 /* Theme.swift */,
-				A1F9E0502492690000323226 /* ThemeManager.swift */,
-			);
-			path = ThemeManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,13 +242,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1F9E04F249268D200323226 /* Model.swift in Sources */,
+				A1F9E04F249268D200323226 /* CryptoCurrency.swift in Sources */,
+				7346E876249BB6F400B32807 /* HomeVC+Themable.swift in Sources */,
 				185CB1FC23C78CE6009F7571 /* AppDelegate.swift in Sources */,
 				7322E45E2497BA1100A4DD69 /* WidgetView.swift in Sources */,
 				185CB1FE23C78CE6009F7571 /* SceneDelegate.swift in Sources */,
 				A1F9E049249267DB00323226 /* HomeViewController.swift in Sources */,
 				A1F9E04B2492688C00323226 /* DataGenerator.swift in Sources */,
 				A1F9E0512492690000323226 /* ThemeManager.swift in Sources */,
+				7346E873249BA84500B32807 /* DataManager.swift in Sources */,
 				A1F9E0532492690B00323226 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
