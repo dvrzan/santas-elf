@@ -22,22 +22,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var priceLabelRight: UILabel!
     @IBOutlet weak var roomLabelRight: UILabel!
 
-    var house1: House?
+    var house1 = House(price: "$12.000", bedrooms: "3 bedrooms")
     var house2: House?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpLeftSideUI()
         setUpRightSideUI()
-
-        house1?.price = "$12,000"
-        house1?.bedrooms = "3 bedrooms"
+        
+//        house1?.price = "$12,000"
+//        house1?.bedrooms = "3 bedrooms"
     }
 
     func setUpLeftSideUI() {
-        titleLabelLeft.text = house1!.address!
-        priceLabelLeft.text = house1!.price!
-        roomLabelLeft.text = house1!.bedrooms!
+        titleLabelLeft.text = house1.address ?? "N/A"
+        priceLabelLeft.text = house1.price ?? "N/A"
+        roomLabelLeft.text = house1.bedrooms ?? "N/A"
     }
 
     func setUpRightSideUI() {
@@ -47,9 +47,14 @@ class ViewController: UIViewController {
             priceLabelRight.alpha = 0
             roomLabelRight.alpha = 0
         } else {
-            titleLabelRight.text! = house2!.address!
-            priceLabelRight.text! = house2!.price!
-            roomLabelRight.text! = house2!.bedrooms!
+            titleLabelRight.alpha = 1
+            imageViewRight.alpha = 1
+            priceLabelRight.alpha = 1
+            roomLabelRight.alpha = 1
+            
+            titleLabelRight.text = house2?.address
+            priceLabelRight.text = house2?.price
+            roomLabelRight.text = house2?.bedrooms
         }
     }
 
@@ -76,9 +81,17 @@ class ViewController: UIViewController {
 
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:{ (UIAlertAction) in
             var house = House()
+            
+            alert.textFields?.forEach { (textField) in
+                if textField.text == "" {
+                    textField.text = "N/A"
+                }
+            }
+            
             house.address = alert.textFields?[0].text
             house.price = alert.textFields?[1].text
             house.bedrooms = alert.textFields?[2].text
+            
             self.house2 = house
             self.setUpRightSideUI()
         }))

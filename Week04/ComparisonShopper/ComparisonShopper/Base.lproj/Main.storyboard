@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,9 +54,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ejr-fP-kpV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ejr-fP-kpV">
                                 <rect key="frame" x="156" y="553" width="102" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Right Item"/>
                                 <connections>
                                     <action selector="didPressAddRightHouseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dzt-Re-ssS"/>
@@ -73,10 +72,12 @@
                         <constraints>
                             <constraint firstItem="kFM-8L-Jys" firstAttribute="width" secondItem="8cF-bQ-XH9" secondAttribute="width" id="6Hi-Mo-bLM"/>
                             <constraint firstItem="8cF-bQ-XH9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8Qd-cy-m4b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ejr-fP-kpV" secondAttribute="bottom" constant="279" id="9mT-TI-a8J"/>
                             <constraint firstItem="qR3-N9-oJU" firstAttribute="leading" secondItem="8cF-bQ-XH9" secondAttribute="trailing" constant="16" id="C11-oo-8Bv"/>
                             <constraint firstItem="kFM-8L-Jys" firstAttribute="top" secondItem="8cF-bQ-XH9" secondAttribute="bottom" constant="64" id="HcJ-dG-cza"/>
                             <constraint firstItem="eWY-yX-Vmp" firstAttribute="top" secondItem="isC-pG-JOl" secondAttribute="bottom" constant="16" id="Iwx-Cw-uYt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qR3-N9-oJU" secondAttribute="trailing" constant="16" id="NiB-T9-ipY"/>
+                            <constraint firstItem="Ejr-fP-kpV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SU4-Cf-h5L"/>
                             <constraint firstItem="isC-pG-JOl" firstAttribute="centerX" secondItem="kFM-8L-Jys" secondAttribute="centerX" id="TBK-Sg-g3w"/>
                             <constraint firstItem="273-4y-mHA" firstAttribute="centerX" secondItem="8Zs-8b-Ndd" secondAttribute="centerX" id="W6L-ft-T8m"/>
                             <constraint firstItem="kFM-8L-Jys" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZbP-bw-IYU"/>
@@ -101,6 +102,7 @@
                         <outlet property="imageViewRight" destination="6Tl-ho-9j4" id="JJb-bG-W7M"/>
                         <outlet property="priceLabelLeft" destination="isC-pG-JOl" id="mEG-tv-J4m"/>
                         <outlet property="priceLabelRight" destination="8Zs-8b-Ndd" id="duf-oQ-ZbI"/>
+                        <outlet property="roomLabelLeft" destination="eWY-yX-Vmp" id="4kA-US-iva"/>
                         <outlet property="roomLabelRight" destination="273-4y-mHA" id="Xhk-iC-AQN"/>
                         <outlet property="titleLabelLeft" destination="8cF-bQ-XH9" id="HOg-o4-mDJ"/>
                         <outlet property="titleLabelRight" destination="qR3-N9-oJU" id="Gdp-J4-v9F"/>
