@@ -25,19 +25,19 @@
 			containerPortal = C3017C342499C83A00B1E49A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C3017C3B2499C83A00B1E49A;
-			remoteInfo = "CompatibilitySlider-Start";
+			remoteInfo = "CompatibilitySlider";
 		};
 		C3017C612499C83B00B1E49A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3017C342499C83A00B1E49A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C3017C3B2499C83A00B1E49A;
-			remoteInfo = "CompatibilitySlider-Start";
+			remoteInfo = "CompatibilitySlider";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C3017C3C2499C83A00B1E49A /* CompatibilitySlider-Start.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CompatibilitySlider-Start.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3017C3C2499C83A00B1E49A /* CompatibilitySlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CompatibilitySlider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3017C3F2499C83A00B1E49A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3017C412499C83A00B1E49A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C3017C432499C83A00B1E49A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,10 +46,10 @@
 		C3017C4B2499C83B00B1E49A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3017C4E2499C83B00B1E49A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3017C502499C83B00B1E49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3017C552499C83B00B1E49A /* CompatibilitySlider-StartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CompatibilitySlider-StartTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3017C552499C83B00B1E49A /* CompatibilitySliderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CompatibilitySliderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3017C592499C83B00B1E49A /* CompatibilitySlider_StartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilitySlider_StartTests.swift; sourceTree = "<group>"; };
 		C3017C5B2499C83B00B1E49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3017C602499C83B00B1E49A /* CompatibilitySlider-StartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CompatibilitySlider-StartUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3017C602499C83B00B1E49A /* CompatibilitySliderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CompatibilitySliderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3017C642499C83B00B1E49A /* CompatibilitySlider_StartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompatibilitySlider_StartUITests.swift; sourceTree = "<group>"; };
 		C3017C662499C83B00B1E49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3017C722499C91700B1E49A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -83,9 +83,9 @@
 		C3017C332499C83A00B1E49A = {
 			isa = PBXGroup;
 			children = (
-				C3017C3E2499C83A00B1E49A /* CompatibilitySlider-Start */,
-				C3017C582499C83B00B1E49A /* CompatibilitySlider-StartTests */,
-				C3017C632499C83B00B1E49A /* CompatibilitySlider-StartUITests */,
+				C3017C3E2499C83A00B1E49A /* CompatibilitySlider */,
+				C3017C582499C83B00B1E49A /* CompatibilitySliderTests */,
+				C3017C632499C83B00B1E49A /* CompatibilitySliderUITests */,
 				C3017C3D2499C83A00B1E49A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,14 +93,14 @@
 		C3017C3D2499C83A00B1E49A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3017C3C2499C83A00B1E49A /* CompatibilitySlider-Start.app */,
-				C3017C552499C83B00B1E49A /* CompatibilitySlider-StartTests.xctest */,
-				C3017C602499C83B00B1E49A /* CompatibilitySlider-StartUITests.xctest */,
+				C3017C3C2499C83A00B1E49A /* CompatibilitySlider.app */,
+				C3017C552499C83B00B1E49A /* CompatibilitySliderTests.xctest */,
+				C3017C602499C83B00B1E49A /* CompatibilitySliderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C3017C3E2499C83A00B1E49A /* CompatibilitySlider-Start */ = {
+		C3017C3E2499C83A00B1E49A /* CompatibilitySlider */ = {
 			isa = PBXGroup;
 			children = (
 				C3017C3F2499C83A00B1E49A /* AppDelegate.swift */,
@@ -113,33 +113,33 @@
 				C3017C502499C83B00B1E49A /* Info.plist */,
 				C3017C482499C83A00B1E49A /* CompatibilitySlider_Start.xcdatamodeld */,
 			);
-			path = "CompatibilitySlider-Start";
+			path = "CompatibilitySlider";
 			sourceTree = "<group>";
 		};
-		C3017C582499C83B00B1E49A /* CompatibilitySlider-StartTests */ = {
+		C3017C582499C83B00B1E49A /* CompatibilitySliderTests */ = {
 			isa = PBXGroup;
 			children = (
 				C3017C592499C83B00B1E49A /* CompatibilitySlider_StartTests.swift */,
 				C3017C5B2499C83B00B1E49A /* Info.plist */,
 			);
-			path = "CompatibilitySlider-StartTests";
+			path = "CompatibilitySliderTests";
 			sourceTree = "<group>";
 		};
-		C3017C632499C83B00B1E49A /* CompatibilitySlider-StartUITests */ = {
+		C3017C632499C83B00B1E49A /* CompatibilitySliderUITests */ = {
 			isa = PBXGroup;
 			children = (
 				C3017C642499C83B00B1E49A /* CompatibilitySlider_StartUITests.swift */,
 				C3017C662499C83B00B1E49A /* Info.plist */,
 			);
-			path = "CompatibilitySlider-StartUITests";
+			path = "CompatibilitySliderUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C3017C3B2499C83A00B1E49A /* CompatibilitySlider-Start */ = {
+		C3017C3B2499C83A00B1E49A /* CompatibilitySlider */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3017C692499C83B00B1E49A /* Build configuration list for PBXNativeTarget "CompatibilitySlider-Start" */;
+			buildConfigurationList = C3017C692499C83B00B1E49A /* Build configuration list for PBXNativeTarget "CompatibilitySlider" */;
 			buildPhases = (
 				C3017C382499C83A00B1E49A /* Sources */,
 				C3017C392499C83A00B1E49A /* Frameworks */,
@@ -149,14 +149,14 @@
 			);
 			dependencies = (
 			);
-			name = "CompatibilitySlider-Start";
-			productName = "CompatibilitySlider-Start";
-			productReference = C3017C3C2499C83A00B1E49A /* CompatibilitySlider-Start.app */;
+			name = "CompatibilitySlider";
+			productName = "CompatibilitySlider";
+			productReference = C3017C3C2499C83A00B1E49A /* CompatibilitySlider.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C3017C542499C83B00B1E49A /* CompatibilitySlider-StartTests */ = {
+		C3017C542499C83B00B1E49A /* CompatibilitySliderTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3017C6C2499C83B00B1E49A /* Build configuration list for PBXNativeTarget "CompatibilitySlider-StartTests" */;
+			buildConfigurationList = C3017C6C2499C83B00B1E49A /* Build configuration list for PBXNativeTarget "CompatibilitySliderTests" */;
 			buildPhases = (
 				C3017C512499C83B00B1E49A /* Sources */,
 				C3017C522499C83B00B1E49A /* Frameworks */,
@@ -167,14 +167,14 @@
 			dependencies = (
 				C3017C572499C83B00B1E49A /* PBXTargetDependency */,
 			);
-			name = "CompatibilitySlider-StartTests";
-			productName = "CompatibilitySlider-StartTests";
-			productReference = C3017C552499C83B00B1E49A /* CompatibilitySlider-StartTests.xctest */;
+			name = "CompatibilitySliderTests";
+			productName = "CompatibilitySliderTests";
+			productReference = C3017C552499C83B00B1E49A /* CompatibilitySliderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C3017C5F2499C83B00B1E49A /* CompatibilitySlider-StartUITests */ = {
+		C3017C5F2499C83B00B1E49A /* CompatibilitySliderUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3017C6F2499C83B00B1E49A /* Build configuration list for PBXNativeTarget "CompatibilitySlider-StartUITests" */;
+			buildConfigurationList = C3017C6F2499C83B00B1E49A /* Build configuration list for PBXNativeTarget "CompatibilitySliderUITests" */;
 			buildPhases = (
 				C3017C5C2499C83B00B1E49A /* Sources */,
 				C3017C5D2499C83B00B1E49A /* Frameworks */,
@@ -185,9 +185,9 @@
 			dependencies = (
 				C3017C622499C83B00B1E49A /* PBXTargetDependency */,
 			);
-			name = "CompatibilitySlider-StartUITests";
-			productName = "CompatibilitySlider-StartUITests";
-			productReference = C3017C602499C83B00B1E49A /* CompatibilitySlider-StartUITests.xctest */;
+			name = "CompatibilitySliderUITests";
+			productName = "CompatibilitySliderUITests";
+			productReference = C3017C602499C83B00B1E49A /* CompatibilitySliderUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +213,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C3017C372499C83A00B1E49A /* Build configuration list for PBXProject "CompatibilitySlider-Start" */;
+			buildConfigurationList = C3017C372499C83A00B1E49A /* Build configuration list for PBXProject "CompatibilitySlider" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -226,9 +226,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C3017C3B2499C83A00B1E49A /* CompatibilitySlider-Start */,
-				C3017C542499C83B00B1E49A /* CompatibilitySlider-StartTests */,
-				C3017C5F2499C83B00B1E49A /* CompatibilitySlider-StartUITests */,
+				C3017C3B2499C83A00B1E49A /* CompatibilitySlider */,
+				C3017C542499C83B00B1E49A /* CompatibilitySliderTests */,
+				C3017C5F2499C83B00B1E49A /* CompatibilitySliderUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -294,12 +294,12 @@
 /* Begin PBXTargetDependency section */
 		C3017C572499C83B00B1E49A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C3017C3B2499C83A00B1E49A /* CompatibilitySlider-Start */;
+			target = C3017C3B2499C83A00B1E49A /* CompatibilitySlider */;
 			targetProxy = C3017C562499C83B00B1E49A /* PBXContainerItemProxy */;
 		};
 		C3017C622499C83B00B1E49A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C3017C3B2499C83A00B1E49A /* CompatibilitySlider-Start */;
+			target = C3017C3B2499C83A00B1E49A /* CompatibilitySlider */;
 			targetProxy = C3017C612499C83B00B1E49A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -444,12 +444,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A9MF56EMP8;
-				INFOPLIST_FILE = "CompatibilitySlider-Start/Info.plist";
+				INFOPLIST_FILE = "CompatibilitySlider/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.CompatibilitySlider-Start";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CompatibilitySlider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,12 +462,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A9MF56EMP8;
-				INFOPLIST_FILE = "CompatibilitySlider-Start/Info.plist";
+				INFOPLIST_FILE = "CompatibilitySlider/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.CompatibilitySlider-Start";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CompatibilitySlider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -481,18 +481,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A9MF56EMP8;
-				INFOPLIST_FILE = "CompatibilitySlider-StartTests/Info.plist";
+				INFOPLIST_FILE = "CompatibilitySliderTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.CompatibilitySlider-StartTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CompatibilitySliderTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CompatibilitySlider-Start.app/CompatibilitySlider-Start";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CompatibilitySlider.app/CompatibilitySlider";
 			};
 			name = Debug;
 		};
@@ -503,18 +503,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A9MF56EMP8;
-				INFOPLIST_FILE = "CompatibilitySlider-StartTests/Info.plist";
+				INFOPLIST_FILE = "CompatibilitySliderTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.CompatibilitySlider-StartTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CompatibilitySliderTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CompatibilitySlider-Start.app/CompatibilitySlider-Start";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CompatibilitySlider.app/CompatibilitySlider";
 			};
 			name = Release;
 		};
@@ -524,17 +524,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A9MF56EMP8;
-				INFOPLIST_FILE = "CompatibilitySlider-StartUITests/Info.plist";
+				INFOPLIST_FILE = "CompatibilitySliderUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.CompatibilitySlider-StartUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CompatibilitySliderUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "CompatibilitySlider-Start";
+				TEST_TARGET_NAME = "CompatibilitySlider";
 			};
 			name = Debug;
 		};
@@ -544,24 +544,24 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A9MF56EMP8;
-				INFOPLIST_FILE = "CompatibilitySlider-StartUITests/Info.plist";
+				INFOPLIST_FILE = "CompatibilitySliderUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.CompatibilitySlider-StartUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CompatibilitySliderUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "CompatibilitySlider-Start";
+				TEST_TARGET_NAME = "CompatibilitySlider";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C3017C372499C83A00B1E49A /* Build configuration list for PBXProject "CompatibilitySlider-Start" */ = {
+		C3017C372499C83A00B1E49A /* Build configuration list for PBXProject "CompatibilitySlider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3017C672499C83B00B1E49A /* Debug */,
@@ -570,7 +570,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3017C692499C83B00B1E49A /* Build configuration list for PBXNativeTarget "CompatibilitySlider-Start" */ = {
+		C3017C692499C83B00B1E49A /* Build configuration list for PBXNativeTarget "CompatibilitySlider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3017C6A2499C83B00B1E49A /* Debug */,
@@ -579,7 +579,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3017C6C2499C83B00B1E49A /* Build configuration list for PBXNativeTarget "CompatibilitySlider-StartTests" */ = {
+		C3017C6C2499C83B00B1E49A /* Build configuration list for PBXNativeTarget "CompatibilitySliderTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3017C6D2499C83B00B1E49A /* Debug */,
@@ -588,7 +588,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3017C6F2499C83B00B1E49A /* Build configuration list for PBXNativeTarget "CompatibilitySlider-StartUITests" */ = {
+		C3017C6F2499C83B00B1E49A /* Build configuration list for PBXNativeTarget "CompatibilitySliderUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3017C702499C83B00B1E49A /* Debug */,

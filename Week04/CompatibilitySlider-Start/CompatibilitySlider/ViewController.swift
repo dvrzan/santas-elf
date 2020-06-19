@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  CompatibilitySlider-Start
+//  CompatibilitySlider
 //
 //  Created by Jay Strawn on 6/16/20.
 //  Copyright © 2020 Jay Strawn. All rights reserved.
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         let sumOfAllPercentages = percentagesForAllItems.reduce(0, +)
         let matchPercentage = sumOfAllPercentages/Double(compatibilityItems.count)
         print(matchPercentage, "%")
-        let matchString = (matchPercentage * 100).rounded()
+        let matchString = 100 - (matchPercentage * 100).rounded()
         return "\(matchString)%"
     }
 
