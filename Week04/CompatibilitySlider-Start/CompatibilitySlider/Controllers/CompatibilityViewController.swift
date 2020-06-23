@@ -26,14 +26,14 @@ class CompatibilityViewController: UIViewController {
         super.viewDidLoad()
         
         currentPerson = person1
-        checkIfPerson1NameIsEmpty()
+        checkIfPersonNameIsEmpty()
         questionLabel.text = person1.name + " how do you feel about..."
         updateLabels()
     }
     
-    func checkIfPerson1NameIsEmpty() {
+    func checkIfPersonNameIsEmpty() {
         if currentPerson?.name == "" {
-            person1.name = "Person 1"
+            currentPerson?.name = "Person \(currentPerson?.id ?? 0)"
         }
     }
     
@@ -52,10 +52,10 @@ class CompatibilityViewController: UIViewController {
         case 0...compatibilityItems.count - 1:
             compatibilityItemLabel.text = compatibilityItems[currentItemIndex]
         case compatibilityItems.count:
-            questionLabel.text = person2.name + " how do you feel about..."
             currentItemIndex = 0
             currentPerson = person2
-            checkIfPerson2NameIsEmpty()
+            checkIfPersonNameIsEmpty()
+            questionLabel.text = person2.name + " how do you feel about..."
             compatibilityItemLabel.text = compatibilityItems[currentItemIndex]
         default:
             break
