@@ -26,8 +26,16 @@ class CompatibilityViewController: UIViewController {
         super.viewDidLoad()
         
         currentPerson = person1
+        checkIfNamesAreEmpty()
         questionLabel.text = person1.name + " how do you feel about..."
         updateLabels()
+    }
+    
+    func checkIfNamesAreEmpty() {
+        if currentPerson?.name == "" {
+            person1.name = "Person 1"
+            person2.name = "Person 2"
+        }
     }
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
@@ -42,6 +50,7 @@ class CompatibilityViewController: UIViewController {
             questionLabel.text = person2.name + " how do you feel about..."
             currentItemIndex = 0
             currentPerson = person2
+            checkIfNamesAreEmpty()
             compatibilityItemLabel.text = compatibilityItems[currentItemIndex]
         default:
             break
