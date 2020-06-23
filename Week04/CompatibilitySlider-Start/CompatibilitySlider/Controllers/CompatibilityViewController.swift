@@ -37,12 +37,6 @@ class CompatibilityViewController: UIViewController {
         }
     }
     
-    func checkIfPerson2NameIsEmpty() {
-        if currentPerson?.name == "" {
-            person2.name = "Person 2"
-        }
-    }
-    
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         //print(sender.value)
     }
