@@ -64,6 +64,12 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 #### Homework
 [Week 04 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week04)
 ***
+### Week 05
+#### Course
+[Beginning Table Views](https://www.raywenderlich.com/5995-beginning-table-views)
+#### Homework
+[Week 05 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week05)
+***
 
 <br />
    
