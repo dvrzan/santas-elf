@@ -34,6 +34,20 @@ class CompatibilityViewController: UIViewController {
         //print(sender.value)
     }
     
+    func updateLabels() {
+        switch currentItemIndex {
+        case 0...compatibilityItems.count - 1:
+            compatibilityItemLabel.text = compatibilityItems[currentItemIndex]
+        case compatibilityItems.count:
+            questionLabel.text = person2.name + " how do you feel about..."
+            currentItemIndex = 0
+            currentPerson = person2
+            compatibilityItemLabel.text = compatibilityItems[currentItemIndex]
+        default:
+            break
+        }
+    }
+    
     @IBAction func didPressNextItemButton(_ sender: Any) {
         let currentItem = compatibilityItems[currentItemIndex]
         currentPerson?.items.updateValue(slider.value, forKey: currentItem)
@@ -77,20 +91,6 @@ class CompatibilityViewController: UIViewController {
     
     func startAgain() {
         dismiss(animated: true, completion: nil)
-    }
-    
-    func updateLabels() {
-        switch currentItemIndex {
-        case 0...compatibilityItems.count - 1:
-            compatibilityItemLabel.text = compatibilityItems[currentItemIndex]
-        case compatibilityItems.count:
-            questionLabel.text = person2.name + " how do you feel about..."
-            currentItemIndex = 0
-            currentPerson = person2
-            compatibilityItemLabel.text = compatibilityItems[currentItemIndex]
-        default:
-            break
-        }
     }
     
 }
