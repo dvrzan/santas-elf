@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		733ECC6424A0F37200584EA2 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733ECC6324A0F37200584EA2 /* HomeTableViewController.swift */; };
 		733ECC6724A0FFC600584EA2 /* UIView+DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733ECC6624A0FFC600584EA2 /* UIView+DismissKeyboard.swift */; };
+		737DCAD224A1669000BBD316 /* String+RegEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737DCAD124A1669000BBD316 /* String+RegEx.swift */; };
 		C3017C402499C83A00B1E49A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3017C3F2499C83A00B1E49A /* AppDelegate.swift */; };
 		C3017C422499C83A00B1E49A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3017C412499C83A00B1E49A /* SceneDelegate.swift */; };
 		C3017C442499C83A00B1E49A /* CompatibilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3017C432499C83A00B1E49A /* CompatibilityViewController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		733ECC6324A0F37200584EA2 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		733ECC6624A0FFC600584EA2 /* UIView+DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DismissKeyboard.swift"; sourceTree = "<group>"; };
+		737DCAD124A1669000BBD316 /* String+RegEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RegEx.swift"; sourceTree = "<group>"; };
 		C3017C3C2499C83A00B1E49A /* Compatibly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Compatibly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3017C3F2499C83A00B1E49A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3017C412499C83A00B1E49A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				733ECC6624A0FFC600584EA2 /* UIView+DismissKeyboard.swift */,
+				737DCAD124A1669000BBD316 /* String+RegEx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				C3017C442499C83A00B1E49A /* CompatibilityViewController.swift in Sources */,
 				C3017C402499C83A00B1E49A /* AppDelegate.swift in Sources */,
 				C3017C422499C83A00B1E49A /* SceneDelegate.swift in Sources */,
+				737DCAD224A1669000BBD316 /* String+RegEx.swift in Sources */,
 				733ECC6724A0FFC600584EA2 /* UIView+DismissKeyboard.swift in Sources */,
 				733ECC6424A0F37200584EA2 /* HomeTableViewController.swift in Sources */,
 			);

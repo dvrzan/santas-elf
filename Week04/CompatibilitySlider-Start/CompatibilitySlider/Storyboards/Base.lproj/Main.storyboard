@@ -11,7 +11,7 @@
         <!--Are you soul-mates?-->
         <scene sceneID="BNk-9I-a9G">
             <objects>
-                <tableViewController id="XtB-vP-5XV" customClass="HomeTableViewController" customModule="CompatibilitySlider" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="XtB-vP-5XV" customClass="HomeTableViewController" customModule="Compatibly" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="insetGrouped" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="fAl-JE-VQE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Danijela" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EEM-E0-X4o" userLabel="Person1 Name Label">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EEM-E0-X4o" userLabel="Person1 Name TextField">
                                                     <rect key="frame" x="15" y="11" width="313" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="name"/>
@@ -50,7 +50,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Matija" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8VF-LQ-OXD" userLabel="Person2 Name Label">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8VF-LQ-OXD" userLabel="Person2 Name TextField">
                                                     <rect key="frame" x="15" y="11" width="313" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="name"/>
@@ -119,6 +119,9 @@
                                                     <state key="normal" title="Check your compatibility">
                                                         <color key="titleShadowColor" red="0.97760146859999997" green="0.69012713429999994" blue="0.89278946510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <state key="disabled">
+                                                        <color key="titleColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToCompatibilityCheckScreen" modalPresentationStyle="fullScreen" id="vO4-4n-oyu"/>
                                                     </connections>
@@ -155,7 +158,7 @@
         <!--Compatibility View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CompatibilityViewController" customModule="CompatibilitySlider" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CompatibilityViewController" customModule="Compatibly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -307,7 +310,7 @@
                                     <action selector="didPressNextItemButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MS9-8c-dV0"/>
                                 </connections>
                             </button>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="end-game" translatesAutoresizingMaskIntoConstraints="NO" id="G40-aa-77r">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="end-game" translatesAutoresizingMaskIntoConstraints="NO" id="G40-aa-77r">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
@@ -315,7 +318,7 @@
                         <constraints>
                             <constraint firstItem="d1w-P6-8nd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1MN-87-ke9"/>
                             <constraint firstItem="CNB-y4-qyz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3Tp-WF-wvh"/>
-                            <constraint firstItem="G40-aa-77r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7bC-zl-Grx"/>
+                            <constraint firstItem="G40-aa-77r" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7bC-zl-Grx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="d1w-P6-8nd" secondAttribute="bottom" constant="30" id="CmQ-yL-3BW"/>
                             <constraint firstItem="aVC-qT-Xfg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="U0q-cU-1aG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G40-aa-77r" secondAttribute="trailing" id="eXJ-oA-FAb"/>
@@ -347,6 +350,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="jrC-Jb-Gdc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="brand-color"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="brand-color"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -367,7 +374,7 @@
         <image name="star" width="1000" height="1000"/>
         <image name="terrible" width="30" height="30"/>
         <namedColor name="brand-color">
-            <color red="0.65490196079999996" green="0.090196078430000007" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.65499997138977051" green="0.090000003576278687" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

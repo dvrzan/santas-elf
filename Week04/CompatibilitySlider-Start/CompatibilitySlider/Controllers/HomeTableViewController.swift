@@ -23,15 +23,7 @@ class HomeTableViewController: UITableViewController {
         
         styleSwitch.isOn = defaults.bool(forKey: "darkMode")
         styleSwitchValueChanged(styleSwitch)
-        
         view.dismissKeyboardOnTapAnywhere(on: view)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-        person1TextField.text = ""
-        person2TextField.text = ""
     }
     
     //MARK: - Style Preference
@@ -56,10 +48,10 @@ class HomeTableViewController: UITableViewController {
                 return
         }
         let destVC = segue.destination as! CompatibilityViewController
-        let person1Name = person1TextField
-        let person2Name = person2TextField
-        destVC.person1.name = person1Name
-        destVC.person2.name = person2Name
+        let person1 = person1TextField
+        let person2 = person2TextField
+        destVC.person1.name = person1
+        destVC.person2.name = person2
     }
     
 }
