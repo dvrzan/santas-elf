@@ -12,4 +12,11 @@ struct TextPost: MediaPost {
     var textBody: String?
     var userName: String
     var timestamp: Date
+    
+    var timeStampString : String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d MMM, HH:mm"
+        
+        return dateFormatter.string(from: timestamp)
+    }
 }

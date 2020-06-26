@@ -13,6 +13,13 @@ struct ImagePost: MediaPost {
     var userName: String
     var timestamp: Date
     var image: UIImage
+    
+    var timeStampString : String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d MMM, HH:mm"
+        
+        return dateFormatter.string(from: timestamp)
+    }
 }
 
 
