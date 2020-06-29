@@ -13,7 +13,7 @@ Birdie is a twitter-like app that shows a home page with posts inside a tablevie
 ## Concepts learned
 
 <p align="center">
-<img src="Documentation/Week03Concepts.png">
+<img src="Documentation/Week05Concepts.png">
 </p>
 
 <br />
