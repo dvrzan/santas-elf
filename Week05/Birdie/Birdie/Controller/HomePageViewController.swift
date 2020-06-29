@@ -30,7 +30,32 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func didPressCreateTextPostButton(_ sender: Any) {
-        
+        addNewTextPost()
+    }
+    
+    func addNewTextPost() {
+        let alert = UIAlertController(title: "Alert Title", message: "Alert Message", preferredStyle: UIAlertController.Style.alert)
+
+        alert.addTextField { (textField) in
+            textField.placeholder = "Username"
+        }
+        alert.addTextField { (textField) in
+            textField.placeholder = "Write your text here"
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:nil))
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:{ (UIAlertAction) in
+            alert.textFields?.forEach { (textField) in
+                if textField.text == nil {
+                    textField.text = "N/A"
+                }
+            }
+            let username = alert.textFields?[0].text
+            let text = alert.textFields?[1].text
+            let textPost = TextPost(textBody: text, userName: username ?? "N/A", timestamp: Date())
+            MediaPostsHandler.shared.addTextPost(textPost: textPost)
+            self.tableview.reloadData()
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func didPressCreateImagePostButton(_ sender: Any) {
