@@ -40,7 +40,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
             textField.placeholder = "Username"
         }
         alert.addTextField { (textField) in
-            textField.placeholder = "Write your text here"
+            textField.placeholder = "Write your post here"
         }
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:nil))
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:{ (UIAlertAction) in
@@ -68,24 +68,9 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let post = MediaPostsHandler.shared.mediaPosts[indexPath.row]
-        if let textPost = post as? TextPost {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TextPostCell") as! TextPostTableViewCell
-            cell.usernameLabel.text = textPost.userName
-            cell.textPostLabel.text = textPost.textBody
-            cell.timeLabel.text = textPost.timeStampString
-            return cell
-        } else if let imagePost = post as? ImagePost {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ImagePostCell") as! ImagePostTableViewCell
-            cell.usernameLabel.text = imagePost.userName
-            cell.textPostLabel.text = imagePost.textBody
-            cell.timeLabel.text = imagePost.timeStampString
-            cell.imagePostImage.image = imagePost.image
-            return cell
-        } else {
-            let cell = UITableViewCell()
-            cell.textLabel?.text = "Unable to load feed"
-            return cell
-        }
+        let cell = MediaPostsViewModel.shared.setUpTableViewCell(for: post, in: tableView)
+        
+        return cell
     }
     
 }
