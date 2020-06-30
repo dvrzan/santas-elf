@@ -11,6 +11,8 @@ import UIKit
 class HomePageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var textPostButton: UIButton!
+    @IBOutlet weak var imagePostButton: UIButton!
     
     var imageView = UIImageView()
     
@@ -31,33 +33,7 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func didPressCreateTextPostButton(_ sender: Any) {
-        addNewTextPost()
-    }
-    
-    func addNewTextPost() {
-        imageView.image = nil
-        let alert = UIAlertController(title: "Alert Title", message: "Alert Message", preferredStyle: UIAlertController.Style.alert)
-
-        alert.addTextField { (textField) in
-            textField.placeholder = "Username"
-        }
-        alert.addTextField { (textField) in
-            textField.placeholder = "Write your post here"
-        }
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:nil))
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:{ (UIAlertAction) in
-            alert.textFields?.forEach { (textField) in
-                if textField.text == nil {
-                    textField.text = "N/A"
-                }
-            }
-            let username = alert.textFields?[0].text
-            let text = alert.textFields?[1].text
-            let textPost = TextPost(textBody: text, userName: username ?? "N/A", timestamp: Date())
-            MediaPostsHandler.shared.addTextPost(textPost: textPost)
-            self.tableview.reloadData()
-        }))
-        self.present(alert, animated: true, completion: nil)
+        addNewPost(textPostButton, nil)
     }
     
     @IBAction func didPressCreateImagePostButton(_ sender: Any) {
@@ -77,11 +53,11 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         present(picker, animated: true, completion: nil)
     }
     
-    func addNewImagePost() {
-        let alert = UIAlertController(title: "Alert Title", message: "Alert Message", preferredStyle: UIAlertController.Style.alert)
+    func addNewPost(_ textPostButton: UIButton?, _ imagePostButton: UIButton?) {
+        let alert = UIAlertController(title: "New Post", message: "What's new today?", preferredStyle: UIAlertController.Style.alert)
 
         alert.addTextField { (textField) in
-            textField.placeholder = "Username"
+            textField.placeholder = "Enter username"
         }
         alert.addTextField { (textField) in
             textField.placeholder = "Write your post here"
@@ -89,14 +65,21 @@ class HomePageViewController: UIViewController, UITableViewDelegate, UITableView
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:nil))
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:{ (UIAlertAction) in
             alert.textFields?.forEach { (textField) in
-                if textField.text == nil {
+                if textField.text == "" {
                     textField.text = "N/A"
                 }
             }
-            let username = alert.textFields?[0].text
+            let username = alert.textFields?[0].text ?? "John Doe"
             let text = alert.textFields?[1].text
-            let imagePost = ImagePost(textBody: text, userName: username ?? "N/A", timestamp: Date(), image: self.imageView.image!)
-            MediaPostsHandler.shared.addImagePost(imagePost: imagePost)
+            
+            if self.imageView.image != nil {
+                let imagePost = ImagePost(textBody: text, userName: username, timestamp: Date(), image: self.imageView.image!)
+                MediaPostsHandler.shared.addImagePost(imagePost: imagePost)
+                self.imageView.image = nil
+            } else {
+                let textPost = TextPost(textBody: text, userName: username, timestamp: Date())
+                MediaPostsHandler.shared.addTextPost(textPost: textPost)
+            }
             self.tableview.reloadData()
         }))
         self.present(alert, animated: true, completion: nil)
@@ -120,7 +103,7 @@ extension HomePageViewController: UIImagePickerControllerDelegate & UINavigation
         if let image = info[UIImagePickerController.InfoKey.originalImage] {
             imageView.image = image as? UIImage
             dismiss(animated: true, completion: nil)
-            addNewImagePost()
+            addNewPost(nil, imagePostButton)
         }
     }
 }

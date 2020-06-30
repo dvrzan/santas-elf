@@ -68,7 +68,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="imagePostButton" destination="CDc-14-JUr" id="CfG-NQ-8C8"/>
                         <outlet property="tableview" destination="N0R-IK-WeJ" id="ErB-MH-1IH"/>
+                        <outlet property="textPostButton" destination="j2n-Sd-aOq" id="MXP-Gd-P8v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
