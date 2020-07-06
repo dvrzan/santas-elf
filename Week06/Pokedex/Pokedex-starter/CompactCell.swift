@@ -30,13 +30,12 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Foundation
+import UIKit
 
-struct Pokemon: Hashable {
-  let pokemonID: Int
-  let pokemonName: String
-  let baseExp: Int
-  let weight: Int
-  let height: Int
+class CompactCell: UICollectionViewCell {
+  static let reuseIdentifier = String(describing: CompactCell.self)
+  
+  @IBOutlet weak var pokemonImageView: UIImageView!
+  @IBOutlet weak var pokemonNameLabel: UILabel!
+  
 }
-
