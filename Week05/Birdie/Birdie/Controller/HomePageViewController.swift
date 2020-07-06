@@ -107,4 +107,3 @@ extension HomePageViewController: UIImagePickerControllerDelegate & UINavigation
         }
     }
 }
-
