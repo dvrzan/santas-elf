@@ -35,14 +35,14 @@ import UIKit
 class CompactViewController: UIViewController {
   
   @IBOutlet weak var compactCollectionView: UICollectionView!
-    var dataSource: UICollectionViewDiffableDataSource<Section, Pokemon>!
+  var dataSource: UICollectionViewDiffableDataSource<Section, Pokemon>!
   
-    override func viewDidLoad() {
-      super.viewDidLoad()
-      
-      compactCollectionView.collectionViewLayout = configureLayout()
-      configureDataSource()
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    compactCollectionView.collectionViewLayout = configureLayout()
+    configureDataSource()
+  }
   
   //MARK: - Collection view data source
   enum Section {
@@ -84,5 +84,5 @@ class CompactViewController: UIViewController {
     
     dataSource.apply(initialSnapshot, animatingDifferences: false)
   }
-
+  
 }

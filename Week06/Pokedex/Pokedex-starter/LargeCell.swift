@@ -33,8 +33,8 @@
 import UIKit
 
 class LargeCell: UICollectionViewCell {
-    static let reuseIdentifier = String(describing: LargeCell.self)
-    
+  static let reuseIdentifier = String(describing: LargeCell.self)
+  
   @IBOutlet weak var pokemonImageView: UIImageView!
   @IBOutlet weak var pokemonNameLabel: UILabel!
   @IBOutlet weak var pokemonExpLabel: UILabel!

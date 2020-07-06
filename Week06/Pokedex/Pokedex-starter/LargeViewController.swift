@@ -35,59 +35,68 @@ import UIKit
 class LargeViewController: UIViewController {
   
   @IBOutlet weak var largeCollectionView: UICollectionView!
-    var dataSource: UICollectionViewDiffableDataSource<Section, Pokemon>!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-      largeCollectionView.collectionViewLayout = configureLayout()
-      configureDataSource()
-    }
+  var dataSource: UICollectionViewDiffableDataSource<Section, Pokemon>!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    largeCollectionView.collectionViewLayout = configureLayout()
+    configureDataSource()
+  }
+  
+  override func viewWillLayoutSubviews() {
+    super.viewWillLayoutSubviews()
+    
+    largeCollectionView.collectionViewLayout = configureLayout()
+  }
   
   //MARK: - Collection view data source
-   enum Section {
-     case main
-   }
-   
-   func configureLayout() -> UICollectionViewCompositionalLayout {
-    let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.7))
-     let item = NSCollectionLayoutItem(layoutSize: itemSize)
-    //item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 5, bottom: 10, trailing: 5)
-     
+  enum Section {
+    case main
+  }
+  
+  func configureLayout() -> UICollectionViewCompositionalLayout {
+    let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+    let item = NSCollectionLayoutItem(layoutSize: itemSize)
+    
     let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.7), heightDimension: .fractionalHeight(1.0))
-     let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-    group.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-     //group.interItemSpacing = .fixed(5)
-     
-     let section = NSCollectionLayoutSection(group: group)
+    let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+    
+    if UIDevice.current.orientation.isLandscape {
+      group.contentInsets = NSDirectionalEdgeInsets(top: 50, leading: 10, bottom: 50, trailing: 10)
+    } else {
+      group.contentInsets = NSDirectionalEdgeInsets(top: 100, leading: 10, bottom: 100, trailing: 10)
+    }
+    
+    let section = NSCollectionLayoutSection(group: group)
     section.orthogonalScrollingBehavior = .continuous
-     
-     return UICollectionViewCompositionalLayout(section: section)
-   }
-   
-   func configureDataSource() {
-     dataSource = UICollectionViewDiffableDataSource<Section, Pokemon>(collectionView: self.largeCollectionView) {
-       (collectionView, indexPath, pokemon) -> UICollectionViewCell? in
-       guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LargeCell.reuseIdentifier, for: indexPath) as? LargeCell else {
-         fatalError("Unable to create cell")
-       }
-       let pokemonImage = UIImage(named: "\(pokemon.pokemonID)")
-       cell.pokemonImageView.image = pokemonImage
-       cell.layer.cornerRadius = cell.bounds.width / 20
-       cell.pokemonNameLabel.text = pokemon.pokemonName
+    
+    return UICollectionViewCompositionalLayout(section: section)
+  }
+  
+  func configureDataSource() {
+    dataSource = UICollectionViewDiffableDataSource<Section, Pokemon>(collectionView: self.largeCollectionView) {
+      (collectionView, indexPath, pokemon) -> UICollectionViewCell? in
+      guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LargeCell.reuseIdentifier, for: indexPath) as? LargeCell else {
+        fatalError("Unable to create cell")
+      }
+      let pokemonImage = UIImage(named: "\(pokemon.pokemonID)")
+      cell.pokemonImageView.image = pokemonImage
+      cell.layer.cornerRadius = cell.bounds.width / 40
+      cell.pokemonNameLabel.text = pokemon.pokemonName
       cell.pokemonExpLabel.text = pokemon.baseExp.description
       cell.pokemonHeightLabel.text = pokemon.height.description
       cell.pokemonWeightLabel.text = pokemon.weight.description
       
-       
-       return cell
-     }
-     var initialSnapshot = NSDiffableDataSourceSnapshot<Section, Pokemon>()
-     initialSnapshot.appendSections([.main])
-     let pokemons = PokemonGenerator.shared.generatePokemons()
-     initialSnapshot.appendItems(pokemons)
-     
-     dataSource.apply(initialSnapshot, animatingDifferences: false)
-   }
-
+      
+      return cell
+    }
+    var initialSnapshot = NSDiffableDataSourceSnapshot<Section, Pokemon>()
+    initialSnapshot.appendSections([.main])
+    let pokemons = PokemonGenerator.shared.generatePokemons()
+    initialSnapshot.appendItems(pokemons)
+    
+    dataSource.apply(initialSnapshot, animatingDifferences: false)
+  }
+  
 }
