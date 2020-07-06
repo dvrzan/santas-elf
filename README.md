@@ -70,6 +70,12 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 #### Homework
 [Week 05 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week05)
 ***
+### Week 06
+#### Course
+[Beginning Collection Views](https://www.raywenderlich.com/5429927-beginning-collection-views)
+#### Homework
+[Week 06 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week06)
+***
 
 <br />
    
