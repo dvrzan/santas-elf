@@ -12,6 +12,12 @@ PokeDex is a simple app that shows a collection view of different pokemons - the
 
 App consists of 2 views; compact view in vertical layout that shows basic info, and large view in horizontal layout that shows more detailed information. Landscape mode is also configured using Vary For Traits.
 
+## Concepts learned
+
+<p align="center">
+<img src="Documentation/Week06Concepts.png">
+</p>
+
 <br />
 
 ![End Banner](Documentation/EndBanner.png)
