@@ -78,18 +78,50 @@
 			children = (
 				185CB1FB23C78CE6009F7571 /* AppDelegate.swift */,
 				185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */,
-				185CB20123C78CE6009F7571 /* Main.storyboard */,
+				7321D96424B422AB00566BF0 /* Models */,
+				7321D96224B4227B00566BF0 /* Cells */,
+				7321D96124B4226800566BF0 /* Controllers */,
+				7321D96324B4229800566BF0 /* Storyboards */,
 				185CB20423C78CE8009F7571 /* Assets.xcassets */,
-				180DC61423C78D9800486B1A /* LaunchScreen.storyboard */,
 				185CB20923C78CE8009F7571 /* Info.plist */,
-				A10D04F824ABC8DB00DE5D14 /* Pokemon.swift */,
 				A125200724AAAB64008F7E2E /* Resources */,
-				7369D21924B38064006E3790 /* CompactCell.swift */,
-				7369D21B24B3816D006E3790 /* CompactViewController.swift */,
-				7369D21D24B3A73B006E3790 /* LargeViewController.swift */,
-				7369D21F24B3AD24006E3790 /* LargeCell.swift */,
 			);
 			path = "Pokedex-starter";
+			sourceTree = "<group>";
+		};
+		7321D96124B4226800566BF0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7369D21B24B3816D006E3790 /* CompactViewController.swift */,
+				7369D21D24B3A73B006E3790 /* LargeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7321D96224B4227B00566BF0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7369D21924B38064006E3790 /* CompactCell.swift */,
+				7369D21F24B3AD24006E3790 /* LargeCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7321D96324B4229800566BF0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				180DC61423C78D9800486B1A /* LaunchScreen.storyboard */,
+				185CB20123C78CE6009F7571 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7321D96424B422AB00566BF0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A10D04F824ABC8DB00DE5D14 /* Pokemon.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A125200724AAAB64008F7E2E /* Resources */ = {
