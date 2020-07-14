@@ -78,9 +78,9 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 ***
 ### Week 07
 #### Course
-[Your First iOS and SwiftUI app](https://www.raywenderlich.com/4919757-your-first-ios-and-swiftui-app)
-[Your Second iOS and SwiftUI app](https://www.raywenderlich.com/5662524-your-second-ios-and-swiftui-app)
-[SwiftUI](https://www.raywenderlich.com/4001741-swiftui)
+[Your First iOS and SwiftUI app](https://www.raywenderlich.com/4919757-your-first-ios-and-swiftui-app)<br />
+[Your Second iOS and SwiftUI app](https://www.raywenderlich.com/5662524-your-second-ios-and-swiftui-app)<br />
+[SwiftUI](https://www.raywenderlich.com/4001741-swiftui)<br />
 #### Homework
 [Week 07 homework solution](https://github.com/dvrzan/rw_ios_bootcamp_week_07)
 ***
