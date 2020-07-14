@@ -76,6 +76,14 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 #### Homework
 [Week 06 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week06)
 ***
+### Week 07
+#### Course
+[Your First iOS and SwiftUI app](https://www.raywenderlich.com/4919757-your-first-ios-and-swiftui-app)
+[Your Second iOS and SwiftUI app](https://www.raywenderlich.com/5662524-your-second-ios-and-swiftui-app)
+[SwiftUI](https://www.raywenderlich.com/4001741-swiftui)
+#### Homework
+[Week 07 homework solution](https://github.com/dvrzan/rw_ios_bootcamp_week_07)
+***
 
 <br />
    
