@@ -55,3 +55,20 @@ extension SauceAmount: RawRepresentable {
   }
 }
 
+extension SandwichData {
+    static func sandwichData() -> [SandwichData] {
+        guard
+            let url = Bundle.main.url(forResource: "sandwiches", withExtension: "json"),
+            let data = try? Data(contentsOf: url)
+            else {
+                return []
+        }
+        
+        do {
+            let decoder = JSONDecoder()
+            return try decoder.decode([SandwichData].self, from: data)
+        } catch {
+            return []
+        }
+    }
+}
