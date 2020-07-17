@@ -1,5 +1,5 @@
 //
-//  PersistanceStore.swift
+//  PersistenceStore.swift
 //  SandwichSaturation
 //
 //  Created by Danijela Vrzan on 2020-07-16.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol Persistance {
+protocol Persistence {
     func save(value: Any, key: String)
     func loadData(key: String) -> Any?
 }
 
-class UserDefaultsPersistance: Persistance {
+class UserDefaultsPersistence: Persistence {
     
     var userDefaults = UserDefaults.standard
     

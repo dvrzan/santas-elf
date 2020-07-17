@@ -17,7 +17,7 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
     var sandwiches = [SandwichData]()
     var filteredSandwiches = [SandwichData]()
     
-    let persistance = UserDefaultsPersistance(userDefaults: UserDefaults.standard)
+    let persistence = UserDefaultsPersistence(userDefaults: UserDefaults.standard)
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -123,7 +123,7 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
 extension SandwichViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
-        searchBar.selectedScopeButtonIndex = persistance.loadData(key: K.searchBarIndex) as? Int ?? 0
+        searchBar.selectedScopeButtonIndex = persistence.loadData(key: K.searchBarIndex) as? Int ?? 0
         let sauceAmount = SauceAmount(rawValue: searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex])
         
         filterContentForSearchText(searchBar.text!, sauceAmount: sauceAmount)
@@ -133,7 +133,7 @@ extension SandwichViewController: UISearchResultsUpdating {
 // MARK: - UISearchBarDelegate
 extension SandwichViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        persistance.save(value: selectedScope, key: K.searchBarIndex)
+        persistence.save(value: selectedScope, key: K.searchBarIndex)
         let sauceAmount = SauceAmount(rawValue: searchBar.scopeButtonTitles![selectedScope])
         filterContentForSearchText(searchBar.text!, sauceAmount: sauceAmount)
     }

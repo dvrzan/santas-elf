@@ -18,12 +18,12 @@
 		12A0791124AFDC5C0097F149 /* AddSandwichViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A0791024AFDC5C0097F149 /* AddSandwichViewController.swift */; };
 		12A0791424AFDD8E0097F149 /* SandwichData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A0791324AFDD8E0097F149 /* SandwichData.swift */; };
 		12A0791824B2CC9A0097F149 /* sandwiches.json in Resources */ = {isa = PBXBuildFile; fileRef = 12A0791724B2CC9A0097F149 /* sandwiches.json */; };
-		735B80BF24C0DDFA0040D7D8 /* PersistanceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735B80BE24C0DDFA0040D7D8 /* PersistanceStore.swift */; };
+		735B80BF24C0DDFA0040D7D8 /* PersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735B80BE24C0DDFA0040D7D8 /* PersistenceStore.swift */; };
 		735B80C124C0E3400040D7D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735B80C024C0E3400040D7D8 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1255797724AFB8FA004C616F /* SandwichSaturation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SandwichSaturation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1255797724AFB8FA004C616F /* Sandwich Saturation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sandwich Saturation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1255797A24AFB8FA004C616F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1255797C24AFB8FA004C616F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1255797E24AFB8FA004C616F /* SandwichViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandwichViewController.swift; sourceTree = "<group>"; };
@@ -36,7 +36,7 @@
 		12A0791024AFDC5C0097F149 /* AddSandwichViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSandwichViewController.swift; sourceTree = "<group>"; };
 		12A0791324AFDD8E0097F149 /* SandwichData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandwichData.swift; sourceTree = "<group>"; };
 		12A0791724B2CC9A0097F149 /* sandwiches.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sandwiches.json; sourceTree = "<group>"; };
-		735B80BE24C0DDFA0040D7D8 /* PersistanceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceStore.swift; sourceTree = "<group>"; };
+		735B80BE24C0DDFA0040D7D8 /* PersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStore.swift; sourceTree = "<group>"; };
 		735B80C024C0E3400040D7D8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +62,7 @@
 		1255797824AFB8FA004C616F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1255797724AFB8FA004C616F /* SandwichSaturation.app */,
+				1255797724AFB8FA004C616F /* Sandwich Saturation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,7 +73,7 @@
 				1255797A24AFB8FA004C616F /* AppDelegate.swift */,
 				1255797C24AFB8FA004C616F /* SceneDelegate.swift */,
 				735B80C024C0E3400040D7D8 /* Constants.swift */,
-				735B80BD24C0DDE20040D7D8 /* Persistance */,
+				735B80BD24C0DDE20040D7D8 /* Persistence */,
 				12A0791224AFDD810097F149 /* Model */,
 				1255799424AFCBDE004C616F /* View */,
 				12A0790F24AFDC2F0097F149 /* ViewControllers */,
@@ -112,12 +112,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		735B80BD24C0DDE20040D7D8 /* Persistance */ = {
+		735B80BD24C0DDE20040D7D8 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				735B80BE24C0DDFA0040D7D8 /* PersistanceStore.swift */,
+				735B80BE24C0DDFA0040D7D8 /* PersistenceStore.swift */,
 			);
-			path = Persistance;
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +137,7 @@
 			);
 			name = SandwichSaturation;
 			productName = SandwichSaturation;
-			productReference = 1255797724AFB8FA004C616F /* SandwichSaturation.app */;
+			productReference = 1255797724AFB8FA004C616F /* Sandwich Saturation.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -199,7 +199,7 @@
 				1255797D24AFB8FA004C616F /* SceneDelegate.swift in Sources */,
 				1255797F24AFB8FA004C616F /* SandwichViewController.swift in Sources */,
 				12A0791424AFDD8E0097F149 /* SandwichData.swift in Sources */,
-				735B80BF24C0DDFA0040D7D8 /* PersistanceStore.swift in Sources */,
+				735B80BF24C0DDFA0040D7D8 /* PersistenceStore.swift in Sources */,
 				735B80C124C0E3400040D7D8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,8 +351,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jefframes.SandwichSaturation;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danijelavrzan.SandwichSaturation;
+				PRODUCT_NAME = "Sandwich Saturation";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -369,8 +369,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jefframes.SandwichSaturation;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danijelavrzan.SandwichSaturation;
+				PRODUCT_NAME = "Sandwich Saturation";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
