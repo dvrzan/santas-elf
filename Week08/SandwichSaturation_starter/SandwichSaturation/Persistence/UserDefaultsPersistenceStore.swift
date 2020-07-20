@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol Persistence {
-    func save(value: Any, key: String)
+protocol UserDefaultsPersistence {
+    func saveData(value: Any, key: String)
     func loadData(key: String) -> Any?
 }
 
-class UserDefaultsPersistence: Persistence {
+class UserDefaultsPersistenceStore: UserDefaultsPersistence {
     
     var userDefaults = UserDefaults.standard
     
@@ -21,7 +21,7 @@ class UserDefaultsPersistence: Persistence {
         self.userDefaults = userDefaults
     }
     
-    func save(value: Any, key: String) {
+    func saveData(value: Any, key: String) {
         userDefaults.set(value, forKey: key)
     }
     

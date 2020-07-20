@@ -10,5 +10,6 @@ import Foundation
 
 struct K {
     static let searchBarIndex = "searchBarIndexForSauceAmount"
+    static let isFirstLaunch = "isFirstLaunch"
     static let isDarkMode = "isDarkMode"
 }
