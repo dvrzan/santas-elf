@@ -17,8 +17,8 @@ extension Sandwich {
         return NSFetchRequest<Sandwich>(entityName: "Sandwich")
     }
 
+    @NSManaged public var image: String?
     @NSManaged public var name: String?
-    @NSManaged public var image: Data?
     @NSManaged public var sauceAmount: SauceAmountString?
 
 }
