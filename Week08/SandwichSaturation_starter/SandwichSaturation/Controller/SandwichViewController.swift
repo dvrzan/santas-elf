@@ -19,6 +19,7 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
     var filteredSandwiches = [Sandwich]()
     
     let userDefaultsPersistence = UserDefaultsPersistenceStore(userDefaults: UserDefaults.standard)
+    let coreDataPersistence = CoreDataPersistenceStore()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var fetchedRC: NSFetchedResultsController<Sandwich>!
@@ -61,31 +62,14 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
     
     //MARK: - Data manipulation
     func saveSandwich(_ sandwich: SandwichData) {
-        let sandwichData = Sandwich(entity: Sandwich.entity(), insertInto: context)
-        sandwichData.name = sandwich.name
-        sandwichData.sauceAmount = SauceAmountString(entity: SauceAmountString.entity(), insertInto: context)
-        sandwichData.sauceAmount?.sauceAmountString = sandwich.sauceAmount.rawValue
-        sandwichData.image = sandwich.imageName
-        sandwiches.append(sandwichData)
-        
-        appDelegate.saveContext()
-        loadSandwiches()
-    }
-    
-    func loadSandwiches(with request: NSFetchRequest<Sandwich> = Sandwich.fetchRequest()) {
-        if !query.isEmpty {
-            request.predicate = NSPredicate(format: "name CONTAINS[cd] %@", query)
-        }
-        let sort = NSSortDescriptor(key: #keyPath(Sandwich.name), ascending: true, selector: #selector(NSString.caseInsensitiveCompare(_:)))
-        request.sortDescriptors = [sort]
-        do {
-            sandwiches = try context.fetch(request)
-        } catch let error {
-            print("Error fetching items from context, \(error)")
-        }
+        sandwiches.append(coreDataPersistence.saveData(sandwich))
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+    
+    func loadSandwiches() {
+        sandwiches = coreDataPersistence.loadData()
     }
     
     //MARK: - Navigation
