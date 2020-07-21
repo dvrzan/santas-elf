@@ -14,6 +14,9 @@ Data is persisted using CoreData and UserDefaults.
 When running the app for the first time, user gets presented with a preloaded set of sandwiches (seed data) read from a json file.
 Users can also delete sandwiches.
 
+### The Requirements Video
+The following clip, *[courtesy of WWDC 2020](https://twitter.com/CastIrony/status/1275496089060167680)*, provides some guidance on acceptance criteria for this application. This is only a 12 second clip, but it's very important!
+
 ### Packaging seed data
 
 **Describe at least one other option for packaging seed data with an app. Which do you think makes the most sense if you were shipping SandwichSaturation, and why?**
