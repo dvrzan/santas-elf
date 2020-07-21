@@ -12,6 +12,7 @@ import CoreData
 protocol CoreDataPersistence {
     func saveData(_: SandwichData) -> Sandwich
     func loadData() -> [Sandwich]
+    func deleteData(_: NSManagedObject)
 }
 
 class CoreDataPersistenceStore: CoreDataPersistence {
@@ -45,6 +46,11 @@ class CoreDataPersistenceStore: CoreDataPersistence {
             print("Error fetching items from context, \(error)")
         }
         return sandwiches
+    }
+    
+    func deleteData(_ sandwich: NSManagedObject) {
+        context.delete(sandwich)
+        appDelegate.saveContext()
     }
     
 }

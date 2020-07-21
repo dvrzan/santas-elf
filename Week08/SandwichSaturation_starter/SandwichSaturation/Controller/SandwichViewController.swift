@@ -20,10 +20,6 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
     
     let userDefaultsPersistence = UserDefaultsPersistenceStore(userDefaults: UserDefaults.standard)
     let coreDataPersistence = CoreDataPersistenceStore()
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var fetchedRC: NSFetchedResultsController<Sandwich>!
-    var query = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,10 +125,9 @@ class SandwichViewController: UITableViewController, SandwichDataSource {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let sandwich = sandwiches[indexPath.row]
-            context.delete(sandwich)
+            coreDataPersistence.deleteData(sandwich)
             sandwiches.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-            appDelegate.saveContext()
+            tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.reloadData()
         }
     }
