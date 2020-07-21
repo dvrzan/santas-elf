@@ -23,6 +23,12 @@ The following clip, *[courtesy of WWDC 2020](https://twitter.com/CastIrony/statu
 
 - If SandwichSaturation had bigger dataset it would be good to use preloaded SQLite database so that changes could be made easily and the data is loaded faster. Some apps give users, when the app is run for the first time, an option to choose the initial (or seed) data to load. Like when choosing what categories you like and then load data according to those categories. I think a good idea is to have the database in the FileManager for faster loading, or even from the external API to load the most current data if fetching from the internet.
 
+## Concepts learned
+
+<p align="center">
+<img src="Documentation/Week08Concepts.png">
+</p>
+
 <br />
 
 ![End Banner](Documentation/EndBanner.png)

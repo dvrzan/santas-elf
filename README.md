@@ -82,7 +82,21 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 [Your Second iOS and SwiftUI app](https://www.raywenderlich.com/5662524-your-second-ios-and-swiftui-app)<br />
 [SwiftUI](https://www.raywenderlich.com/4001741-swiftui)<br />
 #### Homework
-[Week 07 homework solution](https://github.com/dvrzan/rw_ios_bootcamp_week_07)
+[Week 07 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week07)
+***
+### Week 08
+#### Course
+[Beginning Core Data](https://www.raywenderlich.com/7104-beginning-core-data)<br />
+[Saving Data in iOS](https://www.raywenderlich.com/5429634-saving-data-in-ios)<br />
+#### Homework
+[Week 08 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week08)
+***
+### Week 09
+#### Course
+[Networking with URLSession](https://www.raywenderlich.com/10376245-networking-with-urlsession)<br />
+[Fundamental iOS Design Patterns](https://www.raywenderlich.com/1941154-fundamental-ios-design-patterns#c-rate)<br />
+#### Homework
+[Week 09 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week09)
 ***
 
 <br />
