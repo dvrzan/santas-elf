@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ClueViewController: UIViewController {
 
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var soundButton: UIButton!
@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     var clues: [Clue] = []
     var correctAnswerClue: Clue?
     var points: Int = 0
+    
+    let networkHandler = Networking.sharedInstance
+    let clueURL = "http://www.jservice.io/api/random"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +53,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension ClueViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return clues.count
     }
@@ -69,3 +72,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension ClueViewController: NetworkingErrorDelegate {
+    func didFailWithError(error: Error) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Loading Error", message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true)
+        }
+        removeSpinner()
+    }
+}
