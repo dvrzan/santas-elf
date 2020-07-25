@@ -13,16 +13,12 @@ struct Clue: Codable {
     let answer: String?
     let question: String?
     let value: Int?
-    let categoryID: Int?
-    let gameID: Int?
-    let invalidCount: Int?
-    let category: Category?
+    let categoryID: Int
+    let category: Category
     
     enum CodingKeys: String, CodingKey {
         case id, answer, question, value
         case categoryID = "category_id"
-        case gameID = "game_id"
-        case invalidCount = "invalid_count"
         case category
     }
     
@@ -30,12 +26,13 @@ struct Clue: Codable {
 
 struct Category: Codable {
     let id: Int
-    let title: String?
-    let cluesCount: Int?
+    let title: String
+    //let cluesCount: Int?
     
-    enum CodingKeys: String, CodingKey {
-        case id, title
-        case cluesCount = "clues_count"
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case id, title
+//        case cluesCount = "clues_count"
+//    }
     
 }
+

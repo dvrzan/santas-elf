@@ -22,7 +22,6 @@ class ClueViewController: UIViewController {
     var points: Int = 0
     
     let networkHandler = Networking.sharedInstance
-    let clueURL = "http://www.jservice.io/api/random"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +39,26 @@ class ClueViewController: UIViewController {
 
         SoundManager.shared.playSound()
         
+        getClues()
+    }
+    
+    func setUpView() {
+        
+    }
+    
+    func getClues() {
+        networkHandler.getRandomCategory(completion: { (categoryId) in
+            guard let id = categoryId else {
+                print("Empty")
+                return
+            }
+            print("Next")
+            self.networkHandler.getAllCluesInCategory(categoryId: id) { (clues) in
+                self.clues = clues
+                self.setUpView()
+                print("Passed clues: \(clues)")
+            }
+        })
     }
 
     @IBAction func didPressVolumeButton(_ sender: Any) {
