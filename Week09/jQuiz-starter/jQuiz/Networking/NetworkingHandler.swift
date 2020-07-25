@@ -19,7 +19,7 @@ class Networking {
     //var categoryId: Int?
     
     let randomEndpoint = "http://www.jservice.io/api/random"
-    let categoryEndpoint = "http://www.jservice.io/api/clues/?category="
+    let categoryEndpoint = "http://www.jservice.io/api/clues?category="
     
     var delegate: NetworkingErrorDelegate?
     

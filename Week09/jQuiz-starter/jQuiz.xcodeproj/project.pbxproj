@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7347911624CC6712001F2207 /* ClueGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7347911524CC6712001F2207 /* ClueGameModel.swift */; };
+		7347911824CC67B4001F2207 /* ClueAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7347911724CC67B4001F2207 /* ClueAnswerCell.swift */; };
 		736D23EB24CB34FB0094CD2C /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736D23EA24CB34FB0094CD2C /* ErrorHandler.swift */; };
 		736D23EE24CB359D0094CD2C /* PersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736D23ED24CB359D0094CD2C /* PersistenceStore.swift */; };
 		736D23F024CB35E20094CD2C /* UITableView+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736D23EF24CB35E20094CD2C /* UITableView+Empty.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7347911524CC6712001F2207 /* ClueGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClueGameModel.swift; sourceTree = "<group>"; };
+		7347911724CC67B4001F2207 /* ClueAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClueAnswerCell.swift; sourceTree = "<group>"; };
 		736D23EA24CB34FB0094CD2C /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		736D23ED24CB359D0094CD2C /* PersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStore.swift; sourceTree = "<group>"; };
 		736D23EF24CB35E20094CD2C /* UITableView+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Empty.swift"; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			children = (
 				C3DF5B8424C2549A00F6D3EC /* LaunchScreen.storyboard */,
 				C3DF5B7C24C2549400F6D3EC /* Main.storyboard */,
+				7347911724CC67B4001F2207 /* ClueAnswerCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				C3DF5BAF24C260A600F6D3EC /* Clue.swift */,
+				7347911524CC6712001F2207 /* ClueGameModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -337,12 +343,14 @@
 				736D23F024CB35E20094CD2C /* UITableView+Empty.swift in Sources */,
 				C3DF5B7B24C2549400F6D3EC /* ClueViewController.swift in Sources */,
 				C3DF5B7724C2549400F6D3EC /* AppDelegate.swift in Sources */,
+				7347911824CC67B4001F2207 /* ClueAnswerCell.swift in Sources */,
 				C3DF5B7924C2549400F6D3EC /* SceneDelegate.swift in Sources */,
 				C3DF5BB024C260A600F6D3EC /* Clue.swift in Sources */,
 				736D23EB24CB34FB0094CD2C /* ErrorHandler.swift in Sources */,
 				C3FBE53824C4DEA300D11A30 /* ImageCache.swift in Sources */,
 				C3FBE53624C2877C00D11A30 /* SoundManager.swift in Sources */,
 				736D23F224CB36210094CD2C /* UIView+ActivitySpinner.swift in Sources */,
+				7347911624CC6712001F2207 /* ClueGameModel.swift in Sources */,
 				736D23EE24CB359D0094CD2C /* PersistenceStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

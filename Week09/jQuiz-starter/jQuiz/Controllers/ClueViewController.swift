@@ -43,7 +43,7 @@ class ClueViewController: UIViewController {
     }
     
     func setUpView() {
-        
+        correctAnswerClue = networkHandler.clue
     }
     
     func getClues() {
@@ -82,7 +82,15 @@ extension ClueViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "clueAnswerCell", for: indexPath) as? ClueAnswerCell
+            else { return UITableViewCell() }
+        
+        let clue = clues[indexPath.row]
+        
+        // Do something to get only 4 answers with the correct one being inside too?
+        
+        cell.answerLabel.text = clue.answer
+        
         return cell
     }
 
