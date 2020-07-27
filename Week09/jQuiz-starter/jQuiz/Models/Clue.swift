@@ -21,18 +21,10 @@ struct Clue: Codable {
         case categoryID = "category_id"
         case category
     }
-    
 }
 
 struct Category: Codable {
     let id: Int
     let title: String
-    //let cluesCount: Int?
-    
-//    enum CodingKeys: String, CodingKey {
-//        case id, title
-//        case cluesCount = "clues_count"
-//    }
-    
 }
 

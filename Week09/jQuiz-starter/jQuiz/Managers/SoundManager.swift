@@ -10,11 +10,11 @@
 import AVFoundation
 
 class SoundManager: NSObject {
-
+    
     static let shared = SoundManager()
-
+    
     private var player: AVAudioPlayer?
-
+    
     var isSoundEnabled: Bool? {
         get {
             // Since UserDefaults.standard.bool(forKey: "sound") will default to "false" if it has not been set
@@ -23,13 +23,13 @@ class SoundManager: NSObject {
             UserDefaults.standard.object(forKey: "sound") as? Bool
         }
     }
-
+    
     func playSound() {
-
+        
     }
-
+    
     func toggleSoundPreference() {
-
+        
     }
-
+    
 }
