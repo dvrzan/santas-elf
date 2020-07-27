@@ -18,6 +18,7 @@ class Networking {
     
     let randomEndpoint = "http://www.jservice.io/api/random"
     let categoryEndpoint = "http://www.jservice.io/api/clues?category="
+    let imageURL = "https://cdn1.edgedatg.com/aws/v2/abc/ABCUpdates/blog/2900129/8484c3386d4378d7c826e3f3690b481b/1600x900-Q90_8484c3386d4378d7c826e3f3690b481b.jpg"
     
     var delegate: NetworkingErrorDelegate?
     
@@ -107,6 +108,23 @@ class Networking {
             }
             catch {
                 print("Error2: \(error)")
+            }
+        }
+        task.resume()
+    }
+    
+    func getHeaderImage(headerImage: UIImageView) {
+        guard let imageUrl = URL(string: imageURL) else {
+            return
+        }
+        let task = URLSession.shared.downloadTask(with: imageUrl) { location, response, error in
+            guard let location = location,
+                let imageData = try? Data(contentsOf: location),
+                let image = UIImage(data: imageData) else {
+                    return
+            }
+            DispatchQueue.main.async {
+                headerImage.image = image
             }
         }
         task.resume()

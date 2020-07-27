@@ -18,8 +18,6 @@ class ClueViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     
     var clues: [Clue] = []
-    //var correctAnswerClue: Clue?
-    //var points: Int = 0
     
     var game = ClueGameModel()
     let networkHandler = Networking.sharedInstance
@@ -31,7 +29,6 @@ class ClueViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-        
         game.delegate = self
         
         if SoundManager.shared.isSoundEnabled == false {
@@ -43,6 +40,11 @@ class ClueViewController: UIViewController {
         SoundManager.shared.playSound()
         
         getClues()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        networkHandler.getHeaderImage(headerImage: logoImageView)
     }
     
     func setUpView() {

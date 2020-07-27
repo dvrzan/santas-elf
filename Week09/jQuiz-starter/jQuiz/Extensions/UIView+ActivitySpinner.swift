@@ -25,7 +25,7 @@ extension UIViewController {
         vSpinner = spinnerView
     }
     
-    func removeSpinner(after: Double = 2) {
+    func removeSpinner(after: Double = 0.0) {
         // wait two seconds to simulate some work happening
         DispatchQueue.main.asyncAfter(deadline: .now() + after) {
             // then remove the spinner view controller
