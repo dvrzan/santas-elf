@@ -15,8 +15,6 @@ protocol NetworkingErrorDelegate {
 class Networking {
     
     static let sharedInstance = Networking()
-    var clue: Clue? // clue with correct answer -> pass it to viewcontroller
-    //var categoryId: Int?
     
     let randomEndpoint = "http://www.jservice.io/api/random"
     let categoryEndpoint = "http://www.jservice.io/api/clues?category="
@@ -43,14 +41,6 @@ class Networking {
 //            do {
 //                let decoder = JSONDecoder()
 //                let clue = try decoder.decode([Clue].self, from: data)
-//                print("Clue: \(clue)")
-//                //print("ID: \(String(describing: clue.first?.categoryID))")
-//                self.clue = clue
-//                for c in clue {
-//                    self.categoryId = c.categoryID
-//
-//                }
-//                print("ID: \(String(describing: self.categoryId)))")
 //            }
 //            catch {
 //                print("Error2: \(error)")
@@ -62,7 +52,7 @@ class Networking {
     func getRandomCategory(completion: @escaping (Int?) -> ()) {
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
-        let url = URL(string: "http://www.jservice.io/api/random")!
+        let url = URL(string: randomEndpoint)!
         
         let task = session.dataTask(with: url) { data, response, error in
             if let error = error {
@@ -78,15 +68,10 @@ class Networking {
             do {
                 let decoder = JSONDecoder()
                 let clue = try decoder.decode([Clue].self, from: data)
-                //self.clue = clue
                 for c in clue {
-                    //self.categoryId = c.categoryID
-                    self.clue = c
                     completion(c.categoryID)
                 }
-                print("1 Clue: \(clue)")
-//                completion(self.categoryId)
-                //print("ID: \(String(describing: self.categoryId)))")
+                //print("1 Clue: \(clue)")
             }
             catch {
                 print("Error2: \(error)")
@@ -117,10 +102,9 @@ class Networking {
             do {
                 let decoder = JSONDecoder()
                 let clues = try decoder.decode([Clue].self, from: data)
-                print("Clues: \(clues)")
-                completion(clues)
-                
-                print("All clues with same category: \(clues)")
+                let nonNilClues = clues.compactMap { $0 }
+                let limitClues = nonNilClues.limit(4)
+                completion(limitClues)
             }
             catch {
                 print("Error2: \(error)")

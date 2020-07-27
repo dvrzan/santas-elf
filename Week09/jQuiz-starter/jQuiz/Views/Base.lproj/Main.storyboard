@@ -24,25 +24,28 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="clueAnswerCell" id="ozn-NL-xGx" customClass="ClueAnswerCell" customModule="jQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="354" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="354" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ozn-NL-xGx" id="RiH-Dw-ymz">
-                                            <rect key="frame" x="0.0" y="0.0" width="354" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8M5-aX-Lkz" userLabel="Answer">
-                                                    <rect key="frame" x="20" y="11.5" width="314" height="20.5"/>
+                                                    <rect key="frame" x="20" y="11" width="314" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="8M5-aX-Lkz" firstAttribute="centerY" secondItem="RiH-Dw-ymz" secondAttribute="centerY" id="DwK-Dr-MhZ"/>
+                                                <constraint firstItem="8M5-aX-Lkz" firstAttribute="top" secondItem="RiH-Dw-ymz" secondAttribute="topMargin" id="HIO-l5-UYc"/>
                                                 <constraint firstItem="8M5-aX-Lkz" firstAttribute="leading" secondItem="RiH-Dw-ymz" secondAttribute="leadingMargin" id="iQ9-uS-f2x"/>
-                                                <constraint firstItem="8M5-aX-Lkz" firstAttribute="centerX" secondItem="RiH-Dw-ymz" secondAttribute="centerX" id="tSN-Kk-uSk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8M5-aX-Lkz" secondAttribute="trailing" id="jym-9r-b03"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8M5-aX-Lkz" secondAttribute="bottom" id="qbI-RU-3Hp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="answerLabel" destination="8M5-aX-Lkz" id="fxX-TL-eLE"/>
                                         </connections>
@@ -65,7 +68,7 @@
                                     <constraint firstAttribute="height" constant="125" id="iG1-WY-OuC"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IW7-gs-GWY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="IW7-gs-GWY">
                                 <rect key="frame" x="25" y="238.5" width="364" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>

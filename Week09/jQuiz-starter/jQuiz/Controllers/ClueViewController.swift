@@ -43,7 +43,9 @@ class ClueViewController: UIViewController {
     }
     
     func setUpView() {
-        correctAnswerClue = networkHandler.clue
+        categoryLabel.text = correctAnswerClue?.category.title
+        clueLabel.text = correctAnswerClue?.question
+        tableView.reloadData()
     }
     
     func getClues() {
@@ -55,8 +57,15 @@ class ClueViewController: UIViewController {
             print("Next")
             self.networkHandler.getAllCluesInCategory(categoryId: id) { (clues) in
                 self.clues = clues
-                self.setUpView()
-                print("Passed clues: \(clues)")
+                DispatchQueue.main.async {
+                    self.correctAnswerClue = clues.randomElement()
+                    print("Correct clue: \(self.correctAnswerClue!)")
+                    self.setUpView()
+                }
+                //self.correctAnswerClue = clues.randomElement()
+                //self.clues.append(self.correctAnswerClue!)
+                print("All 4 with correct one clues: \(clues)")
+                //print("Correct clue: \(self.correctAnswerClue)")
             }
         })
     }
@@ -86,10 +95,9 @@ extension ClueViewController: UITableViewDelegate, UITableViewDataSource {
             else { return UITableViewCell() }
         
         let clue = clues[indexPath.row]
-        
-        // Do something to get only 4 answers with the correct one being inside too?
-        
-        cell.answerLabel.text = clue.answer
+        cell.answerLabel.text = clue.answer?
+            .replacingOccurrences(of: "<i>", with: "")
+            .replacingOccurrences(of: "</i>", with: "")
         
         return cell
     }

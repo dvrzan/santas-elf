@@ -13,6 +13,7 @@
 		736D23EE24CB359D0094CD2C /* PersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736D23ED24CB359D0094CD2C /* PersistenceStore.swift */; };
 		736D23F024CB35E20094CD2C /* UITableView+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736D23EF24CB35E20094CD2C /* UITableView+Empty.swift */; };
 		736D23F224CB36210094CD2C /* UIView+ActivitySpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736D23F124CB36210094CD2C /* UIView+ActivitySpinner.swift */; };
+		73AD0A1A24CF12EB00975A35 /* Sequence+Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD0A1924CF12EB00975A35 /* Sequence+Filter.swift */; };
 		C3DF5B7724C2549400F6D3EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF5B7624C2549400F6D3EC /* AppDelegate.swift */; };
 		C3DF5B7924C2549400F6D3EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF5B7824C2549400F6D3EC /* SceneDelegate.swift */; };
 		C3DF5B7B24C2549400F6D3EC /* ClueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF5B7A24C2549400F6D3EC /* ClueViewController.swift */; };
@@ -50,6 +51,7 @@
 		736D23ED24CB359D0094CD2C /* PersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStore.swift; sourceTree = "<group>"; };
 		736D23EF24CB35E20094CD2C /* UITableView+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Empty.swift"; sourceTree = "<group>"; };
 		736D23F124CB36210094CD2C /* UIView+ActivitySpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ActivitySpinner.swift"; sourceTree = "<group>"; };
+		73AD0A1924CF12EB00975A35 /* Sequence+Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Filter.swift"; sourceTree = "<group>"; };
 		C3DF5B7324C2549400F6D3EC /* jQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DF5B7624C2549400F6D3EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3DF5B7824C2549400F6D3EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				C3FBE53724C4DEA300D11A30 /* ImageCache.swift */,
 				736D23EF24CB35E20094CD2C /* UITableView+Empty.swift */,
 				736D23F124CB36210094CD2C /* UIView+ActivitySpinner.swift */,
+				73AD0A1924CF12EB00975A35 /* Sequence+Filter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				C3DF5B7924C2549400F6D3EC /* SceneDelegate.swift in Sources */,
 				C3DF5BB024C260A600F6D3EC /* Clue.swift in Sources */,
 				736D23EB24CB34FB0094CD2C /* ErrorHandler.swift in Sources */,
+				73AD0A1A24CF12EB00975A35 /* Sequence+Filter.swift in Sources */,
 				C3FBE53824C4DEA300D11A30 /* ImageCache.swift in Sources */,
 				C3FBE53624C2877C00D11A30 /* SoundManager.swift in Sources */,
 				736D23F224CB36210094CD2C /* UIView+ActivitySpinner.swift in Sources */,
