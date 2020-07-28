@@ -26,6 +26,6 @@ class UserDefaultsPersistence: Persistence {
     }
     
     func loadData(key: String) -> Any? {
-        userDefaults.value(forKey: key)
+        userDefaults.object(forKey: key)
     }
 }
