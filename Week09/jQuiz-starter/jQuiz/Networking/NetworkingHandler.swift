@@ -80,7 +80,7 @@ class Networking {
         task.resume()
     }
     
-    func getAllCluesInCategory(categoryId: Int, completion: @escaping ([Clue]) -> ()) {i
+    func getAllCluesInCategory(categoryId: Int, completion: @escaping ([Clue]) -> ()) {
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
         let url = URL(string: categoryEndpoint + String(describing: categoryId))!
