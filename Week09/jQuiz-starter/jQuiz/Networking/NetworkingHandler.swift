@@ -24,32 +24,6 @@ class Networking {
     
     private init() {}
     
-    //    func getClue(url: URL) {
-    //        let configuration = URLSessionConfiguration.default
-    //        let session = URLSession(configuration: configuration)
-    //
-    //        let task = session.dataTask(with: url) { data, response, error in
-    //            if let error = error {
-    //                fatalError("Error1: \(error)")
-    //            }
-    //            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-    //                fatalError("Error: invalid HTTP response code")
-    //                //self.delegate?.didFailWithError(error: ErrorFound.noNetworkConnection)
-    //            }
-    //            guard let data = data else {
-    //                fatalError("Error: missing response data")
-    //            }
-    //            do {
-    //                let decoder = JSONDecoder()
-    //                let clue = try decoder.decode([Clue].self, from: data)
-    //            }
-    //            catch {
-    //                print("Error2: \(error)")
-    //            }
-    //        }
-    //        task.resume()
-    //    }
-    
     func getRandomCategory(completion: @escaping (Int?) -> ()) {
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
@@ -57,13 +31,15 @@ class Networking {
         
         let task = session.dataTask(with: url) { data, response, error in
             if let error = error {
+                self.delegate?.didFailWithError(error: ErrorFound.unknownError)
                 fatalError("Error1: \(error)")
             }
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                self.delegate?.didFailWithError(error: ErrorFound.invalidHttpResponse)
                 fatalError("Error: invalid HTTP response code")
-                //self.delegate?.didFailWithError(error: ErrorFound.noNetworkConnection)
             }
             guard let data = data else {
+                self.delegate?.didFailWithError(error: ErrorFound.noNetworkConnection)
                 fatalError("Error: missing response data")
             }
             do {
@@ -87,13 +63,15 @@ class Networking {
         
         let task = session.dataTask(with: url) { data, response, error in
             if let error = error {
+                self.delegate?.didFailWithError(error: ErrorFound.unknownError)
                 fatalError("Error1: \(error)")
             }
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                self.delegate?.didFailWithError(error: ErrorFound.invalidHttpResponse)
                 fatalError("Error: invalid HTTP response code")
-                //self.delegate?.didFailWithError(error: ErrorFound.noNetworkConnection)
             }
             guard let data = data else {
+                self.delegate?.didFailWithError(error: ErrorFound.noNetworkConnection)
                 fatalError("Error: missing response data")
             }
             do {
