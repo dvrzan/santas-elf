@@ -40,7 +40,7 @@ class ClueViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        networkHandler.getHeaderImage(headerImage: logoImageView)
+        logoImageView.loadImage(urlString: networkHandler.imageURL)
     }
     
     func setUpView() {

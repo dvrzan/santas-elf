@@ -88,21 +88,4 @@ class Networking {
         task.resume()
     }
     
-    func getHeaderImage(headerImage: UIImageView) {
-        guard let imageUrl = URL(string: imageURL) else {
-            return
-        }
-        let task = URLSession.shared.downloadTask(with: imageUrl) { location, response, error in
-            guard let location = location,
-                let imageData = try? Data(contentsOf: location),
-                let image = UIImage(data: imageData) else {
-                    return
-            }
-            DispatchQueue.main.async {
-                headerImage.image = image
-            }
-        }
-        task.resume()
-    }
-    
 }
