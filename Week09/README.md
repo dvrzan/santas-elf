@@ -1,5 +1,6 @@
-![Front Banner](Documentation/FrontBanner.png)
-
+<p align="center">
+<img src="Documentation/FrontBanner.png">
+</p>
 
 ## About the app
 
@@ -25,4 +26,6 @@ The header logo image is downloaded from the URL the first time the user opens t
 
 <br />
 
-![End Banner](Documentation/EndBanner.png)
+<p align="center">
+<img src="Documentation/EndBanner.png">
+</p>
