@@ -25,7 +25,6 @@ class ClueViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showSpinner(onView: view)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -40,6 +39,7 @@ class ClueViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        showSpinner(onView: view)
         logoImageView.loadImage(urlString: networkHandler.imageURL)
     }
     
@@ -50,6 +50,14 @@ class ClueViewController: UIViewController {
         
         tableView.reloadData()
         removeSpinner()
+    }
+    
+    func setUpTableViewCellDesign(for cell: UITableViewCell) {
+        cell.layer.borderWidth = 2.0
+        cell.layer.borderColor = UIColor.purple.cgColor
+        cell.layer.backgroundColor = UIColor.white.cgColor
+        cell.layer.cornerRadius = 15
+        cell.layer.masksToBounds = true
     }
     
     func getClues() {
@@ -99,6 +107,8 @@ extension ClueViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "clueAnswerCell", for: indexPath) as? ClueAnswerCell
             else { return UITableViewCell() }
         
+        setUpTableViewCellDesign(for: cell)
+        
         let clue = clues[indexPath.row]
         cell.answerLabel.text = clue.answer?
             .replacingOccurrences(of: "<i>", with: "")
@@ -131,7 +141,7 @@ extension ClueViewController: ClueGameModelDelegate {
     func willShowGameInfo(answer: Answer) {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: answer.title, message: answer.message + "\(self.game.correctAnswerClue.value ?? 100) points!", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: {
+            let action = UIAlertAction(title: "Acknowledged", style: .default, handler: {
                 action in
                 self.showSpinner(onView: self.view)
                 self.getClues()
