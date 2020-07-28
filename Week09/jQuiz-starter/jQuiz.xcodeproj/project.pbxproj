@@ -11,7 +11,6 @@
 		7347911824CC67B4001F2207 /* ClueAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7347911724CC67B4001F2207 /* ClueAnswerCell.swift */; };
 		736D23EB24CB34FB0094CD2C /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736D23EA24CB34FB0094CD2C /* ErrorHandler.swift */; };
 		736D23EE24CB359D0094CD2C /* PersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736D23ED24CB359D0094CD2C /* PersistenceStore.swift */; };
-		736D23F024CB35E20094CD2C /* UITableView+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736D23EF24CB35E20094CD2C /* UITableView+Empty.swift */; };
 		736D23F224CB36210094CD2C /* UIView+ActivitySpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736D23F124CB36210094CD2C /* UIView+ActivitySpinner.swift */; };
 		73AD0A1A24CF12EB00975A35 /* Sequence+Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AD0A1924CF12EB00975A35 /* Sequence+Filter.swift */; };
 		C3DF5B7724C2549400F6D3EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF5B7624C2549400F6D3EC /* AppDelegate.swift */; };
@@ -49,7 +48,6 @@
 		7347911724CC67B4001F2207 /* ClueAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClueAnswerCell.swift; sourceTree = "<group>"; };
 		736D23EA24CB34FB0094CD2C /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		736D23ED24CB359D0094CD2C /* PersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStore.swift; sourceTree = "<group>"; };
-		736D23EF24CB35E20094CD2C /* UITableView+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Empty.swift"; sourceTree = "<group>"; };
 		736D23F124CB36210094CD2C /* UIView+ActivitySpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ActivitySpinner.swift"; sourceTree = "<group>"; };
 		73AD0A1924CF12EB00975A35 /* Sequence+Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Filter.swift"; sourceTree = "<group>"; };
 		C3DF5B7324C2549400F6D3EC /* jQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				C3FBE53724C4DEA300D11A30 /* ImageCache.swift */,
-				736D23EF24CB35E20094CD2C /* UITableView+Empty.swift */,
 				736D23F124CB36210094CD2C /* UIView+ActivitySpinner.swift */,
 				73AD0A1924CF12EB00975A35 /* Sequence+Filter.swift */,
 			);
@@ -351,7 +348,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3DF5BAE24C25E1A00F6D3EC /* NetworkingHandler.swift in Sources */,
-				736D23F024CB35E20094CD2C /* UITableView+Empty.swift in Sources */,
 				C3DF5B7B24C2549400F6D3EC /* ClueViewController.swift in Sources */,
 				C3DF5B7724C2549400F6D3EC /* AppDelegate.swift in Sources */,
 				7347911824CC67B4001F2207 /* ClueAnswerCell.swift in Sources */,

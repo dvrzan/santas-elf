@@ -32,15 +32,17 @@ class Networking {
         let task = session.dataTask(with: url) { data, response, error in
             if let error = error {
                 self.delegate?.didFailWithError(error: ErrorFound.unknownError)
-                fatalError("Error1: \(error)")
+                print("Error1: \(error)")
             }
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                 self.delegate?.didFailWithError(error: ErrorFound.invalidHttpResponse)
-                fatalError("Error: invalid HTTP response code")
+                print("Error: invalid HTTP response code")
+                return
             }
             guard let data = data else {
                 self.delegate?.didFailWithError(error: ErrorFound.noNetworkConnection)
-                fatalError("Error: missing response data")
+                print("Error: missing response data")
+                return
             }
             do {
                 let decoder = JSONDecoder()
@@ -64,15 +66,17 @@ class Networking {
         let task = session.dataTask(with: url) { data, response, error in
             if let error = error {
                 self.delegate?.didFailWithError(error: ErrorFound.unknownError)
-                fatalError("Error1: \(error)")
+                print("Error1: \(error)")
             }
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                 self.delegate?.didFailWithError(error: ErrorFound.invalidHttpResponse)
-                fatalError("Error: invalid HTTP response code")
+                print("Error: invalid HTTP response code")
+                return
             }
             guard let data = data else {
                 self.delegate?.didFailWithError(error: ErrorFound.noNetworkConnection)
-                fatalError("Error: missing response data")
+                print("Error: missing response data")
+                return
             }
             do {
                 let decoder = JSONDecoder()
