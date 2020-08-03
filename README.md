@@ -98,6 +98,13 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 #### Homework
 [Week 09 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week09)
 ***
+### Week 10
+#### Course
+[iOS Concurrency with GCD and Operations](https://www.raywenderlich.com/9461083-ios-concurrency-with-gcd-and-operations)<br />
+[ARC & Memory Management](https://www.raywenderlich.com/966538-arc-and-memory-management-in-swift)<br />
+#### Homework
+[Week 10 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week10)
+***
 
 <br />
    
