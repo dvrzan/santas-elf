@@ -72,10 +72,29 @@
                                     <constraint firstAttribute="width" secondItem="EGa-jN-GyB" secondAttribute="height" multiplier="2:1" id="b26-hs-34Q"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRQ-kq-Rzx" userLabel="Success View Alert">
+                                <rect key="frame" x="30" y="-156" width="354" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation added successfully!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKh-wc-Act" userLabel="Success Label Info">
+                                        <rect key="frame" x="0.0" y="18" width="354" height="24"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="MKh-wc-Act" firstAttribute="centerY" secondItem="VRQ-kq-Rzx" secondAttribute="centerY" id="2FI-w1-1Oi"/>
+                                    <constraint firstAttribute="height" constant="60" id="4De-cT-FQI"/>
+                                    <constraint firstItem="MKh-wc-Act" firstAttribute="leading" secondItem="VRQ-kq-Rzx" secondAttribute="leading" id="D2g-Zf-J8q"/>
+                                    <constraint firstItem="MKh-wc-Act" firstAttribute="centerX" secondItem="VRQ-kq-Rzx" secondAttribute="centerX" id="ODU-SN-GXP"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.50739085669999995" green="0.79533392189999996" blue="0.69819450380000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0l7-f8-I6P" firstAttribute="top" secondItem="Ise-fR-INA" secondAttribute="bottom" constant="80" id="1sT-LI-15A"/>
+                            <constraint firstItem="VRQ-kq-Rzx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DfI-Fa-FF3"/>
                             <constraint firstItem="Ise-fR-INA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="GLo-UR-lDl"/>
                             <constraint firstItem="0l7-f8-I6P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HEm-TH-Nfx"/>
                             <constraint firstItem="hNE-VQ-eAC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HkW-HU-r1C"/>
@@ -83,16 +102,19 @@
                             <constraint firstItem="WrR-Ci-WtH" firstAttribute="bottom" secondItem="Ise-fR-INA" secondAttribute="bottom" id="Ke4-2w-QRU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EGa-jN-GyB" secondAttribute="trailing" constant="50" id="NQy-SJ-66D"/>
                             <constraint firstItem="hNE-VQ-eAC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UuF-5j-p4f"/>
+                            <constraint firstItem="VRQ-kq-Rzx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="VLi-Hy-WyB"/>
                             <constraint firstItem="EGa-jN-GyB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="anU-OG-Ipd"/>
                             <constraint firstAttribute="bottom" secondItem="0l7-f8-I6P" secondAttribute="bottom" constant="40" id="eli-0e-Rk8"/>
                             <constraint firstAttribute="bottomMargin" secondItem="EGa-jN-GyB" secondAttribute="bottom" constant="200" id="i38-P0-LmZ"/>
                             <constraint firstItem="Ise-fR-INA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l7t-b6-FkD"/>
                             <constraint firstItem="WrR-Ci-WtH" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="460" id="nrX-xj-oKx"/>
                             <constraint firstItem="Ise-fR-INA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qfr-Er-Wbc"/>
+                            <constraint firstItem="VRQ-kq-Rzx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-200" id="sLP-03-b2n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="alertView" destination="VRQ-kq-Rzx" id="itH-yM-vXB"/>
                         <outlet property="diver1Image" destination="EGa-jN-GyB" id="YWq-kg-EJE"/>
                         <outlet property="diver2Image" destination="WrR-Ci-WtH" id="upJ-Wm-QG6"/>
                         <outlet property="lowAirButton" destination="zM2-KI-Wqy" id="Py3-pj-Ajb"/>

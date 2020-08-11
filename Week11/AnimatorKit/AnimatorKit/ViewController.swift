@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var sharkImage: UIImageView!
     @IBOutlet weak var diver1Image: UIImageView!
     @IBOutlet weak var diver2Image: UIImageView!
+    @IBOutlet weak var alertView: UIView!
     
     //MARK: - Properties
     private var menuIsOpen = false
@@ -46,7 +47,7 @@ class ViewController: UIViewController {
         swimButton.setImage(UIImage(named: "SwimButton-OFF"), for: .normal)
     }
     
-    //MARK: - Main Menu Buttons Animation
+    //MARK: - Main Menu Buttons animation methods
     @IBAction func didTapMainMenuButton() {
         menuIsOpen.toggle()
         animateMainMenuButtons()
@@ -79,10 +80,15 @@ class ViewController: UIViewController {
     
     @IBAction func didTapSharkButton(_ sender: UIButton) {
         changeButtonImage(sender, offImageName: "SharkButton-OFF", onImageName: "SharkButton-ON")
-        animateSharkImageView(onTap: sender)
+        animateSharkImageView()
     }
     
-    func animateSharkImageView(onTap: UIButton) {
+    @IBAction func didTapSwimButton(_ sender: UIButton) {
+        changeButtonImage(sender, offImageName: "SwimButton-OFF", onImageName: "SwimButton-ON")
+        animateSwimDiver2ImageView()
+    }
+    
+    func animateSharkImageView() {
         // Create new keyframe animation
         UIView.animateKeyframes(withDuration: 5.0, delay: 0, animations: { [sharkImage = sharkImage.self!] in
             // Increase shark's width
@@ -91,19 +97,31 @@ class ViewController: UIViewController {
             }
             // Move shark to right & off screen
             UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 4.0) {
-                sharkImage.center.x += 400
                 sharkImage.alpha = 0
+                sharkImage.center.x += 400
             }
+            // Return shark's alpha to 1
             UIView.addKeyframe(withRelativeStartTime: 5.0, relativeDuration: 0.2) {
                 sharkImage.alpha = 1
             }
         })
     }
     
-    @IBAction func didTapSwimButton(_ sender: UIButton) {
-        changeButtonImage(sender, offImageName: "SwimButton-OFF", onImageName: "SwimButton-ON")
+    func animateLowAirDiver1() {
+        
     }
     
+    func animateSwimDiver2ImageView() {
+        // Create new keyframe animation
+        UIView.animateKeyframes(withDuration: 5.0, delay: 0, animations: { [diver2Image = diver2Image.self!] in
+            // Increase diver's width & move him off-screen to left
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 5.0) {
+                diver2Image.frame.size.width -= 650
+            }
+        })
+    }
+    
+    //MARK: - Utility methods
     func changeButtonImage(_ sender: UIButton, offImageName: String, onImageName: String) {
         if sender.currentImage == UIImage(named: offImageName) {
             sender.setImage(UIImage(named: onImageName), for: .normal)
