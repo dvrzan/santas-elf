@@ -29,6 +29,10 @@ class ViewController: UIViewController {
     var sharkButtonCenter: CGPoint!
     var swimButtonCenter: CGPoint!
     
+    let swimAnimation = UIViewPropertyAnimator()
+    let sharkAnimation = UIViewPropertyAnimator()
+    let lowAirAnimation = UIViewPropertyAnimator()
+    
     //MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,19 +116,20 @@ class ViewController: UIViewController {
         let originalCenter = sharkImage.center
         view.layoutIfNeeded()
         // Create new keyframe animation
-        UIView.animateKeyframes(withDuration: 5.0, delay: 0, animations: { [sharkImage = sharkImage.self!] in
+        UIView.animateKeyframes(withDuration: 7.0, delay: 0, animations: { [sharkImage = sharkImage.self!] in
             // Increase shark's width
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5) {
                 sharkImage.frame.size.width += 200
             }
             // Move shark to right & off screen
-            UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 4.0) {
+            UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5) {
                 sharkImage.alpha = 0
                 sharkImage.center.x += 400
             }
             // Return shark's alpha to 1
-            UIView.addKeyframe(withRelativeStartTime: 4.7, relativeDuration: 0.3) {
+            UIView.addKeyframe(withRelativeStartTime: 1.0, relativeDuration: 0.1) {
                 sharkImage.center = originalCenter
+                sharkImage.alpha = 1
             }
         })
     }
@@ -133,16 +138,25 @@ class ViewController: UIViewController {
         let originalCenter = diver1Image.center
         view.layoutIfNeeded()
         // Create new keyframe animation
-        UIView.animateKeyframes(withDuration: 5.0, delay: 0, animations: { [diver1Image = diver1Image.self!] in
+        UIView.animateKeyframes(withDuration: 7.0, delay: 0, animations: { [diver1Image = diver1Image.self!] in
             // Rotate diver & at the same time move to top and dissapear off screen
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 2.0) {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.01) {
+                diver1Image.backgroundColor = .systemRed
+                diver1Image.layer.cornerRadius = 20
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0.01, relativeDuration: 0.01) {
+                diver1Image.backgroundColor = .clear
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0.1, relativeDuration: 0.2) {
                 diver1Image.transform = .init(rotationAngle: .pi/2)
             }
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 5.0) {
+            UIView.addKeyframe(withRelativeStartTime: 0.1, relativeDuration: 0.8) {
                 diver1Image.center.y -= 700
             }
-            UIView.addKeyframe(withRelativeStartTime: 4.7, relativeDuration: 0.3) {
+            // Return to starting position and remove all transformations
+            UIView.addKeyframe(withRelativeStartTime: 1.0, relativeDuration: 0.1) {
                 diver1Image.center = originalCenter
+                diver1Image.transform = .identity
             }
         })
     }
@@ -151,12 +165,13 @@ class ViewController: UIViewController {
         let originalCenter = diver2Image.center
         view.layoutIfNeeded()
         // Create new keyframe animation
-        UIView.animateKeyframes(withDuration: 5.0, delay: 0, animations: { [diver2Image = diver2Image.self!] in
+        UIView.animateKeyframes(withDuration: 7.0, delay: 0, animations: { [diver2Image = diver2Image.self!] in
             // Increase diver's width & move him off-screen to left
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 5.0) {
-                diver2Image.frame.size.width -= 650
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1.0) {
+                diver2Image.frame.size.width -= 700
             }
-            UIView.addKeyframe(withRelativeStartTime: 4.0, relativeDuration: 0.3) {
+            // Return to original position
+            UIView.addKeyframe(withRelativeStartTime: 1.0, relativeDuration: 0.1) {
                 diver2Image.center = originalCenter
             }
         })
