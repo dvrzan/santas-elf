@@ -45,6 +45,8 @@ class ViewController: UIViewController {
         lowAirButton.setImage(UIImage(named: "LowAirButton-OFF"), for: .normal)
         sharkButton.setImage(UIImage(named: "SharkButton-OFF"), for: .normal)
         swimButton.setImage(UIImage(named: "SwimButton-OFF"), for: .normal)
+        
+        alertView.alpha = 0
     }
     
     //MARK: - Main Menu Buttons animation methods
@@ -74,13 +76,26 @@ class ViewController: UIViewController {
         sharkButton.center = mainMenuButton.center
     }
     
+    func presentAlertView() {
+        alertView.layer.cornerRadius = 20
+        UIView.animate(withDuration: 0.6, delay: 0, options: .autoreverse, animations: {
+            self.alertView.center.y = 200
+            self.alertView.alpha = 1
+        }, completion: {_ in
+            self.alertView.alpha = 0
+        })
+    }
+    
     @IBAction func didTapLowAirButton(_ sender: UIButton) {
         changeButtonImage(sender, offImageName: "LowAirButton-OFF", onImageName: "LowAirButton-ON")
+        animateLowAirDiver1()
     }
     
     @IBAction func didTapSharkButton(_ sender: UIButton) {
         changeButtonImage(sender, offImageName: "SharkButton-OFF", onImageName: "SharkButton-ON")
-        animateSharkImageView()
+        if sender.currentImage == UIImage(named: "SharkButton-ON") {
+            animateSharkImageView()
+        }
     }
     
     @IBAction func didTapSwimButton(_ sender: UIButton) {
@@ -108,7 +123,16 @@ class ViewController: UIViewController {
     }
     
     func animateLowAirDiver1() {
-        
+        // Create new keyframe animation
+        UIView.animateKeyframes(withDuration: 5.0, delay: 0, animations: { [diver1Image = diver1Image.self!] in
+            // Rotate diver & at the same time move to top and dissapear off screen
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 2.0) {
+                diver1Image.transform = .init(rotationAngle: .pi/2)
+            }
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 5.0) {
+                diver1Image.center.y -= 700
+            }
+        })
     }
     
     func animateSwimDiver2ImageView() {
@@ -125,6 +149,7 @@ class ViewController: UIViewController {
     func changeButtonImage(_ sender: UIButton, offImageName: String, onImageName: String) {
         if sender.currentImage == UIImage(named: offImageName) {
             sender.setImage(UIImage(named: onImageName), for: .normal)
+            presentAlertView()
         } else {
             sender.setImage(UIImage(named: offImageName), for: .normal)
         }

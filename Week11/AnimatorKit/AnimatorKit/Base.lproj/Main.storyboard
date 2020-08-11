@@ -73,7 +73,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRQ-kq-Rzx" userLabel="Success View Alert">
-                                <rect key="frame" x="30" y="-156" width="354" height="60"/>
+                                <rect key="frame" x="30" y="64" width="354" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation added successfully!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKh-wc-Act" userLabel="Success Label Info">
                                         <rect key="frame" x="0.0" y="18" width="354" height="24"/>
@@ -109,12 +109,12 @@
                             <constraint firstItem="Ise-fR-INA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l7t-b6-FkD"/>
                             <constraint firstItem="WrR-Ci-WtH" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="460" id="nrX-xj-oKx"/>
                             <constraint firstItem="Ise-fR-INA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qfr-Er-Wbc"/>
-                            <constraint firstItem="VRQ-kq-Rzx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-200" id="sLP-03-b2n"/>
+                            <constraint firstItem="VRQ-kq-Rzx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="sLP-03-b2n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="alertView" destination="VRQ-kq-Rzx" id="itH-yM-vXB"/>
+                        <outlet property="AlertView" destination="VRQ-kq-Rzx" id="itH-yM-vXB"/>
                         <outlet property="diver1Image" destination="EGa-jN-GyB" id="YWq-kg-EJE"/>
                         <outlet property="diver2Image" destination="WrR-Ci-WtH" id="upJ-Wm-QG6"/>
                         <outlet property="lowAirButton" destination="zM2-KI-Wqy" id="Py3-pj-Ajb"/>
