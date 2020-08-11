@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var diver1Image: UIImageView!
     @IBOutlet weak var diver2Image: UIImageView!
     @IBOutlet weak var alertView: UIView!
+    @IBOutlet weak var infoLabel: UILabel!
     
     //MARK: - Properties
     private var menuIsOpen = false
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
     var swimAnimation = UIViewPropertyAnimator()
     var sharkAnimation = UIViewPropertyAnimator()
     var lowAirAnimation = UIViewPropertyAnimator()
+    
     
     //MARK: - UIViewController
     override func viewDidLoad() {
@@ -60,6 +62,7 @@ class ViewController: UIViewController {
     }
     
     func animateMainMenuButtons() {
+        changeMenuButtonsAlpha(alpha: 1)
         UIView.animate(
             withDuration: 0.3,
             delay: 0,
@@ -80,20 +83,24 @@ class ViewController: UIViewController {
                 if self.sharkButton.currentImage == UIImage(named: Const.Image.sharkON){
                     self.animateSharkImageView()
                 }
+                self.changeMenuButtonsAlpha(alpha: 0)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 4.6, execute: {
+                    self.presentAlertView(animationFinished: true)
+                })
             }
         })
     }
     
-    func collapseMainMenu() {
-        lowAirButton.center = mainMenuButton.center
-        swimButton.center = mainMenuButton.center
-        sharkButton.center = mainMenuButton.center
-    }
-    
-    func presentAlertView() {
+    func presentAlertView(animationFinished: Bool) {
+        switch animationFinished {
+        case true:
+            infoLabel.text = "ANIMATION FINISHED!"
+        case false:
+            infoLabel.text = "Animation added successfully!"
+        }
         let originCenter = alertView.center
         alertView.layer.cornerRadius = 20
-        UIView.animate(withDuration: 0.4, delay: 0, options: .autoreverse, animations: {
+        UIView.animate(withDuration: 0.7, delay: 0, options: .autoreverse, animations: {
             self.alertView.alpha = 1
             self.alertView.center.y = 200
         }, completion: {_ in
@@ -102,16 +109,48 @@ class ViewController: UIViewController {
         })
     }
     
+    //MARK: - Low Air Button methods
     @IBAction func didTapLowAirButton(_ sender: UIButton) {
         changeButtonImage(sender, offImageName: Const.Image.lowAirOFF, onImageName: Const.Image.lowAirON)
     }
     
-    @IBAction func didTapSharkButton(_ sender: UIButton) {
-        changeButtonImage(sender, offImageName: Const.Image.sharkOFF, onImageName: Const.Image.sharkON)
+    func animateLowAirDiver1ImageView() {
+        let originalCenter = diver1Image.center
+        view.layoutIfNeeded()
+        lowAirAnimation = UIViewPropertyAnimator(duration: 5.0, curve: .easeIn)
+        lowAirAnimation.addAnimations {
+            // Create new keyframe animation
+            UIView.animateKeyframes(withDuration: 5.0, delay: 0, animations: { [diver1Image = self.diver1Image!] in
+                // Add background color red as simulated visual warning
+                UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.01) {
+                    diver1Image.backgroundColor = .systemRed
+                    diver1Image.layer.cornerRadius = 20
+                }
+                // Remove background color
+                UIView.addKeyframe(withRelativeStartTime: 0.01, relativeDuration: 0.01) {
+                    diver1Image.backgroundColor = .clear
+                }
+                // Rotate diver 45 degrees
+                UIView.addKeyframe(withRelativeStartTime: 0.1, relativeDuration: 0.2) {
+                    diver1Image.transform = .init(rotationAngle: .pi/2)
+                }
+                // Move diver off screen at top
+                UIView.addKeyframe(withRelativeStartTime: 0.1, relativeDuration: 0.8) {
+                    diver1Image.center.y -= 700
+                }
+                // Return to starting position and remove all transformations
+                UIView.addKeyframe(withRelativeStartTime: 1.0, relativeDuration: 0.1) {
+                    diver1Image.center = originalCenter
+                    diver1Image.transform = .identity
+                }
+            })
+        }
+        lowAirAnimation.startAnimation()
     }
     
-    @IBAction func didTapSwimButton(_ sender: UIButton) {
-        changeButtonImage(sender, offImageName: Const.Image.swimOFF, onImageName: Const.Image.swimON)
+    //MARK: - Shark Button methods
+    @IBAction func didTapSharkButton(_ sender: UIButton) {
+        changeButtonImage(sender, offImageName: Const.Image.sharkOFF, onImageName: Const.Image.sharkON)
     }
     
     func animateSharkImageView() {
@@ -140,38 +179,9 @@ class ViewController: UIViewController {
         sharkAnimation.startAnimation()
     }
     
-    func animateLowAirDiver1ImageView() {
-        let originalCenter = diver1Image.center
-        view.layoutIfNeeded()
-        lowAirAnimation = UIViewPropertyAnimator(duration: 5.0, curve: .easeIn)
-        lowAirAnimation.addAnimations {
-            // Create new keyframe animation
-            UIView.animateKeyframes(withDuration: 7.0, delay: 0, animations: { [diver1Image = self.diver1Image!] in
-                // Add background color red as simulated visual warning
-                UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.01) {
-                    diver1Image.backgroundColor = .systemRed
-                    diver1Image.layer.cornerRadius = 20
-                }
-                // Remove background color
-                UIView.addKeyframe(withRelativeStartTime: 0.01, relativeDuration: 0.01) {
-                    diver1Image.backgroundColor = .clear
-                }
-                // Rotate diver 45 degrees
-                UIView.addKeyframe(withRelativeStartTime: 0.1, relativeDuration: 0.2) {
-                    diver1Image.transform = .init(rotationAngle: .pi/2)
-                }
-                // Move diver off screen at top
-                UIView.addKeyframe(withRelativeStartTime: 0.1, relativeDuration: 0.8) {
-                    diver1Image.center.y -= 700
-                }
-                // Return to starting position and remove all transformations
-                UIView.addKeyframe(withRelativeStartTime: 1.0, relativeDuration: 0.1) {
-                    diver1Image.center = originalCenter
-                    diver1Image.transform = .identity
-                }
-            })
-        }
-        lowAirAnimation.startAnimation()
+    //MARK: - Swim Button methods
+    @IBAction func didTapSwimButton(_ sender: UIButton) {
+        changeButtonImage(sender, offImageName: Const.Image.swimOFF, onImageName: Const.Image.swimON)
     }
     
     func animateSwimDiver2ImageView() {
@@ -180,7 +190,7 @@ class ViewController: UIViewController {
         swimAnimation = UIViewPropertyAnimator(duration: 5.0, curve: .easeIn)
         swimAnimation.addAnimations {
             // Create new keyframe animation
-            UIView.animateKeyframes(withDuration: 7.0, delay: 0, animations: { [diver2Image = self.diver2Image!] in
+            UIView.animateKeyframes(withDuration: 5.0, delay: 0, animations: { [diver2Image = self.diver2Image!] in
                 // Increase diver's width & move him off-screen to left
                 UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1.0) {
                     diver2Image.frame.size.width -= 700
@@ -198,11 +208,23 @@ class ViewController: UIViewController {
     func changeButtonImage(_ sender: UIButton, offImageName: String, onImageName: String) {
         if sender.currentImage == UIImage(named: offImageName) {
             sender.setImage(UIImage(named: onImageName), for: .normal)
-            presentAlertView()
+            presentAlertView(animationFinished: false)
         } else {
             sender.setImage(UIImage(named: offImageName), for: .normal)
         }
     }
     
+    func changeMenuButtonsAlpha(alpha: CGFloat) {
+        lowAirButton.alpha = alpha
+        swimButton.alpha = alpha
+        sharkButton.alpha = alpha
+    }
+    
+    func collapseMainMenu() {
+        changeMenuButtonsAlpha(alpha: 0)
+        lowAirButton.center = mainMenuButton.center
+        swimButton.center = mainMenuButton.center
+        sharkButton.center = mainMenuButton.center
+    }
 }
 

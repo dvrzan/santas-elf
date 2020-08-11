@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -18,25 +18,34 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Ise-fR-INA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zM2-KI-Wqy" userLabel="LowAirButton">
-                                <rect key="frame" x="251" y="801" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zM2-KI-Wqy" userLabel="LowAirButton">
+                                <rect key="frame" x="257" y="801" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zM2-KI-Wqy" secondAttribute="height" multiplier="1:1" id="ANe-JN-YwK"/>
+                                    <constraint firstAttribute="width" constant="50" id="qfo-JM-C7q"/>
+                                </constraints>
                                 <state key="normal" image="LowAirButton-OFF"/>
                                 <connections>
                                     <action selector="didTapLowAirButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eiW-QA-0U3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKB-oN-mrj" userLabel="SharkButton">
-                                <rect key="frame" x="182" y="730" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKB-oN-mrj" userLabel="SharkButton">
+                                <rect key="frame" x="182" y="726" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="53h-Qn-gTV"/>
+                                    <constraint firstAttribute="width" secondItem="FKB-oN-mrj" secondAttribute="height" multiplier="1:1" id="nKP-tS-IQX"/>
+                                </constraints>
                                 <state key="normal" image="SharkButton-OFF"/>
                                 <connections>
                                     <action selector="didTapSharkButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i5U-SP-161"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPd-e8-AB6" userLabel="SwimButton">
-                                <rect key="frame" x="113" y="801" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPd-e8-AB6" userLabel="SwimButton">
+                                <rect key="frame" x="107" y="801" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vPd-e8-AB6" secondAttribute="height" multiplier="1:1" id="Lvi-Ge-aZj"/>
+                                    <constraint firstAttribute="width" constant="50" id="hoI-bU-QNt"/>
+                                </constraints>
                                 <state key="normal" image="SwimButton-OFF"/>
                                 <connections>
                                     <action selector="didTapSwimButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u2D-cr-GJv"/>
@@ -93,7 +102,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.50739085669999995" green="0.79533392189999996" blue="0.69819450380000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="0l7-f8-I6P" firstAttribute="bottom" secondItem="vPd-e8-AB6" secondAttribute="bottom" constant="5" id="12h-hm-Qpa"/>
                             <constraint firstItem="0l7-f8-I6P" firstAttribute="top" secondItem="Ise-fR-INA" secondAttribute="bottom" constant="80" id="1sT-LI-15A"/>
+                            <constraint firstItem="FKB-oN-mrj" firstAttribute="centerY" secondItem="0l7-f8-I6P" secondAttribute="centerY" constant="-75" id="8Wa-Pi-BEf"/>
                             <constraint firstItem="VRQ-kq-Rzx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DfI-Fa-FF3"/>
                             <constraint firstItem="Ise-fR-INA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="GLo-UR-lDl"/>
                             <constraint firstItem="0l7-f8-I6P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HEm-TH-Nfx"/>
@@ -102,14 +113,18 @@
                             <constraint firstItem="WrR-Ci-WtH" firstAttribute="bottom" secondItem="Ise-fR-INA" secondAttribute="bottom" id="Ke4-2w-QRU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EGa-jN-GyB" secondAttribute="trailing" constant="50" id="NQy-SJ-66D"/>
                             <constraint firstItem="hNE-VQ-eAC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UuF-5j-p4f"/>
+                            <constraint firstItem="vPd-e8-AB6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-75" id="VKU-RS-aiz"/>
                             <constraint firstItem="VRQ-kq-Rzx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="VLi-Hy-WyB"/>
                             <constraint firstItem="EGa-jN-GyB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="anU-OG-Ipd"/>
                             <constraint firstAttribute="bottom" secondItem="0l7-f8-I6P" secondAttribute="bottom" constant="40" id="eli-0e-Rk8"/>
+                            <constraint firstItem="FKB-oN-mrj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g66-ap-Xt5"/>
                             <constraint firstAttribute="bottomMargin" secondItem="EGa-jN-GyB" secondAttribute="bottom" constant="200" id="i38-P0-LmZ"/>
                             <constraint firstItem="Ise-fR-INA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l7t-b6-FkD"/>
                             <constraint firstItem="WrR-Ci-WtH" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="460" id="nrX-xj-oKx"/>
                             <constraint firstItem="Ise-fR-INA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qfr-Er-Wbc"/>
                             <constraint firstItem="VRQ-kq-Rzx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="sLP-03-b2n"/>
+                            <constraint firstItem="0l7-f8-I6P" firstAttribute="bottom" secondItem="zM2-KI-Wqy" secondAttribute="bottom" constant="5" id="uJm-UH-sUf"/>
+                            <constraint firstItem="zM2-KI-Wqy" firstAttribute="centerX" secondItem="0l7-f8-I6P" secondAttribute="centerX" constant="75" id="urH-hg-9iv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -117,6 +132,7 @@
                         <outlet property="alertView" destination="VRQ-kq-Rzx" id="ig9-G3-PTh"/>
                         <outlet property="diver1Image" destination="EGa-jN-GyB" id="YWq-kg-EJE"/>
                         <outlet property="diver2Image" destination="WrR-Ci-WtH" id="upJ-Wm-QG6"/>
+                        <outlet property="infoLabel" destination="MKh-wc-Act" id="JHm-D2-hvy"/>
                         <outlet property="lowAirButton" destination="zM2-KI-Wqy" id="Py3-pj-Ajb"/>
                         <outlet property="mainMenuButton" destination="0l7-f8-I6P" id="7kf-re-E7S"/>
                         <outlet property="sharkButton" destination="FKB-oN-mrj" id="gSQ-eP-8fg"/>
