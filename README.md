@@ -105,6 +105,13 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 #### Homework
 [Week 10 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week10)
 ***
+### Week 11
+#### Course
+[Beginning iOS Animations](https://www.raywenderlich.com/10523008-beginning-ios-animations)<br />
+[Xcode Tips & Tricks](https://www.raywenderlich.com/3199-xcode-tips-and-tricks)<br />
+#### Homework
+[Week 11 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week11)
+***
 
 <br />
    
