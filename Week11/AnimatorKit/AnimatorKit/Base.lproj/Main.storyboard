@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,78 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimatorKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Ise-fR-INA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zM2-KI-Wqy" userLabel="LowAirButton">
+                                <rect key="frame" x="251" y="801" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="LowAirButton-OFF"/>
+                                <connections>
+                                    <action selector="didTapLowAirButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eiW-QA-0U3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKB-oN-mrj" userLabel="SharkButton">
+                                <rect key="frame" x="182" y="730" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="SharkButton-OFF"/>
+                                <connections>
+                                    <action selector="didTapSharkButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i5U-SP-161"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPd-e8-AB6" userLabel="SwimButton">
+                                <rect key="frame" x="113" y="801" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="SwimButton-OFF"/>
+                                <connections>
+                                    <action selector="didTapSwimButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u2D-cr-GJv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-f8-I6P" userLabel="MainMenu Button">
+                                <rect key="frame" x="177" y="796" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0l7-f8-I6P" secondAttribute="height" multiplier="1:1" id="Fcv-Fo-uBU"/>
+                                    <constraint firstAttribute="width" constant="60" id="W2m-oH-EZc"/>
+                                </constraints>
+                                <state key="normal" image="MainMenuButton"/>
+                                <connections>
+                                    <action selector="didTapMainMenuButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="CZf-dq-odM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50739085669999995" green="0.79533392189999996" blue="0.69819450380000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0l7-f8-I6P" firstAttribute="top" secondItem="Ise-fR-INA" secondAttribute="bottom" constant="80" id="1sT-LI-15A"/>
+                            <constraint firstItem="Ise-fR-INA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GLo-UR-lDl"/>
+                            <constraint firstItem="0l7-f8-I6P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HEm-TH-Nfx"/>
+                            <constraint firstAttribute="bottom" secondItem="0l7-f8-I6P" secondAttribute="bottom" constant="40" id="eli-0e-Rk8"/>
+                            <constraint firstItem="Ise-fR-INA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l7t-b6-FkD"/>
+                            <constraint firstItem="Ise-fR-INA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qfr-Er-Wbc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lowAirButton" destination="zM2-KI-Wqy" id="Py3-pj-Ajb"/>
+                        <outlet property="mainMenuButton" destination="0l7-f8-I6P" id="7kf-re-E7S"/>
+                        <outlet property="sharkButton" destination="FKB-oN-mrj" id="gSQ-eP-8fg"/>
+                        <outlet property="swimButton" destination="vPd-e8-AB6" id="kgU-hR-ZKj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="600" height="800"/>
+        <image name="LowAirButton-OFF" width="75" height="75"/>
+        <image name="MainMenuButton" width="75" height="75"/>
+        <image name="SharkButton-OFF" width="75" height="75"/>
+        <image name="SwimButton-OFF" width="75" height="75"/>
+    </resources>
 </document>
