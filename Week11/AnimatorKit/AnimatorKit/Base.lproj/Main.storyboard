@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -53,22 +53,52 @@
                                     <action selector="didTapMainMenuButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="CZf-dq-odM"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shark" translatesAutoresizingMaskIntoConstraints="NO" id="hNE-VQ-eAC">
+                                <rect key="frame" x="0.0" y="413" width="15" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="7Dj-yi-wuh"/>
+                                    <constraint firstAttribute="width" constant="15" id="HvU-fw-yxs"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Diver2" translatesAutoresizingMaskIntoConstraints="NO" id="WrR-Ci-WtH">
+                                <rect key="frame" x="122" y="504" width="70" height="212"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="8J2-im-J0c"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Diver1" translatesAutoresizingMaskIntoConstraints="NO" id="EGa-jN-GyB">
+                                <rect key="frame" x="250" y="605" width="114" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EGa-jN-GyB" secondAttribute="height" multiplier="2:1" id="b26-hs-34Q"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.50739085669999995" green="0.79533392189999996" blue="0.69819450380000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0l7-f8-I6P" firstAttribute="top" secondItem="Ise-fR-INA" secondAttribute="bottom" constant="80" id="1sT-LI-15A"/>
-                            <constraint firstItem="Ise-fR-INA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GLo-UR-lDl"/>
+                            <constraint firstItem="Ise-fR-INA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="GLo-UR-lDl"/>
                             <constraint firstItem="0l7-f8-I6P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HEm-TH-Nfx"/>
+                            <constraint firstItem="hNE-VQ-eAC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HkW-HU-r1C"/>
+                            <constraint firstItem="WrR-Ci-WtH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="I2G-bE-WtB"/>
+                            <constraint firstItem="WrR-Ci-WtH" firstAttribute="bottom" secondItem="Ise-fR-INA" secondAttribute="bottom" id="Ke4-2w-QRU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EGa-jN-GyB" secondAttribute="trailing" constant="50" id="NQy-SJ-66D"/>
+                            <constraint firstItem="hNE-VQ-eAC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UuF-5j-p4f"/>
+                            <constraint firstItem="EGa-jN-GyB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="100" id="anU-OG-Ipd"/>
                             <constraint firstAttribute="bottom" secondItem="0l7-f8-I6P" secondAttribute="bottom" constant="40" id="eli-0e-Rk8"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="EGa-jN-GyB" secondAttribute="bottom" constant="200" id="i38-P0-LmZ"/>
                             <constraint firstItem="Ise-fR-INA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l7t-b6-FkD"/>
-                            <constraint firstItem="Ise-fR-INA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qfr-Er-Wbc"/>
+                            <constraint firstItem="WrR-Ci-WtH" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="460" id="nrX-xj-oKx"/>
+                            <constraint firstItem="Ise-fR-INA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qfr-Er-Wbc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="diver1Image" destination="EGa-jN-GyB" id="YWq-kg-EJE"/>
+                        <outlet property="diver2Image" destination="WrR-Ci-WtH" id="upJ-Wm-QG6"/>
                         <outlet property="lowAirButton" destination="zM2-KI-Wqy" id="Py3-pj-Ajb"/>
                         <outlet property="mainMenuButton" destination="0l7-f8-I6P" id="7kf-re-E7S"/>
                         <outlet property="sharkButton" destination="FKB-oN-mrj" id="gSQ-eP-8fg"/>
+                        <outlet property="sharkImage" destination="hNE-VQ-eAC" id="d49-GT-vta"/>
                         <outlet property="swimButton" destination="vPd-e8-AB6" id="kgU-hR-ZKj"/>
                     </connections>
                 </viewController>
@@ -79,8 +109,11 @@
     </scenes>
     <resources>
         <image name="Background" width="600" height="800"/>
+        <image name="Diver1" width="100" height="50"/>
+        <image name="Diver2" width="150" height="100"/>
         <image name="LowAirButton-OFF" width="75" height="75"/>
         <image name="MainMenuButton" width="75" height="75"/>
+        <image name="Shark" width="100" height="50"/>
         <image name="SharkButton-OFF" width="75" height="75"/>
         <image name="SwimButton-OFF" width="75" height="75"/>
     </resources>

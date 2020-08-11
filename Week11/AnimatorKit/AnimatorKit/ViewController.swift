@@ -17,10 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var sharkButton: UIButton!
     
     //MARK: - Objects
-    @IBOutlet weak var sharkImage: UIImage!
-    @IBOutlet weak var diver1Image: UIImage!
-    @IBOutlet weak var diver2Image: UIImage!
-    @IBOutlet weak var diver2ReturnImage: UIImage!
+    @IBOutlet weak var sharkImage: UIImageView!
+    @IBOutlet weak var diver1Image: UIImageView!
+    @IBOutlet weak var diver2Image: UIImageView!
     
     //MARK: - Properties
     private var menuIsOpen = false
@@ -53,32 +52,6 @@ class ViewController: UIViewController {
         animateMainMenuButtons()
     }
     
-    @IBAction func didTapLowAirButton(_ sender: UIButton) {
-        changeButtonImage(sender, offImageName: "LowAirButton-OFF", onImageName: "LowAirButton-ON")
-    }
-    
-    @IBAction func didTapSharkButton(_ sender: UIButton) {
-        changeButtonImage(sender, offImageName: "SharkButton-OFF", onImageName: "SharkButton-ON")
-    }
-    
-    @IBAction func didTapSwimButton(_ sender: UIButton) {
-        changeButtonImage(sender, offImageName: "SwimButton-OFF", onImageName: "SwimButton-ON")
-    }
-    
-    func changeButtonImage(_ sender: UIButton, offImageName: String, onImageName: String) {
-        if sender.currentImage == UIImage(named: offImageName) {
-            sender.setImage(UIImage(named: onImageName), for: .normal)
-        } else {
-            sender.setImage(UIImage(named: offImageName), for: .normal)
-        }
-    }
-    
-    func collapseMainMenu() {
-        lowAirButton.center = mainMenuButton.center
-        swimButton.center = mainMenuButton.center
-        sharkButton.center = mainMenuButton.center
-    }
-    
     func animateMainMenuButtons() {
         UIView.animate(
             withDuration: 0.3,
@@ -93,6 +66,52 @@ class ViewController: UIViewController {
             self.swimButton.center = self.menuIsOpen ? self.swimButtonCenter : self.mainMenuButton.center
         }
     }
+    
+    func collapseMainMenu() {
+        lowAirButton.center = mainMenuButton.center
+        swimButton.center = mainMenuButton.center
+        sharkButton.center = mainMenuButton.center
+    }
+    
+    @IBAction func didTapLowAirButton(_ sender: UIButton) {
+        changeButtonImage(sender, offImageName: "LowAirButton-OFF", onImageName: "LowAirButton-ON")
+    }
+    
+    @IBAction func didTapSharkButton(_ sender: UIButton) {
+        changeButtonImage(sender, offImageName: "SharkButton-OFF", onImageName: "SharkButton-ON")
+        animateSharkImageView(onTap: sender)
+    }
+    
+    func animateSharkImageView(onTap: UIButton) {
+        // Create new keyframe animation
+        UIView.animateKeyframes(withDuration: 5.0, delay: 0, animations: { [sharkImage = sharkImage.self!] in
+            // Increase shark's width
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5) {
+                sharkImage.frame.size.width += 200
+            }
+            // Move shark to right & off screen
+            UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 4.0) {
+                sharkImage.center.x += 400
+                sharkImage.alpha = 0
+            }
+            UIView.addKeyframe(withRelativeStartTime: 5.0, relativeDuration: 0.2) {
+                sharkImage.alpha = 1
+            }
+        })
+    }
+    
+    @IBAction func didTapSwimButton(_ sender: UIButton) {
+        changeButtonImage(sender, offImageName: "SwimButton-OFF", onImageName: "SwimButton-ON")
+    }
+    
+    func changeButtonImage(_ sender: UIButton, offImageName: String, onImageName: String) {
+        if sender.currentImage == UIImage(named: offImageName) {
+            sender.setImage(UIImage(named: onImageName), for: .normal)
+        } else {
+            sender.setImage(UIImage(named: offImageName), for: .normal)
+        }
+    }
+
     
 }
 

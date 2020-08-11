@@ -13,6 +13,7 @@
 		73AC30B624E1BF65001F6727 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73AC30B424E1BF65001F6727 /* Main.storyboard */; };
 		73AC30B824E1BF6E001F6727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73AC30B724E1BF6E001F6727 /* Assets.xcassets */; };
 		73AC30BB24E1BF6E001F6727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73AC30B924E1BF6E001F6727 /* LaunchScreen.storyboard */; };
+		73AC30C424E217F4001F6727 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AC30C324E217F4001F6727 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		73AC30B724E1BF6E001F6727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73AC30BA24E1BF6E001F6727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73AC30BC24E1BF6E001F6727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73AC30C324E217F4001F6727 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				73AC30AE24E1BF65001F6727 /* AppDelegate.swift */,
 				73AC30B024E1BF65001F6727 /* SceneDelegate.swift */,
+				73AC30C324E217F4001F6727 /* Constants.swift */,
 				73AC30B224E1BF65001F6727 /* ViewController.swift */,
 				73AC30B424E1BF65001F6727 /* Main.storyboard */,
 				73AC30B724E1BF6E001F6727 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				73AC30B324E1BF65001F6727 /* ViewController.swift in Sources */,
 				73AC30AF24E1BF65001F6727 /* AppDelegate.swift in Sources */,
 				73AC30B124E1BF65001F6727 /* SceneDelegate.swift in Sources */,
+				73AC30C424E217F4001F6727 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
