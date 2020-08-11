@@ -9,5 +9,12 @@
 import Foundation
 
 struct Const {
-    
+    struct Image {
+        static let lowAirON = "LowAirButton-ON"
+        static let lowAirOFF = "LowAirButton-OFF"
+        static let swimON = "SwimButton-ON"
+        static let swimOFF = "SwimButton-OFF"
+        static let sharkON = "SharkButton-ON"
+        static let sharkOFF = "SharkButton-OFF"
+    }
 }

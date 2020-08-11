@@ -114,7 +114,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="AlertView" destination="VRQ-kq-Rzx" id="itH-yM-vXB"/>
+                        <outlet property="alertView" destination="VRQ-kq-Rzx" id="ig9-G3-PTh"/>
                         <outlet property="diver1Image" destination="EGa-jN-GyB" id="YWq-kg-EJE"/>
                         <outlet property="diver2Image" destination="WrR-Ci-WtH" id="upJ-Wm-QG6"/>
                         <outlet property="lowAirButton" destination="zM2-KI-Wqy" id="Py3-pj-Ajb"/>
