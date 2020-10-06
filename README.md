@@ -39,7 +39,7 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 ## iOS Bootcamp Curriculum
 
 <details>
-<summary>Week 01</summary>
+<summary>Week 01 - Your First iOS and UIKit app</summary>
 
 + 📚 Course
     + [Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
@@ -51,7 +51,7 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 ***
 
 <details>
-<summary>Week 02</summary>
+<summary>Week 02 - Programming in Swift - Fundamentals</summary>
 
 + 📚 Course
     + [Programming in Swift: Fundamentals](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
@@ -63,7 +63,7 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 ***
 
 <details>
-<summary>Week 03</summary>
+<summary>Week 03 - Programming in Swift: Functions and Types</summary>
 
 + 📚 Course
     + [Programming in Swift: Functions and Types](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
@@ -75,7 +75,7 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 ***
 
 <details>
-<summary>Week 04</summary>
+<summary>Week 04 - Auto Layout, Debugging and Testing</summary>
 
 + 📚 Course
     + [Beginning iOS Debugging](https://www.raywenderlich.com/4681-beginning-ios-debugging)
@@ -89,7 +89,7 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 ***
 
 <details>
-<summary>Week 05</summary>
+<summary>Week 05 - Table Views</summary>
 
 + 📚 Course
     + [Beginning Table Views](https://www.raywenderlich.com/5995-beginning-table-views)
@@ -101,7 +101,7 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 ***
 
 <details>
-<summary>Week 06</summary>
+<summary>Week 06 - Collection Views</summary>
 
 + 📚 Course
     + [Beginning Collection Views](https://www.raywenderlich.com/5429927-beginning-collection-views)
@@ -113,7 +113,7 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 ***
 
 <details>
-<summary>Week 07</summary>
+<summary>Week 07 - SwiftUI</summary>
 
 + 📚 Course
     + [Your First iOS and SwiftUI app](https://www.raywenderlich.com/4919757-your-first-ios-and-swiftui-app)
@@ -127,7 +127,7 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 ***
 
 <details>
-<summary>Week 08</summary>
+<summary>Week 08 - Data persistence</summary>
 
 + 📚 Course
     + [Beginning Core Data](https://www.raywenderlich.com/7104-beginning-core-data)
@@ -140,7 +140,7 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 ***
 
 <details>
-<summary>Week 09</summary>
+<summary>Week 09 - Networking and Design Patterns</summary>
 
 + 📚 Course
     + [Networking with URLSession](https://www.raywenderlich.com/10376245-networking-with-urlsession)
@@ -153,7 +153,7 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 ***
 
 <details>
-<summary>Week 10</summary>
+<summary>Week 10 - Concurrency and Memory Management</summary>
 
 + 📚 Course
     + [iOS Concurrency with GCD and Operations](https://www.raywenderlich.com/9461083-ios-concurrency-with-gcd-and-operations)
@@ -166,7 +166,7 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 ***
 
 <details>
-<summary>Week 11</summary>
+<summary>Week 11 - Animations and Xcode Tips</summary>
 
 + 📚 Course
     + [Beginning iOS Animations](https://www.raywenderlich.com/10523008-beginning-ios-animations)
