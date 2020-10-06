@@ -9,7 +9,7 @@
 <br />
 
 * Name: **Danijela Vrzan**
-* Discord Server Nickname: **TS: Danijela**
+* Discord Server Nickname: **Danijela Vrzan**
 * Current Location: **Toronto, Canada**
 * Home Country: **Croatia**
 
@@ -38,80 +38,146 @@ Apart from that, I love to experiment with cooking different food, go to the gym
 
 ## iOS Bootcamp Curriculum
 
-### Week 01 
-#### Course
-[Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
-#### Homework
-[Week 01 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week01)
+<details>
+<summary>Week 01</summary>
+
++ 📚 Course
+    + [Your first iOS and UIKit app](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
++ 📱 Homework
+    + [Week 01 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week01)
+
+</details>
+
 ***
-### Week 02
-#### Course
-[Programming in Swift: Fundamentals](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
-#### Homework
-[Week 02 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week02)
+
+<details>
+<summary>Week 02</summary>
+
++ 📚 Course
+    + [Programming in Swift: Fundamentals](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
++ 📱 Homework
+    + [Week 02 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week02)
+
+</details>
+
 ***
-### Week 03
-#### Course
-[Programming in Swift: Functions and Types](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
-#### Homework
-[Week 03 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week03)
+
+<details>
+<summary>Week 03</summary>
+
++ 📚 Course
+    + [Programming in Swift: Functions and Types](https://www.raywenderlich.com/5993-your-first-ios-and-uikit-app)
++ 📱 Homework
+    + [Week 03 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week03)
+
+</details>
+
 ***
-### Week 04
-#### Course
-[Beginning iOS Debugging](https://www.raywenderlich.com/4681-beginning-ios-debugging)<br />
-[Layout in iOS](https://www.raywenderlich.com/6849561-layout-in-ios)<br />
-[Unit and UI Testing](https://www.raywenderlich.com/960290-ios-unit-testing-and-ui-testing-tutorial)<br />
-#### Homework
-[Week 04 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week04)
+
+<details>
+<summary>Week 04</summary>
+
++ 📚 Course
+    + [Beginning iOS Debugging](https://www.raywenderlich.com/4681-beginning-ios-debugging)
+    + [Layout in iOS](https://www.raywenderlich.com/6849561-layout-in-ios)
+    + [Unit and UI Testing](https://www.raywenderlich.com/960290-ios-unit-testing-and-ui-testing-tutorial)
++ 📱 Homework
+    + [Week 04 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week04)
+
+</details>
+
 ***
-### Week 05
-#### Course
-[Beginning Table Views](https://www.raywenderlich.com/5995-beginning-table-views)
-#### Homework
-[Week 05 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week05)
+
+<details>
+<summary>Week 05</summary>
+
++ 📚 Course
+    + [Beginning Table Views](https://www.raywenderlich.com/5995-beginning-table-views)
++ 📱 Homework
+    + [Week 05 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week05)
+
+</details>
+
 ***
-### Week 06
-#### Course
-[Beginning Collection Views](https://www.raywenderlich.com/5429927-beginning-collection-views)
-#### Homework
-[Week 06 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week06)
+
+<details>
+<summary>Week 06</summary>
+
++ 📚 Course
+    + [Beginning Collection Views](https://www.raywenderlich.com/5429927-beginning-collection-views)
++ 📱 Homework
+    + [Week 06 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week06)
+
+</details>
+
 ***
-### Week 07
-#### Course
-[Your First iOS and SwiftUI app](https://www.raywenderlich.com/4919757-your-first-ios-and-swiftui-app)<br />
-[Your Second iOS and SwiftUI app](https://www.raywenderlich.com/5662524-your-second-ios-and-swiftui-app)<br />
-[SwiftUI](https://www.raywenderlich.com/4001741-swiftui)<br />
-#### Homework
-[Week 07 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week07)
+
+<details>
+<summary>Week 07</summary>
+
++ 📚 Course
+    + [Your First iOS and SwiftUI app](https://www.raywenderlich.com/4919757-your-first-ios-and-swiftui-app)
+    + [Your Second iOS and SwiftUI app](https://www.raywenderlich.com/5662524-your-second-ios-and-swiftui-app)
+    + [SwiftUI](https://www.raywenderlich.com/4001741-swiftui)
++ 📱 Homework
+    + [Week 07 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week07)
+
+</details>
+
 ***
-### Week 08
-#### Course
-[Beginning Core Data](https://www.raywenderlich.com/7104-beginning-core-data)<br />
-[Saving Data in iOS](https://www.raywenderlich.com/5429634-saving-data-in-ios)<br />
-#### Homework
-[Week 08 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week08)
+
+<details>
+<summary>Week 08</summary>
+
++ 📚 Course
+    + [Beginning Core Data](https://www.raywenderlich.com/7104-beginning-core-data)
+    + [Saving Data in iOS](https://www.raywenderlich.com/5429634-saving-data-in-ios)
++ 📱 Homework
+    + [Week 08 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week08)
+
+</details>
+
 ***
-### Week 09
-#### Course
-[Networking with URLSession](https://www.raywenderlich.com/10376245-networking-with-urlsession)<br />
-[Fundamental iOS Design Patterns](https://www.raywenderlich.com/1941154-fundamental-ios-design-patterns#c-rate)<br />
-#### Homework
-[Week 09 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week09)
+
+<details>
+<summary>Week 09</summary>
+
++ 📚 Course
+    + [Networking with URLSession](https://www.raywenderlich.com/10376245-networking-with-urlsession)
+    + [Fundamental iOS Design Patterns](https://www.raywenderlich.com/1941154-fundamental-ios-design-patterns#c-rate)
++ 📱 Homework
+    + [Week 09 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week09)
+
+</details>
+
 ***
-### Week 10
-#### Course
-[iOS Concurrency with GCD and Operations](https://www.raywenderlich.com/9461083-ios-concurrency-with-gcd-and-operations)<br />
-[ARC & Memory Management](https://www.raywenderlich.com/966538-arc-and-memory-management-in-swift)<br />
-#### Homework
-[Week 10 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week10)
+
+<details>
+<summary>Week 10</summary>
+
++ 📚 Course
+    + [iOS Concurrency with GCD and Operations](https://www.raywenderlich.com/9461083-ios-concurrency-with-gcd-and-operations)
+    + [ARC & Memory Management](https://www.raywenderlich.com/966538-arc-and-memory-management-in-swift)
++ 📱 Homework
+    + [Week 10 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week10)
+
+</details>
+
 ***
-### Week 11
-#### Course
-[Beginning iOS Animations](https://www.raywenderlich.com/10523008-beginning-ios-animations)<br />
-[Xcode Tips & Tricks](https://www.raywenderlich.com/3199-xcode-tips-and-tricks)<br />
-#### Homework
-[Week 11 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week11)
+
+<details>
+<summary>Week 11</summary>
+
++ 📚 Course
+    + [Beginning iOS Animations](https://www.raywenderlich.com/10523008-beginning-ios-animations)
+    + [Xcode Tips & Tricks](https://www.raywenderlich.com/3199-xcode-tips-and-tricks)
++ 📱 Homework
+    + [Week 11 homework solution](https://github.com/dvrzan/santas-elf/tree/master/Week11)
+
+</details>
+
 ***
+
 
 <br />
    
